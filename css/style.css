@@ -64,7 +64,6 @@ p {
   background: #252a33; }
 
 
-
 /* ==============================================================
    HEADER
    ============================================================== */
@@ -703,13 +702,18 @@ footer {
 .reserve-btn {
   display: inline-block;
   vertical-align: top; }
+
+  
+ 
   @media (max-width: 768px) {
     .reserve-btn {
-      margin: -7px 0 0; } }
+      margin: -7px 0 0; }   
+    }
   @media (max-width: 576px) {
     .reserve-btn {
       margin: 0 0 0;
-      width: 100%; } }
+      width: 100%; } 
+    }
 
 .custom-checkbox {
   color: #737882;
