@@ -9,6 +9,7 @@ Author: Surjith S M
 body {
   font-family: 'Roboto', sans-serif; }
 
+
 h1 {
   font-size: 60px;
   color: #fff;
@@ -329,8 +330,7 @@ p {
     text-decoration: none;
     color: #000; }
   .featured-place-wrap img {
-    width: 672px;
-    height: 250px; }
+    width: 100%; }
 
 .featured-rating,
 .featured-rating-orange,
@@ -895,6 +895,56 @@ footer {
   .btn-contact:hover {
     background: #ff3a6d;
     border: 2px solid #ff3a6d; }
+  
+
+/*========= RATING ========= */
+.customer-rating{
+  text-align: center;
+  
+}
+.star-rating{
+  text-align: center;
+}
+.rating-wrapper{
+  direction: rtl;
+}
+.rating-wrapper input{
+display:none;
+
+}
+.rating-wrapper label{
+  display:inline-block;
+  width:30px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+.rating-wrapper label:before{
+  content:"\2605";
+  position: absolute;
+  font-size:22px;
+  display:inline-block;
+  top:0;
+  left:0;
+}
+.rating-wrapper label:after{
+  content:"\2605";
+  position: absolute;
+  font-size:22px;
+  display:inline-block;
+  top:0;
+  left:0;
+  color: yellow;
+  opacity:0;
+}
+.rating-wrapper label:hover:after,
+.rating-wrapper label:hover ~ label:after,
+.rating-wrapper input:checked ~ label:after{
+
+  opacity:1;
+
+}
+
 
 .follow {
   background: #fff; }
