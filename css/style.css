@@ -330,7 +330,8 @@ Author: Surjith S M
       text-decoration: none;
       color: #000; }
     .featured-place-wrap img {
-      width: 100%; }
+      width: 672px;
+      height: 250px;}
   
   .featured-rating,
   .featured-rating-orange,
