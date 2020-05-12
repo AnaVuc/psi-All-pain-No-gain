@@ -53,4 +53,11 @@ class BaseController extends Controller
             echo view('sablon/footer.php');
         }
 
+         public function restoran($id)
+	{
+            $restoranModel=new \App\Models\RestoranModel;
+            $restoran=$restoranModel->find($id);
+            $this->prikaz('restoran',['restoran'=>$restoran]);
+		
+        }
 }

@@ -4,7 +4,11 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		return view('welcome_message');
+		
+                echo view('sablon/header.php');
+                echo view('sablon/srednji.php');
+                echo view('sablon/footer.php');
+                
 	}
 
 	//--------------------------------------------------------------------
