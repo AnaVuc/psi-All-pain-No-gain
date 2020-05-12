@@ -42,5 +42,15 @@ class BaseController extends Controller
 		// E.g.:
 		// $this->session = \Config\Services::session();
 	}
+        
+        protected function prikaz($page,$data){
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+        
+        public function index()
+        {
+            echo view('sablon/header.php');
+            echo view('sablon/footer.php');
+        }
 
 }
