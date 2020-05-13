@@ -1,15 +1,17 @@
 <?php namespace App\Controllers;
 
+use App\Models\RestoranModel;
+
 class Home extends BaseController
 {
 	public function index()
 	{
 		
-                echo view('sablon/header.php');
-                echo view('sablon/srednji.php');
-                echo view('sablon/footer.php');
+                return view('welcome_message');
                 
 	}
+        
+        
 
 	//--------------------------------------------------------------------
 

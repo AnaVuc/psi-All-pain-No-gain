@@ -15,6 +15,7 @@ namespace App\Controllers;
  */
 
 use CodeIgniter\Controller;
+use App\Models\RestoranModel;
 
 class BaseController extends Controller
 {
@@ -40,7 +41,7 @@ class BaseController extends Controller
 		// Preload any models, libraries, etc, here.
 		//--------------------------------------------------------------------
 		// E.g.:
-		// $this->session = \Config\Services::session();
+		 $this->session = \Config\Services::session();
 	}
         
         protected function prikaz($page,$data){
@@ -49,15 +50,23 @@ class BaseController extends Controller
         
         public function index()
         {
-            echo view('sablon/header.php');
-            echo view('sablon/footer.php');
-        }
-
-         public function restoran($id)
-	{
-            $restoranModel=new \App\Models\RestoranModel;
-            $restoran=$restoranModel->find($id);
-            $this->prikaz('restoran',['restoran'=>$restoran]);
+            $restoranModel=new RestoranModel();
+            $restorani=$restoranModel->findAll();
+            $this->najpopularniji($restorani);
+            //$this->prikaz('restoran',['restoran'=>$restoran]);
 		
         }
+        
+        public function najpopularniji($r){
+            
+            $restorani=sort($r);
+           // for($i=0;$i<3;$i++){
+                echo view('stranice/restoran',['restoran'=>$restorani]);
+            //}
+            
+        }
+
+       
+        
+  
 }
