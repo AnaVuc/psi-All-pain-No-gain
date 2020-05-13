@@ -53,6 +53,9 @@ class BaseController extends Controller
             $restoranModel=new RestoranModel();
             $restorani=$restoranModel->findAll();
             $this->najpopularniji($restorani);
+            $this->sortPoOceni($restorani);
+            $this->sortPoCeni($restorani);
+            echo('Svi restorani');
             echo view('stranice/restoran',['restoran'=>$restorani]);
 		
         }
@@ -68,21 +71,42 @@ class BaseController extends Controller
                         return 0;
             }
             });
+                echo ('Sortirani po popularnosti');
                 echo view('stranice/najpopularniji',['restoran'=>$r]);
             
             
         }
         
-        protected function cmp($a,$b){
+        public function sortPoOceni($r){
+            usort($r,function($a,$b){
+                if ($a->Prosecna_ocena > $b->Prosecna_ocena) {
+                        return -1;
+                } else if ($a->Prosecna_ocena < $b->Prosecna_ocena) {
+                        return +1;
+                } else {
+                        return 0;
+            }
+            });
+            echo ('Sortirani po oceni');
+            echo view('stranice/restoran',['restoran'=>$r]);
             
-            if ($a->brojRecenzija * $a->Prosecna_ocena > $b->brojRecenzija * $b->Prosecna_ocena) {
-            return 1;
-        } else if ($a->brojRecenzija * $a->Prosecna_ocena < $b->brojRecenzija * $b->Prosecna_ocena) {
-            return -1;
-        } else {
-            return 0;
         }
-    }
+        
+        public function sortPoCeni($r){
+            usort($r,function($a,$b){
+                if (strlen($a->Cenovni_rang) > strlen($b->Cenovni_rang)) {
+                        return -1;
+                } else if (strlen($a->Cenovni_rang) < strlen($b->Cenovni_rang)) {
+                        return +1;
+                } else {
+                        return 0;
+            }
+            });
+            echo ('Sortirani po ceni');
+            echo view('stranice/restoran',['restoran'=>$r]);
+            
+        }
+        
 
        
         
