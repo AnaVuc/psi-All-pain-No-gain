@@ -53,18 +53,36 @@ class BaseController extends Controller
             $restoranModel=new RestoranModel();
             $restorani=$restoranModel->findAll();
             $this->najpopularniji($restorani);
-            //$this->prikaz('restoran',['restoran'=>$restoran]);
+            echo view('stranice/restoran',['restoran'=>$restorani]);
 		
         }
         
         public function najpopularniji($r){
             
-            $restorani=sort($r);
-           // for($i=0;$i<3;$i++){
-                echo view('stranice/restoran',['restoran'=>$restorani]);
-            //}
+            usort($r,function($a,$b){
+                if ($a->brojRecenzija * $a->Prosecna_ocena > $b->brojRecenzija * $b->Prosecna_ocena) {
+                        return -1;
+                } else if ($a->brojRecenzija * $a->Prosecna_ocena < $b->brojRecenzija * $b->Prosecna_ocena) {
+                        return +1;
+                } else {
+                        return 0;
+            }
+            });
+                echo view('stranice/najpopularniji',['restoran'=>$r]);
+            
             
         }
+        
+        protected function cmp($a,$b){
+            
+            if ($a->brojRecenzija * $a->Prosecna_ocena > $b->brojRecenzija * $b->Prosecna_ocena) {
+            return 1;
+        } else if ($a->brojRecenzija * $a->Prosecna_ocena < $b->brojRecenzija * $b->Prosecna_ocena) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
 
        
         
