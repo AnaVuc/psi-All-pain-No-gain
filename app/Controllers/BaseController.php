@@ -49,9 +49,91 @@ class BaseController extends Controller
         
         public function index()
         {
+<<<<<<< Updated upstream
             echo view('sablon/header.php');
             echo view('sablon/footer.php');
         }
+=======
+            $restoranModel=new RestoranModel();
+            $restorani=$restoranModel->findAll();
+            $this->najpopularniji($restorani);
+            $this->sortPoOceni($restorani);
+            $this->sortPoCeni($restorani);
+            echo('Svi restorani');
+            echo view('stranice/restoran',['restoran'=>$restorani]);
+           // $this->filtrirajPo($restorani,$restoranModel->Vrsta_hrane,"azijska");
+		
+        }
+        
+        
+       /* public function filtrirajPo($r,$param,$vr){
+            array_filter($r,function($obj){
+                if (isset($obj->$param)){
+                    foreach ($obj as $o){
+                        if ($o->$param == $vr) {
+                        return true;
+                    }
+                }
+                }
+                return false;
+        
+            });
+            echo ('Filtrirani po'.$param);
+            echo view('stranice/restoran',['restoran'=>$r]);
+            
+        }*/
+        
+        public function najpopularniji($r){
+            
+            usort($r,function($a,$b){
+                if ($a->brojRecenzija * $a->Prosecna_ocena > $b->brojRecenzija * $b->Prosecna_ocena) {
+                        return -1;
+                } else if ($a->brojRecenzija * $a->Prosecna_ocena < $b->brojRecenzija * $b->Prosecna_ocena) {
+                        return +1;
+                } else {
+                        return 0;
+            }
+            });
+                echo ('Sortirani po popularnosti');
+                echo view('stranice/najpopularniji',['restoran'=>$r]);
+            
+            
+        }
+        
+        public function sortPoOceni($r){
+            usort($r,function($a,$b){
+                if ($a->Prosecna_ocena > $b->Prosecna_ocena) {
+                        return -1;
+                } else if ($a->Prosecna_ocena < $b->Prosecna_ocena) {
+                        return +1;
+                } else {
+                        return 0;
+            }
+            });
+            echo ('Sortirani po oceni');
+            echo view('stranice/restoran',['restoran'=>$r]);
+            
+        }
+        
+        public function sortPoCeni($r){
+            usort($r,function($a,$b){
+                if (strlen($a->Cenovni_rang) > strlen($b->Cenovni_rang)) {
+                        return -1;
+                } else if (strlen($a->Cenovni_rang) < strlen($b->Cenovni_rang)) {
+                        return +1;
+                } else {
+                        return 0;
+            }
+            });
+            echo ('Sortirani po ceni');
+            echo view('stranice/restoran',['restoran'=>$r]);
+            
+        }
+        
+        
+        
+        
+>>>>>>> Stashed changes
 
          public function restoran($id)
 	{
