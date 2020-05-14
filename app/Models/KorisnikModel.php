@@ -11,5 +11,7 @@ class KorisnikModel extends Model
    
 
     protected $allowedFields = ['Password', 'Ime','Prezime'];
+    
+   
 
 }

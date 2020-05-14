@@ -1,20 +1,9 @@
 <?php
 namespace App\Controllers;
 
-/**
- * Class BaseController
- *
- * BaseController provides a convenient place for loading components
- * and performing functions that are needed by all your controllers.
- * Extend this class in any new controllers:
- *     class Home extends BaseController
- *
- * For security be sure to declare any new methods as protected or private.
- *
- * @package CodeIgniter
- */
 
 use CodeIgniter\Controller;
+use App\Models\RestoranModel;
 
 class BaseController extends Controller
 {
@@ -40,7 +29,7 @@ class BaseController extends Controller
 		// Preload any models, libraries, etc, here.
 		//--------------------------------------------------------------------
 		// E.g.:
-		// $this->session = \Config\Services::session();
+		$this->session = \Config\Services::session();
 	}
         
         protected function prikaz($page,$data){
@@ -51,32 +40,14 @@ class BaseController extends Controller
         {
             $restoranModel=new RestoranModel();
             $restorani=$restoranModel->findAll();
-            $this->najpopularniji($restorani);
-            $this->sortPoOceni($restorani);
-            $this->sortPoCeni($restorani);
-            echo('Svi restorani');
-            echo view('stranice/restoran',['restoran'=>$restorani]);
-           // $this->filtrirajPo($restorani,$restoranModel->Vrsta_hrane,"azijska");
+          //  $this->filtrirajPo($restorani,$restoranModel->Vrsta_hrane,"azijska");
+            $filter=$restoranModel->dohvatiRestoraneOcena("4.5");
+          
+            echo view('stranice/restoran',['restoran'=>$filter]);
 
         }
         
         
-       /* public function filtrirajPo($r,$param,$vr){
-            array_filter($r,function($obj){
-                if (isset($obj->$param)){
-                    foreach ($obj as $o){
-                        if ($o->$param == $vr) {
-                        return true;
-                    }
-                }
-                }
-                return false;
-        
-            });
-            echo ('Filtrirani po'.$param);
-            echo view('stranice/restoran',['restoran'=>$r]);
-            
-        }*/
         
         public function najpopularniji($r){
             
@@ -133,5 +104,33 @@ class BaseController extends Controller
             $restoran=$restoranModel->find($id);
             $this->prikaz('restoran',['restoran'=>$restoran]);
 		
+        }
+        
+        public function pretraga($res){
+
+
+            // get the q parameter from URL
+            $q = $_REQUEST["q"];
+
+            $hint = "";
+
+            // lookup all hints from array if $q is different from ""
+            if ($q !== "") {
+            $q = strtolower($q);
+            $len=strlen($q);
+            foreach($res as $name) {
+                if (stristr($q, substr($name->Ime, 0, $len))) {
+                    if ($hint === "") {
+                        $hint = $name->Ime;
+                    } else {
+                        $hint .= ", $name->Ime";
+                }
+            }
+        }
+        }
+
+            // Output "no suggestion" if no hint was found or output correct values
+            echo $hint === "" ? "no suggestion" : $hint;
+
         }
 }
