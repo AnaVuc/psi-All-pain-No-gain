@@ -6,11 +6,7 @@ class Gost extends BaseController
 
 {
     protected function prikaz($page,$data) {
-        if ( ! is_file(APPPATH.'/Views/pages/'.$page.'.php'))
-    {
-        // Whoops, we don't have a page for that!
-        throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
-    }
+     
         $data['controller']='Gost';
         echo view('sablon/header');
         echo view("stranice/$page",$data);

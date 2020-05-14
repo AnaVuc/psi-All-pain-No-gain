@@ -49,11 +49,6 @@ class BaseController extends Controller
         
         public function index()
         {
-<<<<<<< Updated upstream
-            echo view('sablon/header.php');
-            echo view('sablon/footer.php');
-        }
-=======
             $restoranModel=new RestoranModel();
             $restorani=$restoranModel->findAll();
             $this->najpopularniji($restorani);
@@ -62,7 +57,7 @@ class BaseController extends Controller
             echo('Svi restorani');
             echo view('stranice/restoran',['restoran'=>$restorani]);
            // $this->filtrirajPo($restorani,$restoranModel->Vrsta_hrane,"azijska");
-		
+
         }
         
         
@@ -130,10 +125,7 @@ class BaseController extends Controller
             
         }
         
-        
-        
-        
->>>>>>> Stashed changes
+       
 
          public function restoran($id)
 	{
