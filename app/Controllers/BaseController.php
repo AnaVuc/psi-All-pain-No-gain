@@ -29,11 +29,11 @@ class BaseController extends Controller
 		// Preload any models, libraries, etc, here.
 		//--------------------------------------------------------------------
 		// E.g.:
-<<<<<<< HEAD
+
 		$this->session = \Config\Services::session();
-=======
+
 		 $this->session = \Config\Services::session();
->>>>>>> 043716c9a6fa5e86c45dbff50116cd02620e1057
+
 	}
         
         protected function prikaz($page,$data){
@@ -44,11 +44,13 @@ class BaseController extends Controller
         {
             $restoranModel=new RestoranModel();
             $restorani=$restoranModel->findAll();
-<<<<<<< HEAD
+
           //  $this->filtrirajPo($restorani,$restoranModel->Vrsta_hrane,"azijska");
             $filter=$restoranModel->dohvatiRestoraneOcena("4.5");
           
             echo view('stranice/restoran',['restoran'=>$filter]);
+            echo view('stranice/registracija');
+                echo view('stranice/logovanje');
 
         }
         
@@ -137,66 +139,14 @@ class BaseController extends Controller
             // Output "no suggestion" if no hint was found or output correct values
             echo $hint === "" ? "no suggestion" : $hint;
 
-        }
-=======
+        
+
             $this->najpopularniji($restorani);
-            $this->sortPoOceni($restorani);
-            $this->sortPoCeni($restorani);
+            $this->sortOcena($restorani);
+            $this->sortCena($restorani);
             echo('Svi restorani');
             echo view('stranice/restoran',['restoran'=>$restorani]);
 		
         }
         
-        public function najpopularniji($r){
-            
-            usort($r,function($a,$b){
-                if ($a->brojRecenzija * $a->Prosecna_ocena > $b->brojRecenzija * $b->Prosecna_ocena) {
-                        return -1;
-                } else if ($a->brojRecenzija * $a->Prosecna_ocena < $b->brojRecenzija * $b->Prosecna_ocena) {
-                        return +1;
-                } else {
-                        return 0;
-            }
-            });
-                echo ('Sortirani po popularnosti');
-                echo view('stranice/najpopularniji',['restoran'=>$r]);
-            
-            
-        }
-        
-        public function sortPoOceni($r){
-            usort($r,function($a,$b){
-                if ($a->Prosecna_ocena > $b->Prosecna_ocena) {
-                        return -1;
-                } else if ($a->Prosecna_ocena < $b->Prosecna_ocena) {
-                        return +1;
-                } else {
-                        return 0;
-            }
-            });
-            echo ('Sortirani po oceni');
-            echo view('stranice/restoran',['restoran'=>$r]);
-            
-        }
-        
-        public function sortPoCeni($r){
-            usort($r,function($a,$b){
-                if (strlen($a->Cenovni_rang) > strlen($b->Cenovni_rang)) {
-                        return -1;
-                } else if (strlen($a->Cenovni_rang) < strlen($b->Cenovni_rang)) {
-                        return +1;
-                } else {
-                        return 0;
-            }
-            });
-            echo ('Sortirani po ceni');
-            echo view('stranice/restoran',['restoran'=>$r]);
-            
-        }
-        
-
-       
-        
-  
->>>>>>> 043716c9a6fa5e86c45dbff50116cd02620e1057
 }
