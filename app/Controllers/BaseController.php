@@ -29,11 +29,8 @@ class BaseController extends Controller
 		// Preload any models, libraries, etc, here.
 		//--------------------------------------------------------------------
 		// E.g.:
-<<<<<<< HEAD
+                $autoload['libraries'] = array('session', 'database');
 		$this->session = \Config\Services::session();
-=======
-		 $this->session = \Config\Services::session();
->>>>>>> 043716c9a6fa5e86c45dbff50116cd02620e1057
 	}
         
         protected function prikaz($page,$data){
@@ -44,14 +41,57 @@ class BaseController extends Controller
         {
             $restoranModel=new RestoranModel();
             $restorani=$restoranModel->findAll();
-<<<<<<< HEAD
+
           //  $this->filtrirajPo($restorani,$restoranModel->Vrsta_hrane,"azijska");
-            $filter=$restoranModel->dohvatiRestoraneOcena("4.5");
+           // $filter=$restoranModel->dohvatiRestoraneOcena("4.5");
           
-            echo view('stranice/restoran',['restoran'=>$filter]);
+            //echo view('sablon/test',['restoran'=>$filter]);
+             echo view('sablon/ajaxsearch');
+            
+           
 
         }
-        
+        function fetch()
+ {
+            $output = '';
+            $query = '';
+            $this->load->model('RestoranModel');
+            if($this->input->post('query'))
+            {
+             $query = $this->input->post('query');
+            }
+            $data = $this->RestoranModel->fetch_data($query);
+            $output .= '
+            <div class="table-responsive">
+               <table class="table table-bordered table-striped">
+                <tr>
+                 <th>Ime</th>
+                 <th>Addresa</th>
+                </tr>
+            ';
+            if($data->num_rows() > 0)
+            {
+             foreach($data->result() as $row)
+             {
+              $output .= '
+                <tr>
+                 <td>'.$row->Ime.'</td>
+                 <td>'.$row->Addresa.'</td>
+                </tr>
+              ';
+             }
+            }
+            else
+            {
+             $output .= '<tr>
+                 <td colspan="5">No Data Found</td>
+                </tr>';
+            }
+            $output .= '</table>';
+            echo $output;
+ }
+ 
+
         
         
         public function najpopularniji($r){
@@ -138,65 +178,9 @@ class BaseController extends Controller
             echo $hint === "" ? "no suggestion" : $hint;
 
         }
-=======
-            $this->najpopularniji($restorani);
-            $this->sortPoOceni($restorani);
-            $this->sortPoCeni($restorani);
-            echo('Svi restorani');
-            echo view('stranice/restoran',['restoran'=>$restorani]);
-		
-        }
-        
-        public function najpopularniji($r){
-            
-            usort($r,function($a,$b){
-                if ($a->brojRecenzija * $a->Prosecna_ocena > $b->brojRecenzija * $b->Prosecna_ocena) {
-                        return -1;
-                } else if ($a->brojRecenzija * $a->Prosecna_ocena < $b->brojRecenzija * $b->Prosecna_ocena) {
-                        return +1;
-                } else {
-                        return 0;
-            }
-            });
-                echo ('Sortirani po popularnosti');
-                echo view('stranice/najpopularniji',['restoran'=>$r]);
-            
-            
-        }
-        
-        public function sortPoOceni($r){
-            usort($r,function($a,$b){
-                if ($a->Prosecna_ocena > $b->Prosecna_ocena) {
-                        return -1;
-                } else if ($a->Prosecna_ocena < $b->Prosecna_ocena) {
-                        return +1;
-                } else {
-                        return 0;
-            }
-            });
-            echo ('Sortirani po oceni');
-            echo view('stranice/restoran',['restoran'=>$r]);
-            
-        }
-        
-        public function sortPoCeni($r){
-            usort($r,function($a,$b){
-                if (strlen($a->Cenovni_rang) > strlen($b->Cenovni_rang)) {
-                        return -1;
-                } else if (strlen($a->Cenovni_rang) < strlen($b->Cenovni_rang)) {
-                        return +1;
-                } else {
-                        return 0;
-            }
-            });
-            echo ('Sortirani po ceni');
-            echo view('stranice/restoran',['restoran'=>$r]);
-            
-        }
+
         
 
        
         
-  
->>>>>>> 043716c9a6fa5e86c45dbff50116cd02620e1057
 }
