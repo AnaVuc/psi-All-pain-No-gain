@@ -17,6 +17,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\RestoranModel;
 
+
 class BaseController extends Controller
 {
 
@@ -50,14 +51,16 @@ class BaseController extends Controller
         
         public function index()
         {
-            $restoranModel=new RestoranModel();
-            $restorani=$restoranModel->findAll();
-            $this->najpopularniji($restorani);
-            $this->sortPoOceni($restorani);
-            $this->sortPoCeni($restorani);
-            echo('Svi restorani');
-            echo view('stranice/restoran',['restoran'=>$restorani]);
-		
+          //  $restoranModel=new RestoranModel();
+          //  $restorani=$restoranModel->findAll();
+           // $this->najpopularniji($restorani);
+           // $this->sortPoOceni($restorani);
+           // $this->sortPoCeni($restorani);
+           // echo('Svi restorani');
+           
+          //  echo view('stranice/restoran',['restoran'=>$restorani]);
+		echo view('stranice/registracija');
+                echo view('stranice/logovanje');
         }
         
         public function najpopularniji($r){
