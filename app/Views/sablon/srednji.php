@@ -17,12 +17,13 @@
                             <div class="offset-6 col-md-8 " class="align-items-center">
                                 <form class="form-wrap mt-6">
                                     <div class="btn-group " role="group" aria-label="Basic example">
-                                        <input type="text" placeholder="Ime restorana" class="btn-group1">
+                                        <input type="text" onkeyup="showHint(this.value)" placeholder="Ime restorana" class="btn-group1">
                                         <a role="button" href="detail.html" class="btn btn-form btn-primary"><span class="icon-magnifier search-icon"></span>&nbsp;&nbsp;PRETRAŽI<i class="pe-7s-angle-right"></i></a>
                                     </div>
                                 </form>
+                                <div id="result"></div>
                                 <div class="slider-link">
-                                <!-- <a href="#">Pronadji najpopularnije</a> -->
+                                
                                 </div>
                             </div>
                         </div>
@@ -224,7 +225,7 @@
                             <img src="images/lorenzo_image3.jpg" class="img-fluid" alt="#">
                             <span class="featured-rating-green">9.4</span>
                             <div class="featured-title-box">
-                                <h6>Lorenzo & Kakalamba</h6>
+                                <h6><?php echo $restoran->Ime; ?></h6>
                                 <p>45 Ocena</p> <span> • </span>
                                 <p><span>$$$$</span>$</p>
                                 <ul>
@@ -278,3 +279,38 @@
             </div>
         </div>
     </section>
+    
+    <script>
+function showHint(str) {
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "gethint.php?q=" + str, true);
+    xmlhttp.send();
+  }
+}
+</script>
+
+<script>
+    $(document).ready(function(){
+        
+    load_data();
+        
+        function load_data(query){
+            $.ajax({
+                url:"<?php echo base_url(); ?>srednji/fetch",
+                method:"POST",
+                data:{query:query},
+                success:function(data){
+                    $('#result').html(data);
+            })
+        }
+    })
+   }
