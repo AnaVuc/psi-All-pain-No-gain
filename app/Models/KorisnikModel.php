@@ -28,7 +28,7 @@ protected $beforeInsert=['beforeInsert'];
     }
     protected function passwordHash(array $data){
         if (isset($data['data']['Password'])) {
-            $data['data']['Password'] = password_hash($data['data']['Password'], PASSWORD_DEFAULT);
+            $data['data']['Password'] = password_hash($data['data']['Password'],PASSWORD_DEFAULT);
         }
         return $data;
     }

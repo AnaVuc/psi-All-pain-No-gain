@@ -39,6 +39,7 @@ class BaseController extends Controller
         
         public function index()
         {
+            helper(['form']);
             $restoranModel=new RestoranModel();
             $restorani=$restoranModel->findAll();
 
