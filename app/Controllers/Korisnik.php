@@ -27,7 +27,15 @@ class Korisnik extends BaseController
       //      $this->prikaz('dodavanjevesti',[]);
             
       //  }
-         function register(){
+    public function index(){
+        $data=[];
+        helper(['form']);
+        
+        echo view('sablon/header', $data);
+        echo view('logovanje');
+        echo view('sablon/footer');
+    }
+        public  function register(){
             $data=[];
             helper(['form']);
             
@@ -37,7 +45,7 @@ class Korisnik extends BaseController
                     'Ime'=>'required|min_length[3]|max_length[20]',
                     'Prezime'=>'required|min_length[3]|max_length[20]',
                     'Korisnicko_ime'=>'required|min_length[3]|max_length[20]|is_unique[registrovan_korisnik.Korisnicko_ime]',
-                    'Password'=>'required|min_length[6]|max_length[20]',
+                    'Password'=>'required|min_length[6]|max_length[20]'
                     
                 ];
                 if(!$this->validate($rules)){
@@ -50,7 +58,7 @@ class Korisnik extends BaseController
                                'Ime'=> $this->request->getVar('Ime'),
                                 'Prezime'=> $this->request->getVar('Prezime'),
                                 'Korisnicko_ime'=> $this->request->getVar('Korisnicko_ime'),
-                                'Password'=> $this->request->getVar('Password'),
+                                'Password'=> $this->request->getVar('Password')
                             ];
                             $model->save($newData);
                             $session=session();
@@ -62,7 +70,7 @@ class Korisnik extends BaseController
             }
             
             echo view('sablon/header',$data);
-            echo view('register');
+            echo view('registracija');
             echo view('sablon/footer');
         }
        // public function novaVest(){

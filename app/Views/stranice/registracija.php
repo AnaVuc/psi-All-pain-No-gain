@@ -59,18 +59,18 @@
    
     </div>
     <div class="col-md-8 ftco-animate makereservation p-5 ">
-        <form action="regstracija.php" method='post'>
+        <form action="registracija.php" method='post'>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="Ime">Ime</label>
-                <input type="text" class="form-control" placeholder="Ime" id="Ime" value='<?=set_value('Ime') ?>' >
+                <input type="text" class="form-control" placeholder="Ime" id="Ime" value='<?= set_value("Ime")?>' >
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="Prezime">Prezime</label>
-                <input type="text" class="form-control" placeholder="Prezime" id="Prezime" value='<?=set_value('Prezime') ?>'>
+                <input type="text" class="form-control" placeholder="Prezime" id="Prezime" value='<?= set_value("Prezime")?>'>
                 
                 
 
@@ -79,7 +79,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="Korisnicko_ime">Korisničko ime</label>
-                <input type="text" class="form-control" placeholder="Korisničko ime" id="Korisnicko_ime" value='<?=set_value('Korisnicko_ime') ?>'>
+                <input type="text" class="form-control" placeholder="Korisničko ime" id="Korisnicko_ime" value='<?= set_value("Korisnicko_ime")?>'>
               </div>
             </div>
             <div class="col-md-6">
@@ -88,7 +88,9 @@
                   <input type="password" class="form-control" placeholder="Lozinka" id="Password" value=''>
                 </div>
               </div>
-              <?php 
+             
+          </div>
+             <?php 
               if(isset($validation)): ?>
               <div class='col-12'>
                   <div class='alert alert-danger' role='alert'>
@@ -96,7 +98,6 @@
                   </div>
               </div>
               <?php endif; ?>
-          </div>
                   
               
             <div class="col-md-12 mt-3">

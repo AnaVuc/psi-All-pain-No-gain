@@ -79,12 +79,12 @@
             <?=session()->get('success') ?>
         </div>
         <?php endif; ?>
-        <form action="logovanje.php">
+        <form action="logovanje.php" method="post">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="">Korisničko ime</label>
-                <input type="text" class="form-control" placeholder="Korisničko ime" id='Korisnicko_ime' value='<?=set_value('Korisnicko_ime') ?>'>
+                <input type="text" class="form-control" placeholder="Korisničko ime" id='Korisnicko_ime' value="<?= set_value("Korisnicko_ime")?>">
               </div>
             </div>
             <div class="col-md-6">
@@ -104,7 +104,7 @@
         </form>
       </div>
     </div>
-  </div>
+    </div>
 
 
 /* 
