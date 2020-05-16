@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: May 13, 2020 at 07:39 PM
+-- Generation Time: May 16, 2020 at 04:45 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.4.0
 
@@ -77,6 +77,14 @@ CREATE TABLE IF NOT EXISTS `poseceni_restorani` (
   KEY `R_16` (`Korisnicko_ime`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Dumping data for table `poseceni_restorani`
+--
+
+INSERT INTO `poseceni_restorani` (`idR`, `Korisnicko_ime`) VALUES
+(5, 'ema123'),
+(9, 'ema123');
+
 -- --------------------------------------------------------
 
 --
@@ -130,6 +138,16 @@ CREATE TABLE IF NOT EXISTS `registrovan_korisnik` (
   `Prezime` char(18) DEFAULT NULL,
   PRIMARY KEY (`Korisnicko_ime`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `registrovan_korisnik`
+--
+
+INSERT INTO `registrovan_korisnik` (`Korisnicko_ime`, `Password`, `Ime`, `Prezime`) VALUES
+('ema123', 'ER1234', 'Emilija', 'Radovanovic'),
+('ema456', 'ER5678', 'Ema', 'Radovanovic'),
+('ema1234', 'ER1234', 'Emilija', 'Radovanovic'),
+('ema4567', 'ER5678', 'Ema', 'Radovanovic');
 
 -- --------------------------------------------------------
 
