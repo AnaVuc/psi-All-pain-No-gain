@@ -39,26 +39,20 @@ class BaseController extends Controller
         
         public function index()
         {
-            echo view('sablon/header');
-            helper(['form']);
             $restoranModel=new RestoranModel();
             $restorani=$restoranModel->findAll();
-            $this->najpopularniji($restorani);
-            echo view('sablon/footer');
 
-            //echo view ('stranice/BoxRestoran',['niz'=>$restorani]);
-            //$filter=$restoranModel->dohvatiRestoraneOcena("4.5");
+          //  $this->filtrirajPo($restorani,$restoranModel->Vrsta_hrane,"azijska");
+           // $filter=$restoranModel->dohvatiRestoraneOcena("4.5");
           
-            /*echo view('sablon/test',['restoran'=>$filter]);
-            echo view('sablon/ajaxsearch');
-            echo view('stranice/registracija');
-            echo view('stranice/logovanje');*/
+            //echo view('sablon/test',['restoran'=>$filter]);
+             echo view('sablon/ajaxsearch');
             
            
 
         }
         function fetch()
-           {
+ {
             $output = '';
             $query = '';
             $this->load->model('RestoranModel');
@@ -111,7 +105,8 @@ class BaseController extends Controller
                         return 0;
             }
             });
-                echo view('stranice/BoxRestoran',['restoran'=>$r]);
+                echo ('Sortirani po popularnosti');
+                echo view('stranice/najpopularniji',['restoran'=>$r]);
             
             
         }

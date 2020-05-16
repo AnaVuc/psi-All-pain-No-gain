@@ -2,33 +2,22 @@
     <!--Emilija Nikic, Emilija Radovanovic-->
 
 <head>
-    <!-- Required meta tags 
+     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Colorlib">
     <meta name="description" content="#">
     <meta name="keywords" content="#">
-    <!-- Page Title 
     <title>Take Me Out! </title>
     <link rel="icon" type="image/png" sizes="16x16" href="images/android-icon-36x36.png"> 
-    <!-- Bootstrap CSS 
-   <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
     
-    <!-- Google Fonts  
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
-    <!-- Simple line Icon 
-    <link rel="stylesheet" href="/css/simple-line-icons.css">
-    <!-- Themify Icon 
-    <link rel="stylesheet" href="/css/themify-icons.css">
-    <!-- Hover Effects 
-    <link rel="stylesheet" href="/css/set1.css">
-    <!-- Main CSS -->
-   <!--<link rel="stylesheet" href="/css/style.css"> -->
-    <link rel="stylesheet" href="<?= base_url('css/style.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css'); ?>"> 
-      <link rel="stylesheet" href="<?= base_url('css/simple-line-icons.css'); ?>"> 
-      <link rel="stylesheet" href="<?= base_url('css/themify-icons.css'); ?>"> 
+    <link rel="stylesheet" href="<?= base_url('css/style.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('css/simple-line-icons.css'); ?>"> 
+    <link rel="stylesheet" href="<?= base_url('css/themify-icons.css'); ?>"> 
+    <link rel="stylesheet" href="<?= base_url('css/set1.css'); ?>"> 
+    <link rel="stylesheet" href="<?= base_url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900'); ?>"> 
 </head>
 
 <body>
