@@ -27,18 +27,25 @@ class RestoranModel extends Model
         
     }
     
+    public function GetCatSearchName($search_name){
+    $qry = $this->db->select('*')->from('Restoran')
+                    ->where("Ime LIKE '%$search_name%'")
+                    ->get()->result(); // select data like rearch value.
+    return $qry;
+}
+    
     function fetch_data($query)
  {
-        //var_dump($query);
-        $this->select("*");
-        $this->from("Restoran");
+        $this->db->select("*");
+        $this->db->from("Restoran");
         if($query != '')
         {
-         $this->like('Ime', $query);
-         var_dump($this);
-         $this->or_like('Addresa', $query);
+         $this->db->like('Ime', $query);
+         $this->db->or_like('Addresa', $query);
+         
+         
         }
-        return $this->get();
+        return $this->db->get();
  }
     
     

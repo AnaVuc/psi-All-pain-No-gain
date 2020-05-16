@@ -43,24 +43,35 @@ class BaseController extends Controller
             $restorani=$restoranModel->findAll();
 
           //  $this->filtrirajPo($restorani,$restoranModel->Vrsta_hrane,"azijska");
-           // $filter=$restoranModel->dohvatiRestoraneOcena("4.5");
+            $filter=$restoranModel->dohvatiRestoraneOcena("4.5");
           
-            //echo view('sablon/test',['restoran'=>$filter]);
+            //echo view('stranice/restoran',['restoran'=>$filter]);
+            $route['category-search-name'] = "BaseController/category_search_name";
+             	
              echo view('sablon/ajaxsearch');
-            
-           
-
+         
         }
+        
+        public function category_search_name(){
+            $search_name=$this->input->post("search_name"); // first get search character
+            $data=$this->RestoranModel->GetCatSearchName($search_name); // SearchModel is the model class name
+            $view = '';
+            foreach ($data as $sval) {
+                $view = $view .'<li onclick="addText(\''.$sval->post_category_name.'\')">'.$sval->post_category_name.'</li>';
+            }
+            echo $view;
+        }
+        
         function fetch()
  {
             $output = '';
             $query = '';
-            $this->load->model('RestoranModel');
+            $this->load->model('restoranmodel');
             if($this->input->post('query'))
             {
              $query = $this->input->post('query');
             }
-            $data = $this->RestoranModel->fetch_data($query);
+            $data = $this->restoranmodel->fetch_data($query);
             $output .= '
             <div class="table-responsive">
                <table class="table table-bordered table-striped">
@@ -89,6 +100,7 @@ class BaseController extends Controller
             }
             $output .= '</table>';
             echo $output;
+            
  }
  
 
