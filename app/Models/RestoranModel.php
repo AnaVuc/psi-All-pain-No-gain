@@ -11,7 +11,9 @@ class RestoranModel extends Model
 
     protected $allowedFields = ['Ime', 'Broj_telefona','Adresa','Sajt','Vrsta_hrane','Cenovni_rang','Prosecna_ocena','idSl','brojRecenzija'];
 
- 
+    public function dohvBrojRestorana(){
+        return $this->count_all();
+    }
     public function dohvatiRestoraneVH($param){
         return $test=$this->where('Vrsta_hrane',$param)->findAll();
         

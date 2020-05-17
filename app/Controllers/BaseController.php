@@ -30,6 +30,7 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
                 $autoload['libraries'] = array('session', 'database');
+                $pager = \Config\Services::pager();
 		$this->session = \Config\Services::session();
 	}
         
@@ -41,16 +42,23 @@ class BaseController extends Controller
         {
             echo view('sablon/header');
             helper(['form']);
+            
             $restoranModel=new RestoranModel();
             $restorani=$restoranModel->findAll();
-            $this->najpopularniji($restorani);
+            $data=[
+                'niz'=>$restoranModel->paginate(4),
+                'pager'=>$restoranModel->pager
+            ];
+            
+             echo view('stranice/restoranListing',['data'=>$data]);
+            //$this->najpopularniji($restorani);
             echo view('sablon/footer');
 
             //echo view ('stranice/BoxRestoran',['niz'=>$restorani]);
-            //$filter=$restoranModel->dohvatiRestoraneOcena("4.5");
-          
-            /*echo view('sablon/test',['restoran'=>$filter]);
-            echo view('sablon/ajaxsearch');
+            $filter=$restoranModel->dohvatiRestoraneOcena("4.5");
+           
+           
+            /*echo view('sablon/ajaxsearch');
             echo view('stranice/registracija');
             echo view('stranice/logovanje');*/
             

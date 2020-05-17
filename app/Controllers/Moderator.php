@@ -12,5 +12,10 @@ class Moderator extends BaseController
 
 
     }
+    
+    
+    public function ukloniKorisnika($korisnik){
+        
+    }
 
 }
