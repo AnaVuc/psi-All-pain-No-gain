@@ -13,7 +13,7 @@ class Korisnik extends BaseController
     protected function prikaz($page, $data) {
         $data['controller']='Korisnik';
         $data['korisnik']=$this->session->get('korisnik');
-        echo view('sablon/header',$data);
+        echo view('sablon/header_ulogovan',$data);
         echo view("stranice/$page", $data);
     }
     

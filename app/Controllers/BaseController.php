@@ -51,7 +51,7 @@ class BaseController extends Controller
           
             //echo view('sablon/test',['restoran'=>$filter]);
             //echo view('sablon/ajaxsearch');
-            echo view('stranice/registracija');
+            //echo view('stranice/registracija');
             echo view('stranice/logovanje');
             
            

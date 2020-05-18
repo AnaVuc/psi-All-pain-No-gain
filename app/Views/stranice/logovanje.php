@@ -1,31 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Colorlib">
-    <meta name="description" content="#">
-    <meta name="keywords" content="#">
-    <!-- Page Title -->
-    <title>Take Me Out! </title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
-    <!-- Simple line Icon -->
-    <link rel="stylesheet" href="css/simple-line-icons.css">
-    <!-- Themify Icon -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- Hover Effects -->
-    <link rel="stylesheet" href="css/set1.css">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
 <body>
     <!--============================= HEADER =============================-->
     <div class="nav-menu">
@@ -74,33 +46,32 @@
     <!--// SLIDER -->
     <!--//END HEADER -->
     <div class="col-md-8 ftco-animate makereservation p-5 ">
-        
+        <?php if(isset($poruka)) echo "<font color='red'>$poruka</font><br>"; ?>
         <form name='loginform' action="<?= site_url("Gost/loginSubmit") ?>" method="post">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="">Korisničko ime</label>
-                <input type="text" class="form-control" placeholder="Korisničko ime" name='Korisnicko_ime"  value='<?= set_value("Korisnicko_ime")?>'>
+                <input type="text" class="form-control" placeholder="Korisničko ime" name='Korisnicko_ime'  value='<?= set_value("Korisnicko_ime")?>'>
+                <font color='red'>
+                    <?php if(!empty($errors['Korisnicko_ime'])) 
+                    echo $errors['Korisnicko_ime']; ?>
+                    </font>
               </div>
             </div>
-              <div>
-                    <?php if(!empty($errors['Korisnicko_ime'])) 
-                echo $errors['Korisnicko_ime'];
-            ?>
-              </div>
+             
             <div class="col-md-6">
               <div class="form-group">
                 <label for="">Lozinka</label>
-                <input type="password" class="form-control" name='Password' placeholder="Password" name='Password' >
+                <input type="password" class="form-control" name='Password' placeholder="Password" value='<?= set_value("Password")?>'>
+                <font color='red'>
+                    <?php if(!empty($errors['Password'])) 
+                    echo $errors['Password'];
+            ?></font>
               </div>
             </div>
-              <div>
-                  
-                   <?php if(!empty($errors['Password'])) 
-                echo $errors['Password'];
-            ?>
-              </div>
-          
+              
+      
               
             <div class="col-md-12 mt-3">
               <div class="form-group">
@@ -115,10 +86,4 @@
     </div>
     </div>
 
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
