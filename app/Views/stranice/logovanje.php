@@ -1,28 +1,4 @@
 <body>
-    <!--============================= HEADER =============================-->
-    <div class="nav-menu">
-        <div class="bg transition">
-            <div class="container-fluid fixed">
-                <div class="row">
-                    <div class="col-md-12">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="index.html">Take Me Out!</a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icon-menu"></span>
-              </button>
-                            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item dropdown">
-                                  
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SLIDER -->
     <section class="slider d-flex align-items-center">
         <!-- <img src="images/slider.jpg" class="img-fluid" alt="#"> -->
         <div class="container">

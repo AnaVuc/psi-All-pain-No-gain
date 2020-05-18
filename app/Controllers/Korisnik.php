@@ -1,20 +1,29 @@
 <?php namespace App\Controllers;
 
-
+use App\Models\RestoranModel;
 
 class Korisnik extends BaseController
 
 {
    
     public function index(){
-        $this->prikaz('ispiskorisnikaPROVERA', []);
+        $restoranModel=new RestoranModel();
+        $restorani=$restoranModel->findAll();
+        
+        $data['controller']='Korisnik';
+        $data['korisnik']=$this->session->get('korisnik'); 
+        echo view('sablon/header_ulogovan',$data);
+        $this->najpopularniji($restorani);
+        //echo view("stranice/BoxRestoran", ['restoran'=>$restorani]);
+        echo view('sablon/dobrodoslica');
+        $this->sortPoOceni($restorani);
+        //var_dump($restorani);
+        //echo view ('stranice/najboljeOcenjeni',['restoran'=>$restorani]);
+        echo view('sablon/footer');
     }
     
     protected function prikaz($page, $data) {
-        $data['controller']='Korisnik';
-        $data['korisnik']=$this->session->get('korisnik');
-        echo view('sablon/header_ulogovan',$data);
-        echo view("stranice/$page", $data);
+        
     }
     
     public function promena_lozinke($poruka=null){

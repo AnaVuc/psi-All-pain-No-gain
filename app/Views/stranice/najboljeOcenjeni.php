@@ -5,7 +5,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-5">
                     <div class="styled-heading">
-                        <h3>Najpopularniji restorani</h3>
+                        <h3>Najbolje ocenjeni restorani</h3>
                     </div>
                 </div>
             </div>
@@ -14,14 +14,12 @@
 // ikonice se ne ucitavaju kako treba ali su ubacene u headeru
     $niz=$output = array_slice($restoran, 0, 3);
     foreach ($niz as $res){
-    $suma=$res->brojRecenzija*$res->Prosecna_ocena;?>
-
-
+        ?>
                 <div class="col-md-4 featured-responsive">
                     <div class="featured-place-wrap">
                         <a href="detailGost.html">
                             <img src="images/featured1.jpg" class="img-fluid" alt="#">
-                            <span class="featured-rating-green justify-content-center"><?php echo $res->Prosecna_ocena;?></span>
+                            <span class="featured-rating-green"><?php echo $res->Prosecna_ocena;?></span>
                             <div class="featured-title-box">
                                 <h6><?php echo $res->Ime;?></h6>
                                 <p><?php echo $res->brojRecenzija;?> recenzija</p> <span> • </span>

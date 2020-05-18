@@ -39,12 +39,11 @@ class BaseController extends Controller
         
         public function index()
         {
-            echo view('sablon/header');
             
-            $restoranModel=new RestoranModel();
+           /* $restoranModel=new RestoranModel();
             $restorani=$restoranModel->findAll();
             $this->najpopularniji($restorani);
-            echo view('sablon/footer');
+            $this->prikaz('BoxRestoran',['niz'=>$restorani]);*/
 
             //echo view ('stranice/BoxRestoran',['niz'=>$restorani]);
             //$filter=$restoranModel->dohvatiRestoraneOcena("4.5");
@@ -111,7 +110,7 @@ class BaseController extends Controller
                         return 0;
             }
             });
-                echo view('stranice/BoxRestoran',['restoran'=>$r]);
+            echo view('stranice/boxRestoran',['restoran'=>$r]);
             
             
         }
@@ -126,8 +125,7 @@ class BaseController extends Controller
                         return 0;
             }
             });
-            echo ('Sortirani po oceni');
-            echo view('stranice/restoran',['restoran'=>$r]);
+            echo view('stranice/najboljeOcenjeni',['restoran'=>$r]);
             
         }
         
