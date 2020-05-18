@@ -10,10 +10,10 @@ class KorisnikModel extends Model
     protected $returnType     = 'object';
    
 
-    protected $allowedFields = ['Password', 'Ime','Prezime'];
+    protected $allowedFields = ['Korisnicko_ime','Password', 'Ime','Prezime'];
     
    
-protected $beforeInsert=['beforeInsert'];
+/*protected $beforeInsert=['beforeInsert'];
     protected $beforeUpdate=['beforeUpdate'];
     
     
@@ -31,5 +31,5 @@ protected $beforeInsert=['beforeInsert'];
             $data['data']['Password'] = password_hash($data['data']['Password'],PASSWORD_DEFAULT);
         }
         return $data;
-    }
+    } */
 }

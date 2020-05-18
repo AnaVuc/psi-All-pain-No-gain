@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--Emilija Radovanovic-->
+  <!--Emilija Nikic-->
 
 <head>
     <!-- Required meta tags -->
@@ -74,33 +74,42 @@
     <!--// SLIDER -->
     <!--//END HEADER -->
     <div class="col-md-8 ftco-animate makereservation p-5 ">
-        <?php if(session()->get('success')): ?>
-        <div class='alert alert-success' role='alert'>
-            <?=session()->get('success') ?>
-        </div>
-        <?php endif; ?>
-        <form action="logovanje.php" method="post">
+        
+        <form name='loginform' action="<?= site_url("Gost/loginSubmit") ?>" method="post">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="">Korisničko ime</label>
-                <input type="text" class="form-control" placeholder="Korisničko ime" id='Korisnicko_ime' value="<?= set_value("Korisnicko_ime")?>">
+                <input type="text" class="form-control" placeholder="Korisničko ime" name='Korisnicko_ime"  value='<?= set_value("Korisnicko_ime")?>'>
               </div>
             </div>
+              <div>
+                    <?php if(!empty($errors['Korisnicko_ime'])) 
+                echo $errors['Korisnicko_ime'];
+            ?>
+              </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="">Lozinka</label>
-                <input type="password" class="form-control" placeholder="Lozinka" id='Password' value=''>
+                <input type="password" class="form-control" name='Password' placeholder="Password" id='Password' >
               </div>
             </div>
+              <div>
+                  
+                   <?php if(!empty($errors['Password'])) 
+                echo $errors['Password'];
+            ?>
+              </div>
           
               
             <div class="col-md-12 mt-3">
               <div class="form-group">
-                <a href="ulogovani.html" class="btn btn-outline-dark top-btn">Uloguj se</a>
+                <input type="submit"  value="Uloguj se" class="btn btn-primary py-3 px-5">
               </div>
             </div>
+              
           </div>
+            
         </form>
       </div>
     </div>

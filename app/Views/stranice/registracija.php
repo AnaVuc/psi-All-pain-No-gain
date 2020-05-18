@@ -59,50 +59,65 @@
    
     </div>
     <div class="col-md-8 ftco-animate makereservation p-5 ">
-        <form action="registracija.php" method='post'>
+        <form name='kreirajNalogform' action="<?= site_url("Gost/kreirajNalog") ?>" method='post'>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="Ime">Ime</label>
-                <input type="text" class="form-control" placeholder="Ime" id="Ime" value='<?= set_value("Ime")?>' >
+                <input type="text" class="form-control" placeholder="Ime"  name='Ime' value='<?= set_value("Ime")?>' >
               </div>
             </div>
+              <div>
+                   <?php if(!empty($errors['Ime'])) 
+                        echo $errors['Ime'];
+                        ?>
+              </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="Prezime">Prezime</label>
-                <input type="text" class="form-control" placeholder="Prezime" id="Prezime" value='<?= set_value("Prezime")?>'>
+                <input type="text" class="form-control" placeholder="Prezime" name='Prezime'  value='<?= set_value("Prezime")?>'>
                 
                 
 
               </div>
             </div>
+              <div>
+                   <?php if(!empty($errors['Preime'])) 
+                        echo $errors['Preime'];
+                        ?>
+              </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="Korisnicko_ime">Korisničko ime</label>
-                <input type="text" class="form-control" placeholder="Korisničko ime" id="Korisnicko_ime" value='<?= set_value("Korisnicko_ime")?>'>
+                <input type="text" class="form-control" placeholder="Korisničko ime" name='Korisnicko_ime' value='<?= set_value("Korisnicko_ime")?>'>
               </div>
             </div>
+              <div>
+                   <?php if(!empty($errors['Korisnicko_ime'])) 
+                        echo $errors['Korisnicko_ime'];
+                        ?>
+              </div>
             <div class="col-md-6">
                 <div class="form-group">
                   <label for="Password">Lozinka</label>
-                  <input type="password" class="form-control" placeholder="Lozinka" id="Password" value=''>
+                  <input type="password" class="form-control" placeholder="Password" name='Password'  value=''>
                 </div>
+              </div>
+              <div>
+                   <?php if(!empty($errors['Password'])) 
+                        echo $errors['Password'];
+                        ?>
               </div>
              
           </div>
-             <?php 
-              if(isset($validation)): ?>
-              <div class='col-12'>
-                  <div class='alert alert-danger' role='alert'>
-                      <?=$validation->listErrors() ?>
-                  </div>
-              </div>
-              <?php endif; ?>
+             
+                         
+               
                   
               
             <div class="col-md-12 mt-3">
               <div class="form-group">
-                <input type="submit" value="Registruj se" class="btn btn-primary py-3 px-5">
+                <input type="submit"  value="Registruj se" class="btn btn-primary py-3 px-5">
               </div>
             </div>
           </div>

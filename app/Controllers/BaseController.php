@@ -15,7 +15,7 @@ class BaseController extends Controller
 	 *
 	 * @var array
 	 */
-	protected $helpers = [];
+	   protected $helpers = ['form', 'url'];
 
 	/**
 	 * Constructor.
@@ -40,7 +40,7 @@ class BaseController extends Controller
         public function index()
         {
             echo view('sablon/header');
-            helper(['form']);
+            
             $restoranModel=new RestoranModel();
             $restorani=$restoranModel->findAll();
             $this->najpopularniji($restorani);
@@ -49,10 +49,10 @@ class BaseController extends Controller
             //echo view ('stranice/BoxRestoran',['niz'=>$restorani]);
             //$filter=$restoranModel->dohvatiRestoraneOcena("4.5");
           
-            /*echo view('sablon/test',['restoran'=>$filter]);
-            echo view('sablon/ajaxsearch');
+            //echo view('sablon/test',['restoran'=>$filter]);
+            //echo view('sablon/ajaxsearch');
             echo view('stranice/registracija');
-            echo view('stranice/logovanje');*/
+            echo view('stranice/logovanje');
             
            
 
