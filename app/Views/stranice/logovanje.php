@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--Emilija Nikic-->
+
 
 <head>
     <!-- Required meta tags -->
@@ -91,7 +91,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="">Lozinka</label>
-                <input type="password" class="form-control" name='Password' placeholder="Password" id='Password' >
+                <input type="password" class="form-control" name='Password' placeholder="Password" name='Password' >
               </div>
             </div>
               <div>

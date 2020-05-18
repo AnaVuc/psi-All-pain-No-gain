@@ -135,26 +135,27 @@ class Gost extends BaseController
         
         if($kor==null)
             return $this->login('Korisnik ne postoji');
-        if($kor->Password!=$this->request->getVar('Password'))
+        if($kor->Password!=$this->request->getVar('Password')){
             return $this->login('Pogresna lozinka');
+        }
         
            //$regModel=new RegKorisnikModel();
-           $moder=new ModeratorModel();
+           //$moder=new ModeratorModel();
            
-           $m=$moder->find($this->request->getVar('Korisnicko_ime'));
-           if($m==null){
+           //$m=$moder->find($this->request->getVar('Korisnicko_ime'));
+          // if($m==null){
                //echo "Registrovani korisnik"; 
                //skace na stranicu za korisnika
-               
+              
                $this->session->set('korisnik', $kor);      
                return redirect()->to(site_url('Korisnik'));
                
-           }
-           else
-           {
-               echo 'Moderator';
+          // }
+          // else
+           //{
+            //   echo 'Moderator';
            //skace na stranicu za moderatora
-            $this->session->set('korisnik', $kor);
+           // $this->session->set('korisnik', $kor);
         
            }
         
@@ -165,4 +166,4 @@ class Gost extends BaseController
         
         
     }
-}
+
