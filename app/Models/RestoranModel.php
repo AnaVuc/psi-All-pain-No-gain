@@ -17,6 +17,11 @@ class RestoranModel extends Model
         
     }
     
+    public function dohvatiRestoranSaId($param){
+        return $test=$this->where('idR',$param)->findAll();
+        
+    }
+    
     public function dohvatiRestoraneOcena($param){
         return $test=$this->where('Prosecna_ocena',$param)->findAll();
         

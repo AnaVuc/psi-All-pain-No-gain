@@ -17,7 +17,7 @@
         ?>
                 <div class="col-md-4 featured-responsive">
                     <div class="featured-place-wrap">
-                        <a href="detailGost.html">
+                        <a href="<?php echo site_url("BaseController/ispisJednogRestorana/{$res->idR}"); ?>" >
                             <img src="images/featured1.jpg" class="img-fluid" alt="#">
                             <span class="featured-rating-green"><?php echo $res->Prosecna_ocena;?></span>
                             <div class="featured-title-box">
@@ -47,7 +47,7 @@
 <div class="row justify-content-center">
                 <div class="col-md-4">
                     <div class="featured-btn-wrap">
-                        <a href=""<?= site_url('restoranListing.php'); ?>"" class="btn btn-danger">VIDI SVE RESTORANE</a>
+                        <a href="<?php echo site_url('BaseController/ispisSvihRestorana'); ?>" class="btn btn-danger">VIDI SVE RESTORANE</a>
                     </div>
                 </div>
             </div>
