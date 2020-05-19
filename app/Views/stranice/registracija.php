@@ -1,9 +1,33 @@
-
-
-
 <html lang="en">
-  <!--Emilija Nikic-->
+    <!--Emilija Nikic, Emilija Radovanovic-->
 
+<head>
+     
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Colorlib">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+    <title>Take Me Out! </title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/android-icon-36x36.png"> 
+    
+    <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css'); ?>"> 
+    <link rel="stylesheet" href="<?= base_url('css/style.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('css/simple-line-icons.css'); ?>"> 
+    <link rel="stylesheet" href="<?= base_url('css/themify-icons.css'); ?>"> 
+    <link rel="stylesheet" href="<?= base_url('css/font-awesome.min.css'); ?>"> 
+    <link rel="stylesheet" href="<?= base_url('font-awesome.min.css'); ?>"> 
+    <link rel="stylesheet" href="<?= base_url('css/simple-line-icons.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('css/set1.css'); ?>"> 
+    <link rel="stylesheet" href="<?= base_url('css/swiper.min.css.css'); ?>"> 
+    <link rel="stylesheet" href="<?= base_url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900'); ?>"> 
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="<?= base_url('js/jquery-3.2.1.min.js'); ?>"></script>
+    <script src="<?= base_url('js/popper.min.js'); ?>""></script>
+    <script src="<?= base_url('js/bootstrap.min.js'); ?>""></script>
+    <i class="fas fa-tachometer-alt"></i>
+</head>
 
 
 <body>
@@ -100,7 +124,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                   <label for="Password">Lozinka</label>
-                  <input type="password" class="form-control" placeholder="Password" name='Password'  value=''>
+                  <input type="password" class="form-control" placeholder="Password" name='Password'  value='<?= set_value("Password")?>'>
                 </div>
               </div>
               <div>
@@ -109,12 +133,6 @@
                         ?>
               </div>
              
-          </div>
-             
-                         
-               
-                  
-              
             <div class="col-md-12 mt-3">
               <div class="form-group">
                 <input type="submit"  value="Registruj se" class="btn btn-primary py-3 px-5">
@@ -123,5 +141,19 @@
           </div>
         </form>
       </div>
-    </div>
-  </div>
+      <script>
+        $(window).scroll(function() {
+            // 100 = The point you would like to fade the nav in.
+
+            if ($(window).scrollTop() > 100) {
+
+                $('.fixed').addClass('is-sticky');
+
+            } else {
+
+                $('.fixed').removeClass('is-sticky');
+
+            };
+        });
+    </script>
+</body>

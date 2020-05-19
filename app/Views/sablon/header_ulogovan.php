@@ -1,4 +1,5 @@
 
+
 <html lang="en">
     <!--Emilija Nikic, Emilija Radovanovic-->
 
@@ -23,7 +24,10 @@
     <link rel="stylesheet" href="<?= base_url('css/set1.css'); ?>"> 
     <link rel="stylesheet" href="<?= base_url('css/swiper.min.css.css'); ?>"> 
     <link rel="stylesheet" href="<?= base_url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900'); ?>"> 
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />  
+    <script src="<?= base_url('js/jquery-3.2.1.min.js'); ?>"></script>
+    <script src="<?= base_url('js/popper.min.js'); ?>""></script>
+    <script src="<?= base_url('js/bootstrap.min.js'); ?>""></script>
     <i class="fas fa-tachometer-alt"></i>
 
 
@@ -35,7 +39,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="ulogovani.html">Take Me Out!</a>
+                            <a class="navbar-brand" href="<?php echo site_url("Korisnik"); ?>"> Take Me Out! </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-menu"></span>
               </button>
@@ -86,3 +90,21 @@
             </div>
         </div>
     </section>
+   
+
+    <script>
+        $(window).scroll(function() {
+            // 100 = The point you would like to fade the nav in.
+
+            if ($(window).scrollTop() > 100) {
+
+                $('.fixed').addClass('is-sticky');
+
+            } else {
+
+                $('.fixed').removeClass('is-sticky');
+
+            };
+        });
+    </script>
+</body>

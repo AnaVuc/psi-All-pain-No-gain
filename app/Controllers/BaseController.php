@@ -51,7 +51,7 @@ class BaseController extends Controller
             //echo view('sablon/test',['restoran'=>$filter]);
             //echo view('sablon/ajaxsearch');
             //echo view('stranice/registracija');
-            echo view('stranice/logovanje');
+           // echo view('stranice/logovanje');
        
         }
         
@@ -209,6 +209,7 @@ class BaseController extends Controller
             }
             else{
                 echo view('sablon/header');
+                echo view('stranice/restoranListingGost',['data'=>$data]);
                 echo view('sablon/footer');
             }
         }

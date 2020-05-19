@@ -1,6 +1,9 @@
 <?php namespace App\Controllers;
 use App\Models\ModeratorModel;
 use App\Models\KorisnikModel;
+use App\Models\RestoranModel;
+
+
 class Gost extends BaseController
 
 
@@ -8,7 +11,6 @@ class Gost extends BaseController
     protected function prikaz($page,$data) {
      
         $data['controller']='Gost';
-        echo view('sablon/header');
         echo view("stranice/$page",$data);
         echo view('sablon/footer');
         
@@ -16,21 +18,24 @@ class Gost extends BaseController
 
 	//--------------------------------------------------------------------
     public function index(){
-       // $vestModel=new VestModel();
-       // $vesti=$vestModel->findAll();
-         
-
-            //echo view ('stranice/BoxRestoran',['niz'=>$restorani]);
-            //$filter=$restoranModel->dohvatiRestoraneOcena("4.5");
-          
-            //echo view('sablon/test',['restoran'=>$filter]);
-            //echo view('sablon/ajaxsearch');
-            
-        $this->prikaz('registracija', []);
-        $this->prikaz('logovanje', []);
+        $restoranModel=new RestoranModel();
+        $restorani=$restoranModel->findAll();
+        $data['restorani']=$restorani;
+        $data['controller']='Gost';
+        echo view('sablon/header'); 
+        $this->najpopularniji($restorani);
+        echo view('stranice/registrujSe');
+        $this->sortPoOceni($restorani);
+        echo view('sablon/footer');
     }
    
+    public function UlogujSe(){
+        $this->prikaz('logovanje', []);
+    }
     
+    public function registrujSe(){
+        $this->prikaz('registracija', []);
+    }
     public function login($por=null){
         $this->prikaz('logovanje', ['poruka'=>$por]);
     }
@@ -95,8 +100,7 @@ class Gost extends BaseController
             'Ime'=>$this->request->getVar('Ime'),
             'Prezime'=>$this->request->getVar('Prezime')
         ]);
-        echo 'Baza je azururana';
-            //na koju stranu da skocimo
+        $this->prikaz('logovanje', []);
             }
     
     public function loginSubmit(){

@@ -19,10 +19,7 @@ class Korisnik extends BaseController
         echo view('sablon/footer');
         
     }
-    
-    protected function prikaz($page, $data) {
-        
-    }
+ 
     
     public function promena_lozinke($poruka=null){
           
