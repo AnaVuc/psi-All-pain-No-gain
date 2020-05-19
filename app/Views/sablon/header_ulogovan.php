@@ -41,7 +41,7 @@
                             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                                 <ul class="navbar-nav">
                                     <li class="nav-item dropdown">
-                                        <li><a href= "<?php echo site_url('Korisnik/ispisiNalog'); ?>" class="btn btn-outline-light top-btn">Moj nalog</a></li>
+                                        <li><a href= "<?php echo site_url('BaseController/ispisiNalog'); ?>" class="btn btn-outline-light top-btn">Moj nalog</a></li>
                                         &nbsp;
                                         &nbsp;
                                     <li><a href="index.html" class="btn btn-outline-light top-btn">Izloguj se</a></li>

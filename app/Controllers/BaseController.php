@@ -182,6 +182,11 @@ class BaseController extends Controller
             echo $hint === "" ? "no suggestion" : $hint;
 
         }
+        
+       public function ispisiNalog(){
+        $prom=$this->session->get('korisnik');
+        echo view('stranice/nalog',['korisnik'=>$prom]);
+    }
 
         
 
