@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="<?= base_url('font-awesome.min.css'); ?>"> 
     <link rel="stylesheet" href="<?= base_url('css/simple-line-icons.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('css/set1.css'); ?>"> 
+    <link rel="stylesheet" href="<?= base_url('css/swiper.min.css.css'); ?>"> 
     <link rel="stylesheet" href="<?= base_url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900'); ?>"> 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <i class="fas fa-tachometer-alt"></i>
@@ -44,7 +45,7 @@
                                         <li><a href= "<?php echo site_url('BaseController/ispisiNalog'); ?>" class="btn btn-outline-light top-btn">Moj nalog</a></li>
                                         &nbsp;
                                         &nbsp;
-                                    <li><a href="index.html" class="btn btn-outline-light top-btn">Izloguj se</a></li>
+                                    <li><li><a href= "<?php echo site_url('BaseController/izlogujse'); ?>" class="btn btn-outline-light top-btn">Izloguj se </a></li>
                                 </ul>
                             </div>
                         </nav>

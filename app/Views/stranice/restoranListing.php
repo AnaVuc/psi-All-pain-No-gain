@@ -118,7 +118,7 @@
                    
                         <div class="col-sm-6 col-lg-12 col-xl-6 featured-responsive">
                             <div class="featured-place-wrap">
-                                <a href="detail.html">
+                                <a href= "<?php echo base_url('BaseController/ispisRestorana/{$res}'); ?>">
                                     <img src="images/featured1.jpg" class="img-fluid" alt="#">
                                     <span class="featured-rating-green "><?php echo $res->Prosecna_ocena;?></span>
                                     <div class="featured-title-box">

@@ -52,11 +52,9 @@ class BaseController extends Controller
             //echo view('sablon/ajaxsearch');
             //echo view('stranice/registracija');
             echo view('stranice/logovanje');
-           
-            
-           
-
+       
         }
+        
         function fetch()
            {
             $output = '';
@@ -186,7 +184,44 @@ class BaseController extends Controller
        public function ispisiNalog(){
         $prom=$this->session->get('korisnik');
         echo view('stranice/nalog',['korisnik'=>$prom]);
-    }
+        }
+    
+        public function izlogujse() {
+            $this->session->destroy();
+           return  redirect()->to(site_url('/')); //podrazumevano
+        }
+        
+        public function ispisSvihRestorana(){
+            
+            $restoranModel=new RestoranModel();
+            $restorani=$restoranModel->findAll();
+            $data=[
+                'niz'=>$restoranModel->paginate(4),
+                'pager'=>$restoranModel->pager
+            ];
+            
+             
+            if($this->session->has('korisnik')){
+                $prom=$this->session->get('korisnik');
+                 echo view('sablon/header_ulogovan',['korisnik'=>$prom]);
+                 echo view('stranice/restoranListing',['data'=>$data]);
+                 echo view('sablon/footer');
+            }
+            else{
+                echo view('sablon/header');
+                echo view('sablon/footer');
+            }
+        }
+        
+        public function ispisJednogRestorana($id) {
+                $restoranModel=new RestoranModel();
+                $res=$restoranModel->dohvatiRestoranSaId($id);
+                $prom=$this->session->get('korisnik');
+                 echo view('sablon/header_ulogovan',['korisnik'=>$prom]);
+                 echo view('stranice/restoran',['restoran'=>$res]);
+                 echo view('sablon/footer');
+            
+        }
 
         
 
