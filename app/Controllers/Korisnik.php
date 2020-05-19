@@ -13,6 +13,8 @@ class Korisnik extends BaseController
         $data['controller']='Korisnik';
         $data['korisnik']=$this->session->get('korisnik'); 
         echo view('sablon/header_ulogovan',$data);
+        $s=site_url('Korisnik/izlogujse');
+        var_dump($s);
         $this->najpopularniji($restorani);
         //echo view("stranice/BoxRestoran", ['restoran'=>$restorani]);
         echo view('sablon/dobrodoslica');
@@ -76,6 +78,10 @@ class Korisnik extends BaseController
             $this->session->destroy();
            return  redirect()->to(site_url('/')); //podrazumevano
         }
+        
+    public function ispisiNalog(){
+        echo view('stranice/nalog');
+    }
     
       // protected function prikaz($page,$data) {
         
@@ -84,14 +90,6 @@ class Korisnik extends BaseController
        //// echo view('sablon/header_korisnik',$data);
       //  echo view("stranice/$page",$data);
       //  echo view('sablon/footer');
-        
-        
-        
-        
-      //  public function logout(){
-            //$this->session->destroy();
-           // return redirect()->to(site_url('/'));
-       // }
         
         //public function dodajVest(){
       //      $this->prikaz('dodavanjevesti',[]);

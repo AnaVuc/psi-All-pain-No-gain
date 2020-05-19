@@ -4,12 +4,12 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
-class UsertFilter implements FilterInterface
+class UserFilter implements FilterInterface
 {
     public function before(RequestInterface $request)
     {
        $session=session();
-        if($session->has('autor'))
+        if($session->has('korisnik'))
             return redirect ()->to ('Gost');
     }
 

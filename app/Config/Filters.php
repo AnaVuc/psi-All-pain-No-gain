@@ -10,8 +10,8 @@ class Filters extends BaseConfig
 		'csrf'     => \CodeIgniter\Filters\CSRF::class,
 		'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
 		'honeypot' => \CodeIgniter\Filters\Honeypot::class,
-                'gost'      =>\App\Filters\GostFilter::class,
-                'user'      =>\App\Filters\UserFilter::class,
+                'gost'=>\App\Filters\GostFilter::class,
+                'user'=>\App\Filters\UserFilter::class
 	];
 
 	// Always applied before every request
