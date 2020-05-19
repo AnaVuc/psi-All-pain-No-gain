@@ -52,6 +52,7 @@ class BaseController extends Controller
             //echo view('sablon/ajaxsearch');
             //echo view('stranice/registracija');
             echo view('stranice/logovanje');
+           
             
            
 

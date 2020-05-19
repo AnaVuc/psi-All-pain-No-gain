@@ -45,7 +45,7 @@
 							<tr>
 								<td><strong>Lozinka</strong></td>
 								<td><?php echo $korisnik->Password;?></td>
-								<td><a href="novaLozinka.html" class="btn btn-outline-dark top-btn">Promeni lozinku</a></td>
+                                                                <td><a href="promenasifre.php" class="btn btn-outline-dark top-btn">Promeni lozinku</a></td>
 							</tr>
 						</tbody>
 					</table>
