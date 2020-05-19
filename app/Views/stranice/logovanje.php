@@ -46,6 +46,16 @@
             ?></font>
               </div>
             </div>
+                <form class="filter-dropdown">
+                                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                  <option selected>Vrsta korisnika</option>
+                  <option value="1">Admin</option>
+                  <option value="2">Moderator</option>
+                  <option value="3">Korisnik</option>
+                  
+                 </select>
+
+                                </form>
               
       
               

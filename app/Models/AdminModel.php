@@ -11,7 +11,7 @@ class AdminModel extends Model
     protected $returnType     = 'object';
    
 
-    protected $allowedFields = ['Password'];
+    protected $allowedFields = ['Korisnicko_ime','Password'];
 
 }
 /* 
