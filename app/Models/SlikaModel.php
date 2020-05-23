@@ -11,5 +11,9 @@ class SlikaModel extends Model
    
 
     protected $allowedFields = ['Opis', 'Slika','idRec'];
+    
+    public function slikaRestorana($imeRestorana){
+        return $this->where('idSl',$imeRestorana);
+    }
 
 }

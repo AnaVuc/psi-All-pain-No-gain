@@ -17,16 +17,23 @@
     <link rel="stylesheet" href="<?= base_url('css/simple-line-icons.css'); ?>"> 
     <link rel="stylesheet" href="<?= base_url('css/themify-icons.css'); ?>"> 
     <link rel="stylesheet" href="<?= base_url('css/font-awesome.min.css'); ?>"> 
-    <link rel="stylesheet" href="<?= base_url('font-awesome.min.css'); ?>"> 
     <link rel="stylesheet" href="<?= base_url('css/simple-line-icons.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('css/set1.css'); ?>"> 
     <link rel="stylesheet" href="<?= base_url('css/swiper.min.css.css'); ?>"> 
     <link rel="stylesheet" href="<?= base_url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900'); ?>"> 
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
     <script src="<?= base_url('js/jquery-3.2.1.min.js'); ?>"></script>
     <script src="<?= base_url('js/popper.min.js'); ?>""></script>
     <script src="<?= base_url('js/bootstrap.min.js'); ?>""></script>
-    <i class="fas fa-tachometer-alt"></i>
+    <script src="<?= base_url('js/jquery-3.2.1.min.js'); ?>"></script>
+    <script src="<?= base_url('js/popper.min.js'); ?>"></script>
+    <script src="<?= base_url('js/bootstrap.min.js'); ?>"></script>
+    <!-- Magnific popup JS -->
+    <script src="<?= base_url('js/jquery.magnific-popup.js'); ?>"></script>
+    <!-- Swipper Slider JS -->
+    <script src="<?= base_url('js/swiper.min.js'); ?>"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+
 </head>
 
 <body>

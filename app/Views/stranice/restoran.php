@@ -1,5 +1,13 @@
 
    <link rel="stylesheet" href="<?= base_url('css/swiper.min.css.css'); ?>"> 
+   
+     <script src="<?= base_url('js/jquery-3.2.1.min.js'); ?>"></script>
+    <script src="<?= base_url('js/popper.min.js'); ?>"></script>
+    <script src="<?= base_url('js/bootstrap.min.js'); ?>"></script>
+    <!-- Magnific popup JS -->
+    <script src="<?= base_url('js/jquery.magnific-popup.js'); ?>"></script>
+    <!-- Swipper Slider JS -->
+    <script src="<?= base_url('js/swiper.min.js'); ?>"></script>
 
 <div>
         <div class="row">&nbsp;</div>
@@ -14,35 +22,35 @@
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
-                    <a href="images/madera_image1.jpg" class="grid image-link">
-                        <img src="images/madera_image2.jpg" class="img-fluid" alt="#">
+                    <a href="<?php echo $slika->Opis;?>" class="grid image-link">
+                        <img src="<?php echo $slika->Opis;?>" class="img-fluid" alt="#">
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="images/madera_image3.jpg" class="grid image-link">
-                        <img src="images/madera_image4.jpg" class="img-fluid" alt="#">
+                    <a href="<?= base_url('images/madera_image3.jpg'); ?>" class="grid image-link">
+                        <img src="<?= base_url('images/madera_image3.jpg'); ?>" class="img-fluid" alt="#">
+                    </a>
+                </div>
+                <!--<div class="swiper-slide">
+                    <a href="<?= base_url('images/madera_image3.jpg'); ?>" class="grid image-link">
+                        <img src="<?= base_url('images/madera_image3.jpg'); ?>" class="img-fluid" alt="#">
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="images/madera_image5.jpg" class="grid image-link">
-                        <img src="images/madera_image6.jpg" class="img-fluid" alt="#">
+                    <a href="<?= base_url('images/madera_image3.jpg'); ?>" class="grid image-link">
+                        <img src="<?= base_url('images/madera_image3.jpg'); ?>" class="img-fluid" alt="#">
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="images/madera_instagram1JPG.jpg" class="grid image-link">
-                        <img src="images/rsz_madera2.jpg" class="img-fluid" alt="#">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="images/madera_instagram3JPG.jpg" class="grid image-link">
-                        <img src="images/rsz_madera4.jpg" class="img-fluid" alt="#">
+                    <a href=<?= base_url('images/madera_image3.jpg'); ?>" class="grid image-link">
+                        <img src=<?= base_url('images/madera_image3.jpg'); ?>" class="img-fluid" alt="#">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="images/madera_instagram5JPG.jpg" class="grid image-link">
                         <img src="images/rsz_madera.jpg" class="img-fluid" alt="#">
                     </a>
-                </div>
+                </div> -->
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination swiper-pagination-white"></div>
@@ -64,11 +72,13 @@
                        Vrsta hrane: <?php echo $res->Vrsta_hrane;?></p>
                     
                 </div>
+                
                 <div class="col-md-6">
                     <div class="reserve-seat-block">
                         <div class="reserve-rating">
                             <span><?php echo $res->Prosecna_ocena;?></span>
                         </div>
+                        <?php if ($korisnik){ ?>
                         <div class="review-btn">
                             <a href="#" class="btn btn-outline-danger">OSTAVI RECENZIJU</a>
                             <span><?php echo $res->brojRecenzija;?> ostavljenih recenzija</span>
@@ -82,6 +92,7 @@
                 </div>
             </div>
         </div>
+                <?php } ?>
     </section>
     <!--//END RESERVE A SEAT -->
     <!--============================= BOOKING DETAILS =============================-->
@@ -115,9 +126,8 @@
                                         <span></span>
                                         <span></span>
                                         <span class="round-icon-blank"></span>
-                                        <p>Napisano pre 2 dana</p>
                                     </div>
-                                    <div class="customer-rating">8.0</div>
+                                    <div class="customer-rating">4.0</div>
                                 </div>
                                 <p class="customer-text">Savršen enterijer, odlična hrana veoma ljubazni zaposleni
                                 </p>
@@ -128,8 +138,6 @@
                                     <li><img src="images/review-img2.jpg" class="img-fluid" alt="#"></li>
                                     <li><img src="images/review-img3.jpg" class="img-fluid" alt="#"></li>
                                 </ul>
-                                <span>28 ljudi označilo ovu recenziju kao korisnu</span>
-                                <a href="#"><span class="icon-like"></span>Korisno?</a>
                             </div>
                         </div>
                         <hr>
@@ -138,9 +146,9 @@
                 </div>
                 <div class="col-md-4 responsive-wrap">
                     <div class="contact-info">
-                        <img src="images/mapa.png" class="img-fluid" alt="#">
+                        <img src="<?= base_url('images/mapa.png'); ?>" class="img-fluid" alt="#">
                         <div class="address">
-                            <span class="icon-location-pin"></span>
+                            <span class="fab fa icon-location-pin"></span>
                             <p><?php echo $res->Adresa;?></p>
                         </div>
                         <div class="address">
@@ -151,11 +159,7 @@
                             <span class="icon-link"></span>
                             <p><?php echo $res->Sajt;?></p>
                         </div>
-                        <div class="address">
-                            <span class="icon-clock"></span>
-                            <p>Pon - Ned 12:00  - 00:00 am <br>
-                                <span class="open-now">TRENUTNO OTVORENO</span></p>
-                        </div>
+                        
                         
                     </div>
                   
@@ -164,3 +168,38 @@
         </div>
     </section>
    <?php } ?>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <script>
+        if ($('.image-link').length) {
+            $('.image-link').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        }
+        if ($('.image-link2').length) {
+            $('.image-link2').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        }
+    </script>

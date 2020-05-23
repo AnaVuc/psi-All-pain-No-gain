@@ -30,28 +30,18 @@ class RestoranModel extends Model
     public function dohvatiRestoraneCena($param){
         return $test=$this->where('Cenovni_rang',$param)->findAll();
         
+    } 
+    
+    public function brojRestorana() {
+        return $test= $this->countAll();
+        
+        
     }
+    public function pretraga($tekst){
+            $this->like('Ime',$tekst)->orLike('Adresa',$tekst)->findAll();
+       }
     
-    public function GetCatSearchName($search_name){
-    $qry = $this->db->select('*')->from('Restoran')
-                    ->where("Ime LIKE '%$search_name%'")
-                    ->get()->result(); // select data like rearch value.
-    return $qry;
-}
-    
-    function fetch_data($query)
- {
-        $this->db->select("*");
-        $this->db->from("Restoran");
-        if($query != '')
-        {
-         $this->db->like('Ime', $query);
-         $this->db->or_like('Addresa', $query);
-         
-         
-        }
-        return $this->db->get();
- }
+ 
     
     
     

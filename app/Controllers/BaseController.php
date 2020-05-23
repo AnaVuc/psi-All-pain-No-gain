@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\RestoranModel;
+use App\Models\SlikaModel;
 
 class BaseController extends Controller
 {
@@ -39,19 +40,6 @@ class BaseController extends Controller
         
         public function index()
         {
-            
-           /* $restoranModel=new RestoranModel();
-            $restorani=$restoranModel->findAll();
-            $this->najpopularniji($restorani);
-            $this->prikaz('BoxRestoran',['niz'=>$restorani]);*/
-
-            //echo view ('stranice/BoxRestoran',['niz'=>$restorani]);
-            //$filter=$restoranModel->dohvatiRestoraneOcena("4.5");
-          
-            //echo view('sablon/test',['restoran'=>$filter]);
-            //echo view('sablon/ajaxsearch');
-            //echo view('stranice/registracija');
-           // echo view('stranice/logovanje');
        
         }
         
@@ -182,8 +170,10 @@ class BaseController extends Controller
         }
         
        public function ispisiNalog(){
+        echo view('sablon/header_ulogovan');
         $prom=$this->session->get('korisnik');
         echo view('stranice/nalog',['korisnik'=>$prom]);
+        echo view('sablon/footer');
         }
     
         public function izlogujse() {
@@ -199,28 +189,40 @@ class BaseController extends Controller
                 'niz'=>$restoranModel->paginate(4),
                 'pager'=>$restoranModel->pager
             ];
-            
-             
-            if($this->session->has('korisnik')){
-                $prom=$this->session->get('korisnik');
-                 echo view('sablon/header_ulogovan',['korisnik'=>$prom]);
-                 echo view('stranice/restoranListing',['data'=>$data]);
-                 echo view('sablon/footer');
+           
+            $prom=$this->session->get('korisnik');
+            var_dump($prom);
+            if (!empty ($prom)){
+                echo view('sablon/header_ulogovan',['korisnik'=>$prom]);
+                echo view('stranice/restoranListing',['data'=>$data,'model'=>$restoranModel,'korisnik'=>$prom]);
+                echo view('sablon/footer');
             }
             else{
                 echo view('sablon/header');
-                echo view('stranice/restoranListingGost',['data'=>$data]);
+                echo view('stranice/restoranListing',['data'=>$data,'model'=>$restoranModel,'korisnik'=>$prom]);
                 echo view('sablon/footer');
             }
+                
+            
         }
         
         public function ispisJednogRestorana($id) {
                 $restoranModel=new RestoranModel();
+                $slikaModel=new SlikaModel();
+                $slika=$slikaModel->slikaRestorana(1);
                 $res=$restoranModel->dohvatiRestoranSaId($id);
                 $prom=$this->session->get('korisnik');
-                 echo view('sablon/header_ulogovan',['korisnik'=>$prom]);
-                 echo view('stranice/restoran',['restoran'=>$res]);
-                 echo view('sablon/footer');
+                var_dump($prom);
+                if (empty($prom)){
+                    echo view('sablon/header');
+                }
+                else{
+                    echo view('sablon/header_ulogovan',['korisnik'=>$prom]);
+                }
+                echo view('stranice/restoran',['restoran'=>$res,'korisnik'=>$prom,'slika'=>$slika]);
+                echo view('sablon/footer');
+                
+                
             
         }
 

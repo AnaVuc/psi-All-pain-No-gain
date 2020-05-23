@@ -2,6 +2,7 @@
 use App\Models\ModeratorModel;
 use App\Models\KorisnikModel;
 use App\Models\RestoranModel;
+use App\Models\AdminModel;
 
 
 class Gost extends BaseController
@@ -18,6 +19,7 @@ class Gost extends BaseController
 
 	//--------------------------------------------------------------------
     public function index(){
+        //echo view('stranice/test');
         $restoranModel=new RestoranModel();
         $restorani=$restoranModel->findAll();
         $data['restorani']=$restorani;
@@ -77,9 +79,6 @@ class Gost extends BaseController
                 ['errors'=>$this->validator->getErrors()]);
        }
       
-        //ubacimo u bazu ako je sve ok
-        //gde ide?
-        
        
        $kormod=new KorisnikModel();
        
@@ -109,41 +108,46 @@ class Gost extends BaseController
                 ['errors'=>$this->validator->getErrors()]);
         }
         $korModel=new KorisnikModel();
-        
-        $kor=$korModel->find($this->request->getVar('Korisnicko_ime'));
-     
-        
-        if($kor==null)
-            return $this->login('Korisnik ne postoji');
-        if($kor->Password!=$this->request->getVar('Password')){
-            return $this->login('Pogresna lozinka');
+        $modModel=new ModeratorModel();
+        $adminModel=new AdminModel();
+        switch($_POST['vrstaKorisnika']){
+            
+            case 'admin':
+                $admin=$adminModel->find($this->request->getVar('Korisnicko_ime'));
+                if($admin==null){
+                    return $this->login('Korisnik ne postoji');
+                }
+                if($admin->Password!=$this->request->getVar('Password')){
+                    return $this->login('Pogresna lozinka');
+                }
+                $this->session->set('korisnik', $admin);      
+                return redirect()->to(site_url('Admin')); 
+                break;
+            case 'moderator':
+                $mod=$modModel->find($this->request->getVar('Korisnicko_ime'));
+                if($mod==null){
+                    return $this->login('Korisnik ne postoji');
+                }
+                if($mod->Password!=$this->request->getVar('Password')){
+                    return $this->login('Pogresna lozinka');
+                }
+                $this->session->set('korisnik', $mod);      
+                return redirect()->to(site_url('Moderator'));
+                break;
+            case 'korisnik':
+                $kor=$korModel->find($this->request->getVar('Korisnicko_ime'));
+                if($kor==null){
+                    return $this->login('Korisnik ne postoji');
+                }
+                if($kor->Password!=$this->request->getVar('Password')){
+                    return $this->login('Pogresna lozinka');
+                }
+                $this->session->set('korisnik', $kor);      
+                return redirect()->to(site_url('Korisnik'));
+               }
+            }
+            
         }
         
-           //$regModel=new RegKorisnikModel();
-           //$moder=new ModeratorModel();
-           
-           //$m=$moder->find($this->request->getVar('Korisnicko_ime'));
-          // if($m==null){
-               //echo "Registrovani korisnik"; 
-               //skace na stranicu za korisnika
-              
-               $this->session->set('korisnik', $kor);      
-               return redirect()->to(site_url('Korisnik'));
-               
-          // }
-          // else
-           //{
-            //   echo 'Moderator';
-           //skace na stranicu za moderatora
-           // $this->session->set('korisnik', $kor);
-        
-           }
-        
-   
-        //return redirect()->to(site_url('Korisnik'));
-        
-        
-        
-        
-    }
+ 
 

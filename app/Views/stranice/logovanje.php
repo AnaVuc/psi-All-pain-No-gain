@@ -99,22 +99,35 @@
                 <font color='red'>
                     <?php if(!empty($errors['Password'])) 
                     echo $errors['Password'];
-            ?></font>
+                ?></font>
               </div>
             </div>
-                <form class="filter-dropdown">
-                                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-                  <option selected>Vrsta korisnika</option>
-                  <option value="1">Admin</option>
-                  <option value="2">Moderator</option>
-                  <option value="3">Korisnik</option>
-                  
-                 </select>
+                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="vrstaKorisnika" >
+                        <option value="admin">Admin</option>
+                        <option value="moderator">Moderator</option>
+                        <option value="korisnik" selected>Korisnik</option>
+                    </select>
 
-                                </form>
-              
-      
-              
+            <?php
+            if(isset($_POST['vrstaKorisnika'])){
+                $select1 = $_POST['vrstaKorisnika'];
+                switch ($select1) {
+                    case 'admin':
+                        echo 'this is ADMIN<br/>';
+                        break;
+                    case 'moderator':
+                        echo 'moderator<br/>';
+                        break;
+                    case 'korisnik':
+                        echo 'korisnik';
+                    default:
+                        # code...
+                        break;
+                }
+            }
+            ?>
+
+               
             <div class="col-md-12 mt-3">
               <div class="form-group">
                 <input type="submit"  value="Uloguj se" class="btn btn-primary py-3 px-5">
@@ -143,6 +156,12 @@
             };
         });
     </script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("vrstaKorisnika");
+          document.getElementbyId("demo").innerHTML = x;
+        }
+</script>
 </body>
 
 
