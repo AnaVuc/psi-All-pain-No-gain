@@ -7,11 +7,14 @@ class Moderator extends BaseController
 {
     public function index()
     {
-       echo view('sablon/header_ulogovan');
+       $data['korisnik']=$this->session->get('korisnik'); 
+       $mod=$this->session->get('korisnik'); 
+       var_dump($mod);
+       echo view('sablon/header_mod');
+      // $korisnikModel=new KorisnikModel();
+       //$korisnici=$korisnikModel->findAll();
+       //echo view('stranice/moderatorUklanjanjeKorisnika',['korisnici'=>$korisnici]);
        echo view('stranice/moderator_pocetna');
-       $korisnikModel=new KorisnikModel();
-       $korisnici=$korisnikModel->findAll();
-       echo view('stranice/moderatorUklanjanjeKorisnika',['korisnici'=>$korisnici]);
        echo view('sablon/footer');
 
 
@@ -21,5 +24,14 @@ class Moderator extends BaseController
         $korisnikModel=new KorisnikModel();
         $korisnikModel->delete($this->request->getVar('Korisnicko_ime'));
         return redirect()->to(site_url('Moderator'));
+    }
+    
+    public function ispisUklanjanjeKorisnika(){
+        $data['korisnik']=$this->session->get('korisnik'); 
+        $korisnikModel=new KorisnikModel();
+        $korisnici=$korisnikModel->findAll();
+        echo view('sablon/header_mod');
+        echo view('stranice/moderatorUklanjanjeKorisnika',['korisnici'=>$korisnici]);
+        echo view('sablon/footer');
     }
 }

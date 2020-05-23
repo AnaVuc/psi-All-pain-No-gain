@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: May 21, 2020 at 02:03 PM
+-- Generation Time: May 23, 2020 at 10:10 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.4.0
 
@@ -45,8 +45,17 @@ DROP TABLE IF EXISTS `moderator`;
 CREATE TABLE IF NOT EXISTS `moderator` (
   `Korisnicko_ime_mod` char(18) NOT NULL,
   `Password` char(18) DEFAULT NULL,
+  `Ime` varchar(30) NOT NULL,
+  `Prezime` varchar(30) NOT NULL,
   PRIMARY KEY (`Korisnicko_ime_mod`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `moderator`
+--
+
+INSERT INTO `moderator` (`Korisnicko_ime_mod`, `Password`, `Ime`, `Prezime`) VALUES
+('mod', '123456', 'Mod', 'Modic');
 
 -- --------------------------------------------------------
 
@@ -161,7 +170,8 @@ CREATE TABLE IF NOT EXISTS `registrovan_korisnik` (
 
 INSERT INTO `registrovan_korisnik` (`Korisnicko_ime`, `Password`, `Ime`, `Prezime`) VALUES
 ('ema123', 'ER1234', 'Emilija', 'Radovanovic'),
-('ema456', 'ER5678', 'Ema', 'Radovanovic');
+('ema456', 'ER5678', 'Ema', 'Radovanovic'),
+('AnaVuc', '123456', 'Ana', 'Vuceljic');
 
 -- --------------------------------------------------------
 

@@ -10,6 +10,6 @@ class ModeratorModel extends Model
     protected $returnType     = 'object';
    
 
-    protected $allowedFields= ['Korisnicko_ime_mod','Password'];
+    protected $allowedFields= ['Korisnicko_ime_mod','Password','Ime','Prezime'];
 
 }

@@ -12,7 +12,7 @@ class Korisnik extends BaseController
        $data['restorani']=$restorani;
         $data['controller']='Korisnik';
         $data['korisnik']=$this->session->get('korisnik'); 
-        $korisnik=$this->session->get('korisnik'); ;
+        $korisnik=$this->session->get('korisnik'); 
         echo view('sablon/header_ulogovan',$data); 
         $this->najpopularniji($restorani);
         echo view('sablon/dobrodoslica');
