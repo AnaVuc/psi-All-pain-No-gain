@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: May 16, 2020 at 04:45 PM
+-- Generation Time: May 21, 2020 at 02:03 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.4.0
 
@@ -59,9 +59,17 @@ CREATE TABLE IF NOT EXISTS `ostavljena_za` (
   `idRec` int(11) NOT NULL,
   `idR` int(11) NOT NULL,
   `Korisnicko_ime` char(18) NOT NULL,
-  PRIMARY KEY (`idRec`,`idR`,`Korisnicko_ime`),
-  KEY `R_18` (`idR`,`Korisnicko_ime`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `idOZ` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`idOZ`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `ostavljena_za`
+--
+
+INSERT INTO `ostavljena_za` (`idRec`, `idR`, `Korisnicko_ime`, `idOZ`) VALUES
+(1, 5, 'ema123', 1),
+(2, 6, 'ema123', 2);
 
 -- --------------------------------------------------------
 
@@ -73,17 +81,17 @@ DROP TABLE IF EXISTS `poseceni_restorani`;
 CREATE TABLE IF NOT EXISTS `poseceni_restorani` (
   `idR` int(11) NOT NULL,
   `Korisnicko_ime` char(18) NOT NULL,
-  PRIMARY KEY (`idR`,`Korisnicko_ime`),
-  KEY `R_16` (`Korisnicko_ime`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `idPosR` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`idPosR`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `poseceni_restorani`
 --
 
-INSERT INTO `poseceni_restorani` (`idR`, `Korisnicko_ime`) VALUES
-(5, 'ema123'),
-(9, 'ema123');
+INSERT INTO `poseceni_restorani` (`idR`, `Korisnicko_ime`, `idPosR`) VALUES
+(5, 'ema123', 1),
+(9, 'ema123', 2);
 
 -- --------------------------------------------------------
 
@@ -114,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `radno_vreme` (
 
 DROP TABLE IF EXISTS `recenzija`;
 CREATE TABLE IF NOT EXISTS `recenzija` (
-  `idRec` int(11) NOT NULL,
+  `idRec` int(11) NOT NULL AUTO_INCREMENT,
   `Korisnicko_ime_mod` char(18) DEFAULT NULL,
   `idR` int(11) NOT NULL,
   `Tekst` text,
@@ -122,7 +130,15 @@ CREATE TABLE IF NOT EXISTS `recenzija` (
   PRIMARY KEY (`idRec`),
   KEY `R_7` (`idR`),
   KEY `R_19` (`Korisnicko_ime_mod`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `recenzija`
+--
+
+INSERT INTO `recenzija` (`idRec`, `Korisnicko_ime_mod`, `idR`, `Tekst`, `Ocena`) VALUES
+(1, '', 5, 'Odlican restoran, sve preporuke!', 10),
+(2, NULL, 5, 'dbfdxb cv', 6);
 
 -- --------------------------------------------------------
 
@@ -145,9 +161,7 @@ CREATE TABLE IF NOT EXISTS `registrovan_korisnik` (
 
 INSERT INTO `registrovan_korisnik` (`Korisnicko_ime`, `Password`, `Ime`, `Prezime`) VALUES
 ('ema123', 'ER1234', 'Emilija', 'Radovanovic'),
-('ema456', 'ER5678', 'Ema', 'Radovanovic'),
-('ema1234', 'ER1234', 'Emilija', 'Radovanovic'),
-('ema4567', 'ER5678', 'Ema', 'Radovanovic');
+('ema456', 'ER5678', 'Ema', 'Radovanovic');
 
 -- --------------------------------------------------------
 
