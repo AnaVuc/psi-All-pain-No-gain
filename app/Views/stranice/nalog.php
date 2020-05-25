@@ -58,7 +58,7 @@
                             <tr>
                                 <td><strong>Lozinka</strong></td>
                                 <td><?php echo $korisnik->Password; ?></td>
-                                <td><a href="promenasifre.php" class="btn btn-outline-dark top-btn">Promeni lozinku</a></td>
+                                <td><a href="<?php echo site_url('BaseController/promena_lozinke'); ?>" class="btn btn-outline-dark top-btn">Promeni lozinku</a></td>
                             </tr>
                         </tbody>
                     </table>

@@ -12,10 +12,12 @@ class AdminModel extends Model
 
     protected $allowedFields = ['Korisnicko_ime','Password'];
 
-}
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+    public function nadjiPoKI($kor_ime){
+         $rez=$this->where('Korisnicko_ime',$kor_ime)->find();
+         foreach ($rez as $r){
+            return $r;
+         }
+      
+   }
+}

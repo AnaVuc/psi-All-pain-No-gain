@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: May 23, 2020 at 10:10 PM
+-- Generation Time: May 25, 2020 at 04:06 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.4.0
 
@@ -35,6 +35,13 @@ CREATE TABLE IF NOT EXISTS `admin` (
   PRIMARY KEY (`Korisnicko_ime`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`Korisnicko_ime`, `Password`) VALUES
+('admin1', 'admin1');
+
 -- --------------------------------------------------------
 
 --
@@ -43,19 +50,19 @@ CREATE TABLE IF NOT EXISTS `admin` (
 
 DROP TABLE IF EXISTS `moderator`;
 CREATE TABLE IF NOT EXISTS `moderator` (
-  `Korisnicko_ime_mod` char(18) NOT NULL,
+  `Korisnicko_ime` char(18) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Password` char(18) DEFAULT NULL,
   `Ime` varchar(30) NOT NULL,
   `Prezime` varchar(30) NOT NULL,
-  PRIMARY KEY (`Korisnicko_ime_mod`)
+  PRIMARY KEY (`Korisnicko_ime`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `moderator`
 --
 
-INSERT INTO `moderator` (`Korisnicko_ime_mod`, `Password`, `Ime`, `Prezime`) VALUES
-('mod', '123456', 'Mod', 'Modic');
+INSERT INTO `moderator` (`Korisnicko_ime`, `Password`, `Ime`, `Prezime`) VALUES
+('mod', 'proba1', 'Mod', 'Modic');
 
 -- --------------------------------------------------------
 
