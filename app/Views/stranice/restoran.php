@@ -114,7 +114,7 @@
                         <div class="customer-review_wrap">
                             <?php 
                         $recenzijaModel=new App\Models\RecenzijaModel();
-                        $recenzije=$recenzijaModel->where('Korisnicko_ime_mod !=', null)->where('idR',$res->idR)->findAll();
+                        $recenzije=$recenzijaModel->where('Korisnicko_ime !=', null)->where('idR',$res->idR)->findAll();
                         $ostavljenaZaModel=new \App\Models\OstavljenaZaModel();
                         $restoranModel=new App\Models\RestoranModel();
                         foreach($recenzije as $recenzija){
