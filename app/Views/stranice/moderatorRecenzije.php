@@ -8,7 +8,7 @@
                         <hr>
                         <?php 
                         $recenzijaModel=new App\Models\RecenzijaModel();
-                        $recenzije=$recenzijaModel->where('Korisnicko_ime_mod', null)->findAll();
+                        $recenzije=$recenzijaModel->where('Korisnicko_ime', null)->findAll();
                         $ostavljenaZaModel=new \App\Models\OstavljenaZaModel();
                         $restoranModel=new App\Models\RestoranModel();
                         foreach($recenzije as $recenzija){

@@ -16,7 +16,8 @@ class ModeratorModel extends Model
     public function nadjiPoKI($kor_ime){
        $rez=  $this->where('Korisnicko_ime',$kor_ime)->find();
          foreach ($rez as $r){
-            return $r;         }
+            return $r;        
+            }
     }
 
 }
