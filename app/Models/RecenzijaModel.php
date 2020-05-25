@@ -10,7 +10,7 @@ class RecenzijaModel extends Model
     protected $returnType     = 'object';
    
 
-    protected $allowedFields= ['Korisnicko_ime_mod','Tekst','Ocena','idR'];
+    protected $allowedFields= ['Korisnicko_ime','Tekst','Ocena','idR'];
 
 }
 
