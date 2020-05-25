@@ -9,7 +9,7 @@ class RestoranModel extends Model
 
     protected $returnType     = 'object';
 
-    protected $allowedFields = ['Ime', 'Broj_telefona','Adresa','Sajt','Vrsta_hrane','Cenovni_rang','Prosecna_ocena','idSl','brojRecenzija'];
+    protected $allowedFields = ['Ime', 'Broj_telefona','Adresa','Sajt','Vrsta_hrane','Cenovni_rang','Prosecna_ocena','idSl','brojRecenzija','zbirOcena'];
 
  
     public function dohvatiRestoraneVH($param){

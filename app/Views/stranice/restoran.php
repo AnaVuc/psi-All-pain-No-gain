@@ -112,7 +112,62 @@
                         <h5><?php echo $res->brojRecenzija;?> recenzija</h5>
                         <hr>
                         <div class="customer-review_wrap">
+                            <?php 
+                        $recenzijaModel=new App\Models\RecenzijaModel();
+                        $recenzije=$recenzijaModel->where('Korisnicko_ime_mod !=', null)->where('idR',$res->idR)->findAll();
+                        $ostavljenaZaModel=new \App\Models\OstavljenaZaModel();
+                        $restoranModel=new App\Models\RestoranModel();
+                        foreach($recenzije as $recenzija){
+                            $ostavljenaZa=$ostavljenaZaModel->find($recenzija->idRec);
+                            $restoran=$restoranModel->find($recenzija->idR);
+                            echo '<div class="customer-review_wrap">
                             <div class="customer-img">
+                                <p>'.$ostavljenaZa->Korisnicko_ime.'</p>
+                            </div>
+                            <div class="customer-content-wrap">
+                                <div class="customer-content">
+                                    <div class="customer-review">
+                                        ';
+                            if($recenzija->Ocena>=1){
+                                echo '<span></span>';
+                            }
+                            else {
+                                 echo '<span class="round-icon-blank"></span>';
+                            }
+                            if($recenzija->Ocena>=2){
+                                echo '<span></span>';
+                            }
+                            else {
+                                echo '<span class="round-icon-blank"></span>';
+                            }
+                            if($recenzija->Ocena>=3){
+                                echo '<span></span>';
+                            }
+                            else {
+                                echo '<span class="round-icon-blank"></span>';
+                            }
+                            if($recenzija->Ocena>=4){
+                                echo '<span></span>';
+                            }
+                            else {
+                                echo '<span class="round-icon-blank"></span>';
+                            }
+                            if($recenzija->Ocena>=5){
+                                echo '<span></span>';
+                            }
+                            else {
+                                echo '<span class="round-icon-blank"></span>';
+                            }
+                                    echo'</div>
+                                    <div class="customer-rating">'.$recenzija->Ocena.'</div>
+                                </div>
+                                <p class="customer-text">'.$recenzija->Tekst.'</p>
+                            </div>
+                        </div>
+                        <hr>';
+                        }
+                        ?>
+                          <!-- <div class="customer-img">
                                 <img src="images/customer-img1.jpg" class="img-fluid" alt="#">
                                 <p>Ljiljana F</p>
                                 <span>12 recenzija</span>
@@ -138,9 +193,8 @@
                                     <li><img src="images/review-img2.jpg" class="img-fluid" alt="#"></li>
                                     <li><img src="images/review-img3.jpg" class="img-fluid" alt="#"></li>
                                 </ul>
-                            </div>
+                            </div>-->
                         </div>
-                        <hr>
                     
                     </div>
                 </div>
