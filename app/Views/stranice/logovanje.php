@@ -102,31 +102,15 @@
                 ?></font>
               </div>
             </div>
+            <div class="col-md-6">
                     <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="vrstaKorisnika" >
                         <option value="admin">Admin</option>
                         <option value="moderator">Moderator</option>
                         <option value="korisnik" selected>Korisnik</option>
                     </select>
+            </div>
 
-            <?php
-            if(isset($_POST['vrstaKorisnika'])){
-                $select1 = $_POST['vrstaKorisnika'];
-                switch ($select1) {
-                    case 'admin':
-                        echo 'this is ADMIN<br/>';
-                        break;
-                    case 'moderator':
-                        echo 'moderator<br/>';
-                        break;
-                    case 'korisnik':
-                        echo 'korisnik';
-                    default:
-                        # code...
-                        break;
-                }
-            }
-            ?>
-
+      
                
             <div class="col-md-12 mt-3">
               <div class="form-group">

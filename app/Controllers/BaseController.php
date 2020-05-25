@@ -5,6 +5,8 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\RestoranModel;
 use App\Models\SlikaModel;
+use App\Models\KorisnikModel;
+use App\Models\AdminModel;
 
 class BaseController extends Controller
 {
@@ -42,50 +44,79 @@ class BaseController extends Controller
         {
        
         }
-        
-        function fetch()
-           {
-            $output = '';
-            $query = '';
-            $this->load->model('RestoranModel');
-            if($this->input->post('query'))
-            {
-             $query = $this->input->post('query');
-            }
-            $data = $this->RestoranModel->fetch_data($query);
-            $output .= '
-            <div class="table-responsive">
-               <table class="table table-bordered table-striped">
-                <tr>
-                 <th>Ime</th>
-                 <th>Addresa</th>
-                </tr>
-            ';
-            if($data->num_rows() > 0)
-            {
-             foreach($data->result() as $row)
-             {
-              $output .= '
-                <tr>
-                 <td>'.$row->Ime.'</td>
-                 <td>'.$row->Addresa.'</td>
-                </tr>
-              ';
-             }
-            }
-            else
-            {
-             $output .= '<tr>
-                 <td colspan="5">No Data Found</td>
-                </tr>';
-            }
-            $output .= '</table>';
-            echo $output;
- }
- 
+         public function promena_lozinke($poruka=null){
+          
+         echo view('sablon/header_ulogovan');
+         echo view('stranice/promenasifre',['errors'=>$poruka]);
+         echo view('sablon/footer');
+        }
 
-        
-        
+        public function promenaLoz(){
+
+
+
+            if(!$this->validate(['password'=>'required', 'new'=>'required|min_length[6]|max_length[18]|alpha_numeric', 'new2'=>'required|matches[new]|min_length[6]|max_length[18]|alpha_numeric'],
+                    ['password'=>[
+                     'required'=> 'Ovo polje je obavezno',
+                    ],
+                     'new'=>[
+                     'alpha_numeric'=>'Ovo polje mora da sadrži samo slova i cifre',
+                     'min_length' => 'Minimalna dužina polja je 6 karaktera',
+                     'required'=> 'Ovo polje je obavezno',
+                     'max_length' => 'Maksimalna dužina polja je 18 karaktera'
+                    ],
+                     'new2'=>[
+                     'matches'=>'Pogrešno uneta šifra', 
+                     'alpha_numeric'=>'Ovo polje mora da sadrži samo slova i cifre',
+                     'min_length' => 'Minimalna dužina polja je 6 karaktera',
+                     'required'=> 'Ovo polje je obavezno',
+                     'max_length' => 'Maksimalna dužina polja je 18 karaktera'
+                    ]])) 
+                     {
+                    var_dump($this->validator->getErrors());
+                    return $this->promena_lozinke($this->validator->getErrors());
+                }
+             //provera da li je to njegova sifra
+                $korModel=new KorisnikModel();
+                $modModel=new \App\Models\ModeratorModel;
+                $adminModel=new AdminModel;
+                $prom=$this->session->get('korisnik');
+                $ime=$this->session->get('korisnik')->Korisnicko_ime;
+                if($prom->Password!=$this->request->getVar('password'))
+                  return $this->promena_lozinke('Pogresna stara lozinka');
+                 var_dump($korModel->nadjiPoKI($ime));
+                var_dump($modModel->nadjiPoKI($ime));
+                
+                var_dump($korModel->nadjiPoKI($ime)===$prom);
+                var_dump($modModel->nadjiPoKI($ime)===$prom);
+
+              //promena u bazi
+                if ($korModel->nadjiPoKI($ime)==$prom){
+                    $korModel->update($prom->Korisnicko_ime,['Password'=>$this->request->getVar('new')]);
+                    $this->session->set('password');
+                    return redirect()->to(site_url('Korisnik'));
+                    
+                }
+                if ($modModel->nadjiPoKI($ime)==$prom){
+                    $modModel->update($prom->Korisnicko_ime,['Password'=>$this->request->getVar('new')]);
+                    $this->session->set('password');
+                    return redirect()->to(site_url('Moderator'));
+                }
+                if ($adminModel->nadjiPoKI($ime)==$prom){
+                    $adminModel->update($prom->Korisnicko_ime,['Password'=>$this->request->getVar('new')]);
+                    $this->session->set('password');
+                    return redirect()->to(site_url('Admin'));
+                }
+                else{
+                    echo"Greska";
+                }
+
+                  //gde da skoci??
+
+               
+        }
+
+ 
         public function najpopularniji($r){
             
             usort($r,function($a,$b){
@@ -225,6 +256,7 @@ class BaseController extends Controller
                 
             
         }
+      
 
         
 

@@ -12,24 +12,11 @@ class KorisnikModel extends Model
 
     protected $allowedFields = ['Korisnicko_ime','Password', 'Ime','Prezime'];
     
-   
-/*protected $beforeInsert=['beforeInsert'];
-    protected $beforeUpdate=['beforeUpdate'];
-    
-    
-    protected function beforeInsert(array $data){
-        $data=$this->passwordHash($data);
-        return $data;
-    }
-       protected function beforeUpdate(array $data){
-          $data=$this->passwordHash($data);
-        return $data;
-        
-    }
-    protected function passwordHash(array $data){
-        if (isset($data['data']['Password'])) {
-            $data['data']['Password'] = password_hash($data['data']['Password'],PASSWORD_DEFAULT);
-        }
-        return $data;
-    } */
+   public function nadjiPoKI($kor_ime){
+         $rez=$this->where('Korisnicko_ime',$kor_ime)->find();
+         foreach ($rez as $r){
+            return $r;
+         }
+      
+   }
 }

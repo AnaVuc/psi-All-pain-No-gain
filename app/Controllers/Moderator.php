@@ -9,7 +9,6 @@ class Moderator extends BaseController
     {
        $data['korisnik']=$this->session->get('korisnik'); 
        $mod=$this->session->get('korisnik'); 
-       var_dump($mod);
        echo view('sablon/header_mod');
       // $korisnikModel=new KorisnikModel();
        //$korisnici=$korisnikModel->findAll();
