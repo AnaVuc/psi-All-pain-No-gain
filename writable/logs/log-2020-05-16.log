@@ -1,0 +1,272 @@
+CRITICAL - 2020-05-16 09:19:15 --> Invalid file: logovanje.php
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('logovanje.php')
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('logovanje', Array, true)
+#2 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Korisnik.php(35): view('logovanje')
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Korisnik->index()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Korisnik))
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#8 {main}
+CRITICAL - 2020-05-16 09:19:48 --> Invalid file: logovanje.php
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('logovanje.php')
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('logovanje', Array, true)
+#2 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Korisnik.php(35): view('logovanje')
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Korisnik->index()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Korisnik))
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#8 {main}
+CRITICAL - 2020-05-16 09:20:03 --> Invalid file: logovanje.php
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('logovanje.php')
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('logovanje', Array, true)
+#2 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Korisnik.php(35): view('logovanje')
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Korisnik->index()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Korisnik))
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#8 {main}
+CRITICAL - 2020-05-16 09:20:25 --> Invalid file: logovanje.php
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('logovanje.php')
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('logovanje', Array, true)
+#2 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Korisnik.php(35): view('logovanje')
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Korisnik->index()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Korisnik))
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#8 {main}
+CRITICAL - 2020-05-16 09:20:38 --> Invalid file: logovanje.php
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('logovanje.php')
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('logovanje', Array, true)
+#2 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Korisnik.php(35): view('logovanje')
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Korisnik->index()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Korisnik))
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#8 {main}
+CRITICAL - 2020-05-16 09:49:13 --> Undefined variable: restoran
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Views\sablon\srednji.php(228): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\p...', 228, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('sablon/srednji', Array, true)
+#3 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Home.php(11): view('sablon/srednji')
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Home->index()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#9 {main}
+CRITICAL - 2020-05-16 09:49:14 --> Undefined variable: restoran
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Views\sablon\srednji.php(228): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\p...', 228, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('sablon/srednji', Array, true)
+#3 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Home.php(11): view('sablon/srednji')
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Home->index()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#9 {main}
+CRITICAL - 2020-05-16 09:49:51 --> Undefined variable: restoran
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Views\sablon\srednji.php(228): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\p...', 228, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('sablon/srednji', Array, true)
+#3 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Home.php(11): view('sablon/srednji')
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Home->index()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#9 {main}
+CRITICAL - 2020-05-16 09:49:54 --> Undefined variable: restoran
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Views\sablon\srednji.php(228): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\p...', 228, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('sablon/srednji', Array, true)
+#3 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Home.php(11): view('sablon/srednji')
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Home->index()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#9 {main}
+CRITICAL - 2020-05-16 09:50:19 --> Invalid file: logovanje.php
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('logovanje.php')
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('logovanje', Array, true)
+#2 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Korisnik.php(35): view('logovanje')
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Korisnik->index()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Korisnik))
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#8 {main}
+CRITICAL - 2020-05-16 13:20:31 --> Call to undefined function set_value()
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(246): include()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('stranice/login', Array, true)
+#2 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(12): view('stranice/login', Array)
+#3 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(27): App\Controllers\Gost->prikaz('login', Array)
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Gost->loginSubmit()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#6 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#9 {main}
+CRITICAL - 2020-05-16 13:42:24 --> Class 'App\Models\KorisnikModelModel' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\BaseController->index()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#5 {main}
+CRITICAL - 2020-05-16 13:42:40 --> Undefined variable: KorisnikModel
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\BaseController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\p...', 46, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\BaseController->index()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#6 {main}
+CRITICAL - 2020-05-16 15:03:46 --> Cannot call constructor
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(886): App\Controllers\Gost->__construct()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#5 {main}
+CRITICAL - 2020-05-16 15:06:25 --> Class 'App\Controllers\CIController' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Router\Router.php(575): include_once()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Gost')
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Gost')
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#7 {main}
+CRITICAL - 2020-05-16 15:06:45 --> Class 'App\Controllers\CI_Controller' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Router\Router.php(575): include_once()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Gost')
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Gost')
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#7 {main}
+CRITICAL - 2020-05-16 15:07:47 --> Class 'App\Controllers\Controller' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Router\Router.php(575): include_once()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Gost')
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Gost')
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#7 {main}
+CRITICAL - 2020-05-16 15:11:33 --> Cannot call constructor
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(886): App\Controllers\Gost->__construct()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#5 {main}
+CRITICAL - 2020-05-16 15:12:06 --> Undefined property: App\Controllers\Gost::$session
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\wamp64\\www\\p...', 10, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(886): App\Controllers\Gost->__construct()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#6 {main}
+CRITICAL - 2020-05-16 15:13:07 --> Undefined property: App\Controllers\Gost::$session
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\wamp64\\www\\p...', 11, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(886): App\Controllers\Gost->__construct()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#6 {main}
+CRITICAL - 2020-05-16 15:14:34 --> Cannot call constructor
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(886): App\Controllers\Gost->__construct()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#5 {main}
+CRITICAL - 2020-05-16 15:16:37 --> Undefined property: App\Controllers\Gost::$session
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\wamp64\\www\\p...', 13, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(886): App\Controllers\Gost->__construct()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#6 {main}
+CRITICAL - 2020-05-16 15:21:28 --> Undefined property: App\Controllers\Gost::$session
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\wamp64\\www\\p...', 13, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(886): App\Controllers\Gost->__construct()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#6 {main}
+CRITICAL - 2020-05-16 15:26:30 --> Undefined property: App\Controllers\Gost::$load
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\wamp64\\www\\p...', 16, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(886): App\Controllers\Gost->__construct()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#6 {main}
+CRITICAL - 2020-05-16 15:27:03 --> Call to undefined method CodeIgniter\Session\Session::userdata()
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(886): App\Controllers\Gost->__construct()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#5 {main}
+CRITICAL - 2020-05-16 15:27:38 --> Call to a member function model() on null
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(886): App\Controllers\Gost->__construct()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#5 {main}
+CRITICAL - 2020-05-16 15:28:33 --> Class 'App\Controllers\KorisnikModel' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(886): App\Controllers\Gost->__construct()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#5 {main}
+CRITICAL - 2020-05-16 15:29:09 --> Class 'App\Controllers\App\ModelsKorisnikModel' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(886): App\Controllers\Gost->__construct()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#5 {main}
+CRITICAL - 2020-05-16 15:29:40 --> Undefined property: App\Controllers\Gost::$load
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\wamp64\\www\\p...', 29, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Gost->index()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#6 {main}
+CRITICAL - 2020-05-16 15:29:41 --> Undefined property: App\Controllers\Gost::$load
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\wamp64\\www\\p...', 29, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Gost->index()
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#6 {main}
+CRITICAL - 2020-05-16 15:30:26 --> Invalid file: index.php
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('index.php', Array, true)
+#2 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(29): view('index.php')
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Gost->index()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#8 {main}

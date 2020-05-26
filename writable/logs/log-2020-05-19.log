@@ -1,0 +1,29 @@
+CRITICAL - 2020-05-19 07:25:41 --> Trying to get property 'Ime' of non-object
+#0 C:\wamp64\www\psi-All-pain-No-gain\app\Views\sablon\dobrodoslica.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\wamp64\\www\\p...', 6, Array)
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('sablon/dobrodos...', Array, true)
+#3 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Korisnik.php(18): view('sablon/dobrodos...')
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Korisnik->index()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Korisnik))
+#6 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#9 {main}
+CRITICAL - 2020-05-19 07:56:04 --> Class 'App\Filters\UserFilter' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(378): CodeIgniter\Filters\Filters->run('Korisnik/ispisi...', 'before')
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#4 {main}
+CRITICAL - 2020-05-19 08:05:34 --> Class 'App\Filters\UserFilter' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(378): CodeIgniter\Filters\Filters->run('Korisnik/ispisi...', 'before')
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#4 {main}
+CRITICAL - 2020-05-19 11:15:22 --> Class 'App\Filters\UserFilter' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(378): CodeIgniter\Filters\Filters->run('Korisnik/promen...', 'before')
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#4 {main}

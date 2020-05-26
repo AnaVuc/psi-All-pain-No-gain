@@ -1,0 +1,62 @@
+CRITICAL - 2020-05-17 19:30:41 --> Invalid file: stranice/pocetna.php
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('stranice/pocetn...')
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('stranice/pocetn...', Array, true)
+#2 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(12): view('stranice/pocetn...', Array)
+#3 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(45): App\Controllers\Gost->prikaz('pocetna', Array)
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Gost->index()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#6 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#9 {main}
+CRITICAL - 2020-05-17 19:32:27 --> Class 'App\Validation\userrules' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Validation\Validation.php(147): CodeIgniter\Validation\Validation->loadRuleSets()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Controller.php(219): CodeIgniter\Validation\Validation->run()
+#2 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(118): CodeIgniter\Controller->validate(Array)
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Gost->loginSubmit()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#8 {main}
+CRITICAL - 2020-05-17 19:37:42 --> Class 'App\Controllers\RestoranModel' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Gost->index()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#5 {main}
+CRITICAL - 2020-05-17 19:38:27 --> Class 'App\Models\BaseController' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Router\Router.php(575): include_once()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Gost')
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Gost')
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#7 {main}
+CRITICAL - 2020-05-17 19:39:21 --> Class 'App\Validation\userrules' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Validation\Validation.php(147): CodeIgniter\Validation\Validation->loadRuleSets()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Controller.php(219): CodeIgniter\Validation\Validation->run()
+#2 C:\wamp64\www\psi-All-pain-No-gain\app\Controllers\Gost.php(127): CodeIgniter\Controller->validate(Array)
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Gost->loginSubmit()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#8 {main}
+CRITICAL - 2020-05-17 19:46:38 --> Class 'App\Controllers\KorisnikModel' not found
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Gost->kreirajNalog()
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#5 {main}
+CRITICAL - 2020-05-17 20:25:05 --> syntax error, unexpected '}', expecting end of file
+#0 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Gost')
+#1 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Gost')
+#2 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\psi-All-pain-No-gain\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\psi-All-pain-No-gain\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\p...')
+#6 {main}
