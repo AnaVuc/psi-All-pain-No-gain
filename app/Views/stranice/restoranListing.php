@@ -30,20 +30,19 @@
                                     <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" name="sortiranje">
                                     
                                         <option value="Cena">Cena</option>
-                                        <option value="Udaljenost">Udaljenost</option>
                                         <option value="Popularnost" selected>Popularnost</option>
                                         <option value="Ocena">Ocena</option>
                                     </select>
                                     
 
                                 </form>
+                               <!--<p>Redosled </p>
                                 <form class="filter-dropdown">
-                                    <select name="smer" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="smer" >
+                                    <select  class="custom-select mb-2 mr-sm-2 mb-sm-0" id="smer" name="s">
                                         <option value="Rastuce" >Rastuce</option>
                                         <option value="Opadajuce" selected>Opadajuce</option>
-
                                     </select>
-                                </form>
+                                </form> -->
                                 <div class="map-responsive-wrap">
                                     <a class="map-icon" href="#"><span class="icon-location-pin"></span></a>
                                 </div>

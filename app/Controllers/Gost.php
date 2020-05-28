@@ -25,6 +25,7 @@ class Gost extends BaseController
         $data['restorani']=$restorani;
         $data['controller']='Gost';
         echo view('sablon/header'); 
+        echo view('sablon/pretraga');
         $this->najpopularniji($restorani);
         echo view('stranice/registrujSe');
         $this->sortPoOceni($restorani);

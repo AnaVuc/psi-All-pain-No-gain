@@ -53,14 +53,13 @@ class BaseController extends Controller
              if (isset($_POST['sortiranje'])){
                  $sort= ($_POST['sortiranje']);
              }
-             $smer=null;
-             if (isset($_POST['smer'])){
+             /*$smer=null;
+             if (isset($_POST['s'])){
                  
-                 
-                 $smer=($_POST['smer']);
+                 $smer=($_POST['s']);
              }
-             var_dump($smer);
-            
+             echo '<br><br><br><br>';
+            var_dump($_POST);*/
              $vh=array();
              if (isset($_POST['vrsta'])){
                 foreach ($_POST['vrsta'] as $f){
