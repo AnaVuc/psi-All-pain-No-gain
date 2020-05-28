@@ -243,7 +243,6 @@ class BaseController extends Controller
                 $slika=$slikaModel->slikaRestorana(1);
                 $res=$restoranModel->dohvatiRestoranSaId($id);
                 $prom=$this->session->get('korisnik');
-                var_dump($prom);
                 if (empty($prom)){
                     echo view('sablon/header');
                 }

@@ -88,7 +88,8 @@ Author: Surjith S M
     font-size: 31px; }
   
   .navbar-light .navbar-brand {
-    color: white }
+    color: white;
+  }
     .navbar-light .navbar-brand:hover {
       color: white; }
   
@@ -141,7 +142,9 @@ Author: Surjith S M
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1; }
+    z-index: 1;
+    background-color: #252a33;
+  }
     @media (max-width: 992px) {
       .fixed {
         border: none;

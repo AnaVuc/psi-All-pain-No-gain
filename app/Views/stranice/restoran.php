@@ -1,5 +1,5 @@
 
-   <link rel="stylesheet" href="<?= base_url('css/swiper.min.css.css'); ?>"> 
+   <link rel="stylesheet" href="<?= base_url('css/swiper.min.css'); ?>"> 
    
      <script src="<?= base_url('js/jquery-3.2.1.min.js'); ?>"></script>
     <script src="<?= base_url('js/popper.min.js'); ?>"></script>
@@ -22,35 +22,21 @@
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
-                    <a href="<?php echo $slika->Opis;?>" class="grid image-link">
-                        <img src="<?php echo $slika->Opis;?>" class="img-fluid" alt="#">
-                    </a>
+                   
+                        <img src="<?= base_url('images/frans_image5.JPG'); ?>" class="img-fluid" alt="#">
+                    
                 </div>
                 <div class="swiper-slide">
-                    <a href="<?= base_url('images/madera_image3.jpg'); ?>" class="grid image-link">
-                        <img src="<?= base_url('images/madera_image3.jpg'); ?>" class="img-fluid" alt="#">
-                    </a>
-                </div>
-                <!--<div class="swiper-slide">
-                    <a href="<?= base_url('images/madera_image3.jpg'); ?>" class="grid image-link">
-                        <img src="<?= base_url('images/madera_image3.jpg'); ?>" class="img-fluid" alt="#">
-                    </a>
+                   
+                        <img src="<?= base_url('images/ambar_image1.jpg'); ?>" class="img-fluid" alt="#">
+                    
                 </div>
                 <div class="swiper-slide">
-                    <a href="<?= base_url('images/madera_image3.jpg'); ?>" class="grid image-link">
-                        <img src="<?= base_url('images/madera_image3.jpg'); ?>" class="img-fluid" alt="#">
-                    </a>
+                   
+                        <img src="<?= base_url('images/slider.jpg'); ?>" class="img-fluid" alt="#">
+                    
                 </div>
-                <div class="swiper-slide">
-                    <a href=<?= base_url('images/madera_image3.jpg'); ?>" class="grid image-link">
-                        <img src=<?= base_url('images/madera_image3.jpg'); ?>" class="img-fluid" alt="#">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="images/madera_instagram5JPG.jpg" class="grid image-link">
-                        <img src="images/rsz_madera.jpg" class="img-fluid" alt="#">
-                    </a>
-                </div> -->
+                
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination swiper-pagination-white"></div>
@@ -225,8 +211,8 @@
 
     <script>
         var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
+            slidesPerView: 1,
+            //slidesPerGroup: 4,
             loop: true,
             loopFillGroupWithBlank: true,
             pagination: {
