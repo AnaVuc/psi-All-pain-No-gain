@@ -44,6 +44,47 @@ class BaseController extends Controller
         {
        
         }
+        
+        public function sortiranje_filtriranje(){
+            $res=new RestoranModel;
+            var_dump($_POST);
+            //sortiranje
+            $sort=null;
+             if (isset($_POST['sortiranje'])){
+                 $sort= ($_POST['sortiranje']);
+             }
+             $smer=null;
+             if (isset($_POST['smer'])){
+                 
+                 
+                 $smer=($_POST['smer']);
+             }
+             var_dump($smer);
+            
+             $vh=array();
+             if (isset($_POST['vrsta'])){
+                foreach ($_POST['vrsta'] as $f){
+                    $vh[]=$f;
+                }
+             }
+             $c=array();
+             if (isset($_POST['cena'])){
+                foreach ($_POST['cena'] as $f){
+                    $c[]=$f;
+                }
+             }
+             $o=array();
+             if (isset($_POST['ocena'])){
+                 foreach ($_POST['ocena'] as $f){
+                     $cifre= explode("-", $f);
+                     $o[]= $cifre;
+                 }
+             }
+             
+             $r=$res->filter($vh,$o,$c,$sort);
+             $this->ispisSvihRestorana($r);
+        }
+        
          public function promena_lozinke($poruka=null){
           
          echo view('sablon/header_ulogovan');
@@ -73,7 +114,6 @@ class BaseController extends Controller
                      'max_length' => 'Maksimalna dužina polja je 18 karaktera'
                     ]])) 
                      {
-                    var_dump($this->validator->getErrors());
                     return $this->promena_lozinke($this->validator->getErrors());
                 }
              //provera da li je to njegova sifra
@@ -84,11 +124,11 @@ class BaseController extends Controller
                 $ime=$this->session->get('korisnik')->Korisnicko_ime;
                 if($prom->Password!=$this->request->getVar('password'))
                   return $this->promena_lozinke('Pogresna stara lozinka');
-                 var_dump($korModel->nadjiPoKI($ime));
-                var_dump($modModel->nadjiPoKI($ime));
+                // var_dump($korModel->nadjiPoKI($ime));
+                //var_dump($modModel->nadjiPoKI($ime));
                 
-                var_dump($korModel->nadjiPoKI($ime)===$prom);
-                var_dump($modModel->nadjiPoKI($ime)===$prom);
+                //var_dump($korModel->nadjiPoKI($ime)===$prom);
+                //var_dump($modModel->nadjiPoKI($ime)===$prom);
 
               //promena u bazi
                 if ($korModel->nadjiPoKI($ime)==$prom){
@@ -111,7 +151,6 @@ class BaseController extends Controller
                     echo"Greska";
                 }
 
-                  //gde da skoci??
 
                
         }
@@ -212,17 +251,20 @@ class BaseController extends Controller
            return  redirect()->to(site_url('/')); //podrazumevano
         }
         
-        public function ispisSvihRestorana(){
+        public function ispisSvihRestorana($r=null){
             
             $restoranModel=new RestoranModel();
             $restorani=$restoranModel->findAll();
+            if ($r!=null){
+                $restorani=$r;
+            }
             $data=[
                 'niz'=>$restoranModel->paginate(4),
+                'restorani'=>$restorani,
                 'pager'=>$restoranModel->pager
             ];
            
             $prom=$this->session->get('korisnik');
-            var_dump($prom);
             if (!empty ($prom)){
                 echo view('sablon/header_ulogovan',['korisnik'=>$prom]);
                 echo view('stranice/restoranListing',['data'=>$data,'model'=>$restoranModel,'korisnik'=>$prom]);
@@ -243,7 +285,6 @@ class BaseController extends Controller
                 $slika=$slikaModel->slikaRestorana(1);
                 $res=$restoranModel->dohvatiRestoranSaId($id);
                 $prom=$this->session->get('korisnik');
-                var_dump($prom);
                 if (empty($prom)){
                     echo view('sablon/header');
                 }

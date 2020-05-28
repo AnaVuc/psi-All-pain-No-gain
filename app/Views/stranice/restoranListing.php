@@ -12,12 +12,14 @@
     </div>
 <section>
         <div class="container-fluid">
+            <form name='sort_filt' action="<?= site_url("BaseController/sortiranje_filtriranje") ?>" method="post">
             <div class="row">
                 <div class="col-md-7 responsive-wrap">
                     <div class="row detail-filter-wrap">
                         <div class="col-md-4 featured-responsive">
                             <div class="detail-filter-text">
-                                <p>34 restorana</p>
+                                <p><?php $korModel=new App\Models\RestoranModel;
+                                echo $korModel->brojRestorana()?>  restorana </p>
                             </div>
                         </div>
                         <?php if ($korisnik){ ?>
@@ -25,21 +27,20 @@
                             <div class="detail-filter">
                                 <p>Sortiraj </p>
                                 <form class="filter-dropdown">
-                                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-                                        <option selected>Sortiranje</option>
+                                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" name="sortiranje">
+                                    
                                         <option value="Cena">Cena</option>
                                         <option value="Udaljenost">Udaljenost</option>
-                                        <option value="Popularnost">Popularnost</option>
+                                        <option value="Popularnost" selected>Popularnost</option>
                                         <option value="Ocena">Ocena</option>
                                     </select>
                                     
 
                                 </form>
                                 <form class="filter-dropdown">
-                                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-                                        <option selected>Redosled</option>
-                                        <option value="Rastuce">Rastuce</option>
-                                        <option value="Opadajuce">Opadajuce</option>
+                                    <select name="smer" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="smer" >
+                                        <option value="Rastuce" >Rastuce</option>
+                                        <option value="Opadajuce" selected>Opadajuce</option>
 
                                     </select>
                                 </form>
@@ -55,73 +56,75 @@
                         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                             <p>Vrsta hrane:</p>
                             <div class="checkbox">
-                                <p><input type="checkbox" name="vrsta" value="italijanska" <?php echo set_checkbox('vrsta', 'italijanska'); ?> >&nbsp;Italijanska</p>
+                                <p><input type="checkbox" name="vrsta[]" value="italijanska"  >&nbsp;Italijanska</p>
                             </div>
                             <div class="checkbox">
-                                <p><input type="checkbox" name="vrsta" value="grčka" <?php echo set_checkbox('vrsta', 'grčka'); ?> >&nbsp;Grčka</p>
+                                <p><input type="checkbox" name="vrsta[]" value="grčka"  >&nbsp;Grčka</p>
                             </div>
                             <div class="checkbox">
-                                <p><input type="checkbox" name="vrsta" value="meksička"  <?php echo set_checkbox('vrsta', 'meksička'); ?> >&nbsp;Meksička</p>
+                                <p><input type="checkbox" name="vrsta[]" value="meksička" >&nbsp;Meksička</p>
                             </div>
                             <div class="checkbox">
-                                <p><input type="checkbox" name="vrsta" value="azijska" <?php echo set_checkbox('vrsta', 'azijska'); ?> >&nbsp;Azijska</p>
+                                <p><input type="checkbox" name="vrsta[]" value="azijska"  >&nbsp;Azijska</p>
                             </div>
                             <div class="checkbox">
-                                <p><input type="checkbox" name="vrsta" value="srpska" <?php echo set_checkbox('vrsta', 'srpska'); ?> >&nbsp;Srpska</p>
+                                <p><input type="checkbox" name="vrsta[]" value="srpska" >&nbsp;Srpska</p>
                             </div>
                         </div>
-                        <?php
-                            if (isset($_POST['vrsta'])){
-                                echo $_POST['vrsta']; // Displays value of checked checkbox.
-                            }
-                            ?>
-                    
+                        
                         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                             <p>Cena:</p>
                             <div class="checkbox">
-                                <p><input type="checkbox" name="cena" value="$">&nbsp;$</p>
+                                <p><input type="checkbox" name="cena[]" value="$">&nbsp;$</p>
                             </div>
                             <div class="checkbox">
-                                <p><input type="checkbox" name="cena" value="$$">&nbsp;$$</p>
+                                <p><input type="checkbox" name="cena[]" value="$$">&nbsp;$$</p>
                             </div>
                             <div class="checkbox">
-                                <p><input type="checkbox" name="cena" value="$$$">&nbsp;$$$</p>
+                                <p><input type="checkbox" name="cena[]" value="$$$">&nbsp;$$$</p>
                             </div>
                             <div class="checkbox">
-                                <p><input type="checkbox" name="cena" value="$$$$">&nbsp;$$$$</p>
+                                <p><input type="checkbox" name="cena[]" value="$$$$">&nbsp;$$$$</p>
                             </div>
                             <div class="checkbox">
-                                <p><input type="checkbox" name="cena" value="$$$$$">&nbsp;$$$$$</p>
+                                <p><input type="checkbox" name="cena[]" value="$$$$$">&nbsp;$$$$$</p>
                             </div>
-                            </div>  
+                         </div>  
+                            
                             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                                 <p>Ocena:</p>
                                 <div class="checkbox">
-                                    <p><input type="checkbox" name="ocena">&nbsp;0-1</p>
+                                    <p><input type="checkbox" name="ocena[]" value="0-1">&nbsp;0-1</p>
                                 </div>
                                 <div class="checkbox">
-                                    <p><input type="checkbox" name="ocena">&nbsp;1-2</p>
+                                    <p><input type="checkbox" name="ocena[]" value="1-2">&nbsp;1-2</p>
                                 </div>
                                 <div class="checkbox">
-                                    <p><input type="checkbox" name="ocena">&nbsp;2-3</p>
+                                    <p><input type="checkbox" name="ocena[]" value="2-3">&nbsp;2-3</p>
                                 </div>
                                 <div class="checkbox">
-                                    <p><input type="checkbox" name="ocena">&nbsp;3-4</p>
+                                    <p><input type="checkbox" name="ocena[]" value="3-4">&nbsp;3-4</p>
                                 </div>
                                 <div class="checkbox">
-                                    <p><input type="checkbox" name="ocena">&nbsp;4-5</p>
+                                    <p><input type="checkbox" name="ocena[]" value="4-5">&nbsp;4-5</p>
                                 </div>
                                 
-                                </div>                   
+                            </div>                   
                         </div>
+                    <div class="col-md-12 mt-3 pull-right">
+                    <div class="form-group ">
+                      <input type="submit"  value="Potvrdi" class="btn btn-primary py-3 px-5">
+                    </div>
+                  </div>
+               
+            </form>
                       <?php } ?>
                      <div class="row light-bg detail-options-wrap">
                     <?php 
-                // ikonice se ne ucitavaju kako treba ali su ubacene u headeru
-               // echo ($pager);
-                    if($data['niz']):
+        
+                    if($data['restorani']):
                        
-                    foreach ($data['niz'] as $res){
+                    foreach ($data['restorani'] as $res){
                         ?>
                    
                         <div class="col-sm-6 col-lg-12 col-xl-6 featured-responsive">
@@ -149,6 +152,7 @@
                                 </a>
                             </div>
                         </div>
+                         
                     <?php  }
                         endif; ?>
                 <div class="col-md-5 responsive-wrap map-wrap">
@@ -158,11 +162,10 @@
                         <div id="map" data-lat="40.674" data-lon="-73.945" data-zoom="14"></div>
                     </div>
                 </div>
-              <?= $data['pager']->links() ?>
-                        <?php //$data['pager']->setSurroundCount(2) ?> 
-
-            
+              
+                  
             </div>
+            <?= $data['pager']->links('restorani_pager') ?>
         </div>
      </div>
   </div>
