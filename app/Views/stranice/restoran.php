@@ -23,17 +23,17 @@
 
                 <div class="swiper-slide">
                    
-                        <img src="<?= base_url('images/frans_image5.JPG'); ?>" class="img-fluid" alt="#">
+                        <img src="<?= base_url('images/frans_image5.JPG'); ?>" class="img-fluid1" alt="#">
                     
                 </div>
                 <div class="swiper-slide">
                    
-                        <img src="<?= base_url('images/ambar_image1.jpg'); ?>" class="img-fluid" alt="#">
+                        <img src="<?= base_url('images/ambar_image1.jpg'); ?>" class="img-fluid1" alt="#">
                     
                 </div>
                 <div class="swiper-slide">
                    
-                        <img src="<?= base_url('images/slider.jpg'); ?>" class="img-fluid" alt="#">
+                        <img src="<?= base_url('images/slider.jpg'); ?>" class="img-fluid1" alt="#">
                     
                 </div>
                 
