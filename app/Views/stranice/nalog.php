@@ -102,27 +102,32 @@
                             echo '<h5>Recenzija:'. $cntr.'</h5>
                         <hr>';
                             foreach ($ostavljenaZaRestorane as $ostavljenaZa) {
-                                $recenzija = $recenzijeModel->where("Korisnicko_ime !=",null)->find($ostavljenaZa->idRec);
-                                echo '<div class="customer-review_wrap">
+                                $recenzija = $recenzijeModel->where("Korisnicko_ime!=",null)->find($ostavljenaZa->idRec);
+                            if($recenzija!=null){ echo '<div class="customer-review_wrap">
                             <div class="customer-content-wrap">
                                 <div class="customer-content">
                                     <div class="customer-review">
                                         <h6>' . $restorani->find($recenzija->idR)->Ime . '</h6>
-                                        <!--<span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span class="round-icon-blank"></span>-->
+                                        
                                     </div>
-                                    <div class="customer-rating">' . $recenzija->Ocena . '</div>
+                                   ';
+                            
+                            if($recenzija->Ocena!=null){
+                                echo '<div class="customer-rating">'.$recenzija->Ocena.'</div>';
+                            }
+                               echo'
                                 </div>
                                 <p class="customer-text">' . $recenzija->Tekst . '</p>
-                                    <p class="customer-text">' . $recenzija->Korisnicko_ime . '</p>
-                                <ul>
-                                   <!--slike-->
-                                </ul>
+                                   
+                                ';
+                                    $slikaModel=new App\Models\SlikaModel();
+                                    $slike=$slikaModel->where("idRec",$recenzija->idRec)->findAll();
+                                    foreach($slike as $slika){
+                                        echo '<img src="'.base_url('images/'.$slika->Opis).'" class="img-fluid2" alt="#"> &nbsp;';
+                                    }
+                                    echo'
                             </div>
-                        </div> <hr>';
+                            </div> <hr>';}
                             }
                         }
                         else{

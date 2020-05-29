@@ -138,6 +138,7 @@
                                 <div class="customer-content">
                                     <div class="customer-review">
                                         ';
+                            if($recenzija->Ocena!=null){
                             if($recenzija->Ocena>=1){
                                 echo '<span></span>';
                             }
@@ -167,19 +168,19 @@
                             }
                             else {
                                 echo '<span class="round-icon-blank"></span>';
-                            }
-                                    echo'</div>
-                                    <div class="customer-rating">'.$recenzija->Ocena.'</div>
-                                </div>
+                            }}
+                                    echo'</div>';
+                                 if($recenzija->Ocena!=null) echo'   <div class="customer-rating">'.$recenzija->Ocena.'</div>';
+                               echo' </div>
                                 <p class="customer-text">'.$recenzija->Tekst.'</p>
-                                <ul>';
+                                ';
                                     $slikaModel=new App\Models\SlikaModel();
                                     $slike=$slikaModel->where("idRec",$recenzija->idRec)->findAll();
                                     foreach($slike as $slika){
-                                        echo '<li><img src="'.base_url('images/'.$slika->Opis).'" class="img-fluid" alt="#"></li>';
+                                        echo '<img src="'.base_url('images/'.$slika->Opis).'" class="img-fluid2" alt="#">&nbsp;';
                                     }
                                     echo'
-                                </ul>    
+                                    
                             </div>
                         </div>
                         <hr>';

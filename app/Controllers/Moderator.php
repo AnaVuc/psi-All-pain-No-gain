@@ -46,13 +46,14 @@ class Moderator extends BaseController
         $recenzija=$recenzijaModel->find($id);
         $restoran=$restoranModel->find($recenzija->idR);
         $mod=$this->session->get('korisnik');
-       // var_dump($mod);
         $recenzijaModel->update($recenzija->idRec,["Korisnicko_ime"=>$mod->Korisnicko_ime]); 
         $noviBrojRecenzija=$restoran->brojRecenzija+1;
-        $noviZbirOcena=$restoran->zbirOcena+$recenzija->Ocena;
-        $restoranModel->update($restoran->idR,["brojRecenzija"=>$noviBrojRecenzija]);
-        $restoranModel->update($restoran->idR,["zbirOcena"=>$noviZbirOcena]);
-        $restoranModel->update($restoran->idR,["Prosecna_ocena"=>[$noviZbirOcena*1.0/$noviBrojRecenzija]]);
+        if($recenzija->Ocena!=null){
+            $noviZbirOcena=$restoran->zbirOcena+$recenzija->Ocena;
+            $restoranModel->update($restoran->idR,["brojRecenzija"=>$noviBrojRecenzija]);
+            $restoranModel->update($restoran->idR,["zbirOcena"=>$noviZbirOcena]);
+            $restoranModel->update($restoran->idR,["Prosecna_ocena"=>[$noviZbirOcena*1.0/$noviBrojRecenzija]]);
+        }
         return redirect()->to(site_url('Moderator/ispisRecenzija'));
         
     }
