@@ -36,6 +36,105 @@ class BaseController extends Controller
 		$this->session = \Config\Services::session();
 	}
         
+        
+        public function ispisOstavljanjeRecenzije($id){
+                $restoranModel=new RestoranModel();
+                $res=$restoranModel->dohvatiRestoranSaId($id);
+                $prom=$this->session->get('korisnik');
+                echo view('sablon/header_ulogovan',['korisnik'=>$prom]);
+                echo view('stranice/ostavljanjeRecenzije',['restoran'=>$res,'korisnik'=>$prom]);
+                echo view('sablon/footer');
+        }
+        
+         public function ispisOstavljenaRecenzija($id){
+                $restoranModel=new RestoranModel();
+                $res=$restoranModel->dohvatiRestoranSaId($id);
+                $prom=$this->session->get('korisnik');
+                echo view('sablon/header_ulogovan',['korisnik'=>$prom]);
+                echo view('stranice/poslataRecenzija',['restoran'=>$res,'korisnik'=>$prom]);
+                echo view('sablon/footer');
+        }
+        
+        
+        
+        public function ostavljanjeRecenzije($id){
+            $prom=$this->session->get('korisnik');
+            $rate=null;
+            $tekstRecenzije=null;
+            $ocena='0';
+            if (isset($_POST['rating'])){
+                 $rate= ($_POST['rating']);
+            }
+            if (isset($_POST['tekstRecenzije'])){
+                 $tekstRecenzije= ($_POST['tekstRecenzije']);
+            }
+            $slike=array();
+            if(isset($_POST['slike'])){
+                foreach ($_POST['slike'] as $s){
+                    $slike[]=$s;
+                }
+            }
+            if($rate!=null){
+            foreach($rate as $r) $ocena=$r;}
+            
+            $recenzijaModel=new \App\Models\RecenzijaModel();
+            $ostavljenaZaModel=new \App\Models\OstavljenaZaModel();
+            $poseceniRestoraniModel= new \App\Models\PoseceniRestoraniModel();
+            $slikaModel= new \App\Models\SlikaModel();
+            $recenzijaModel->insert([
+            'Tekst'=>$tekstRecenzije,
+            'Ocena'=>$ocena,
+            'idR'=>$id
+        ]);
+            
+            $idRec=$recenzijaModel->getInsertID();
+            $ostavljenaZaModel->insert([
+            'Korisnicko_ime'=>$prom->Korisnicko_ime,
+            'idRec'=>$idRec,
+            'idR'=>$id
+        ]);
+           
+            $brojSlika= count($slike);
+            $i = 0;
+        while ($i < $brojSlika) {
+            if($slike[$i]!=''){
+            $slikaModel->insert([
+            'Opis'=>$slike[$i],
+            'idRec'=>$idRec,
+            'idR'=>$id
+             ]);
+            }
+            $i++;
+            
+            
+        }
+        
+        if($poseceniRestoraniModel->where('idR',$id)->where('Korisnicko_ime',$prom->Korisnicko_ime)->findAll()==null){
+            $poseceniRestoraniModel->insert([
+            'idR'=>$id,
+            'Korisnicko_ime'=>$prom->Korisnicko_ime
+             ]);
+            
+        }
+            
+            
+        return redirect()->to(site_url('BaseController/ispisOstavljenaRecenzija/'.$id.'#target'));
+            
+        }
+        
+        public function posetiRestoran($id){
+            $poseceniRestoraniModel=new \App\Models\PoseceniRestoraniModel();
+            $prom=$this->session->get('korisnik');
+            $poseceniRestoraniModel->insert([
+            'idR'=>$id,
+            'Korisnicko_ime'=>$prom->Korisnicko_ime
+             ]);
+            return redirect()->to(site_url('BaseController/ispisJednogRestorana/'.$id));
+        }
+
+
+
+
         protected function prikaz($page,$data){
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }

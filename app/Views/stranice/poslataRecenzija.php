@@ -73,33 +73,18 @@
                 <div class="col-md-6">
                     <div class="reserve-seat-block">
                         <div class="reserve-rating">
-                            <span><?php echo number_format($res->Prosecna_ocena, 2)?></span>
+                            <span><?php echo $res->Prosecna_ocena;?></span>
                         </div>
                         <?php if ($korisnik){ ?>
                         <div class="review-btn">
-                            <a href="<?php echo site_url("BaseController/ispisOstavljanjeRecenzije/{$res->idR}#target1"); ?>" class="btn btn-outline-danger">OSTAVI RECENZIJU</a>
+                            <a href="#" class="btn btn-outline-danger">OSTAVI RECENZIJU</a>
                             <span><?php echo $res->brojRecenzija;?> ostavljenih recenzija</span>
                         </div>
-                        <?php 
-                        $poseceniRestoraniModel=new App\Models\PoseceniRestoraniModel();
-                        
-                        if($poseceniRestoraniModel->where('Korisnicko_ime',$korisnik->Korisnicko_ime)->where('idR',$res->idR)->findAll()!=null){?>
-                            
-                            <div class="reserve-btn">
+                        <div class="reserve-btn">
                             <div class="featured-btn-wrap">
-                                <a href="" id="dugmePosecen" class="btn btn-danger">POSEĆEN</a>
+                                <a href="posecen.html" class="btn btn-danger">POSETI</a>
                             </div>
-                            </div>
-                       <?php }
-                        else{?>
-                            <div class="reserve-btn">
-                            <div class="featured-btn-wrap">
-                                <a href="<?php echo site_url("BaseController/posetiRestoran/{$res->idR}"); ?>" id="dugmePosecen" class="btn btn-danger">POSETI</a>
-                            </div>
-                            </div>
-                       <?php }
-                        ?>
-                       
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,7 +105,15 @@
                         </div>
                         
                     </div>
-                    <div class="booking-checkbox_wrap mt-4">
+                   <div class="booking-checkbox_wrap mt-4" id="target" >
+                        <div class="row">
+                           <h6>Hvala Vam na recenziji!</h6>
+                        </div>
+                        
+                        
+                        &nbsp;
+                        
+                        
                         <h5><?php echo $res->brojRecenzija;?> recenzija</h5>
                         <hr>
                         <div class="customer-review_wrap">
@@ -174,14 +167,6 @@
                                     <div class="customer-rating">'.$recenzija->Ocena.'</div>
                                 </div>
                                 <p class="customer-text">'.$recenzija->Tekst.'</p>
-                                <ul>';
-                                    $slikaModel=new App\Models\SlikaModel();
-                                    $slike=$slikaModel->where("idRec",$recenzija->idRec)->findAll();
-                                    foreach($slike as $slika){
-                                        echo '<li><img src="'.base_url('images/'.$slika->Opis).'" class="img-fluid" alt="#"></li>';
-                                    }
-                                    echo'
-                                </ul>    
                             </div>
                         </div>
                         <hr>';
@@ -276,6 +261,6 @@
                 }
             });
         }
-    </script>
-    
-    
+    </script> 
+
+

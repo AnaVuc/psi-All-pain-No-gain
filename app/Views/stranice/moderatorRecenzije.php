@@ -1,9 +1,13 @@
 
 <div class="container">
             <div class="row">
+                <br>
+                <br>
                 <div class="col-md-8 responsive-wrap">
                    
                     <div class="booking-checkbox_wrap mt-4">
+                        <br>
+                        <br>
                         <h5>Recenzije za odobravanje</h5>
                         <hr>
                         <?php 

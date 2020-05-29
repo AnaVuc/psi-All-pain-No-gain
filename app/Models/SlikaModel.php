@@ -10,7 +10,7 @@ class SlikaModel extends Model
     protected $returnType     = 'object';
    
 
-    protected $allowedFields = ['Opis', 'Slika','idRec'];
+    protected $allowedFields = ['Opis', 'Slika','idRec','idR'];
     
     public function slikaRestorana($imeRestorana){
         return $this->where('idSl',$imeRestorana);

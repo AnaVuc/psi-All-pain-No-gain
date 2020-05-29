@@ -92,7 +92,7 @@
                         $recenzijeModel = new App\Models\RecenzijaModel();
                         $cntr=0;
                         foreach($ostavljenaZaRestorane as $ostavljenaZa){
-                            $recenzija = $recenzijeModel->where("Korisnicko_ime_mod !=",null)->find($ostavljenaZa->idRec);
+                            $recenzija = $recenzijeModel->where("Korisnicko_ime !=",null)->find($ostavljenaZa->idRec);
                             if($recenzija!=null) $cntr++;
                         }
                         ?>
@@ -102,7 +102,7 @@
                             echo '<h5>Recenzija:'. $cntr.'</h5>
                         <hr>';
                             foreach ($ostavljenaZaRestorane as $ostavljenaZa) {
-                                $recenzija = $recenzijeModel->where("Korisnicko_ime_mod !=",null)->find($ostavljenaZa->idRec);
+                                $recenzija = $recenzijeModel->where("Korisnicko_ime !=",null)->find($ostavljenaZa->idRec);
                                 echo '<div class="customer-review_wrap">
                             <div class="customer-content-wrap">
                                 <div class="customer-content">
@@ -117,7 +117,7 @@
                                     <div class="customer-rating">' . $recenzija->Ocena . '</div>
                                 </div>
                                 <p class="customer-text">' . $recenzija->Tekst . '</p>
-                                    <p class="customer-text">' . $recenzija->Korisnicko_ime_mod . '</p>
+                                    <p class="customer-text">' . $recenzija->Korisnicko_ime . '</p>
                                 <ul>
                                    <!--slike-->
                                 </ul>
