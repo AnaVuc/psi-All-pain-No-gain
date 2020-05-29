@@ -1,4 +1,6 @@
- 
+
+   <link rel="stylesheet" href="<?= base_url('css/swiper.min.css'); ?>"> 
+   
      <script src="<?= base_url('js/jquery-3.2.1.min.js'); ?>"></script>
     <script src="<?= base_url('js/popper.min.js'); ?>"></script>
     <script src="<?= base_url('js/bootstrap.min.js'); ?>"></script>
@@ -71,33 +73,18 @@
                 <div class="col-md-6">
                     <div class="reserve-seat-block">
                         <div class="reserve-rating">
-                            <span><?php echo number_format($res->Prosecna_ocena, 2)?></span>
+                            <span><?php echo $res->Prosecna_ocena;?></span>
                         </div>
                         <?php if ($korisnik){ ?>
                         <div class="review-btn">
-                            <a href="<?php echo site_url("BaseController/ispisOstavljanjeRecenzije/{$res->idR}#target1"); ?>" class="btn btn-outline-danger">OSTAVI RECENZIJU</a>
+                            <a href="#" class="btn btn-outline-danger">OSTAVI RECENZIJU</a>
                             <span><?php echo $res->brojRecenzija;?> ostavljenih recenzija</span>
                         </div>
-                        <?php 
-                        $poseceniRestoraniModel=new App\Models\PoseceniRestoraniModel();
-                        
-                        if($poseceniRestoraniModel->where('Korisnicko_ime',$korisnik->Korisnicko_ime)->where('idR',$res->idR)->findAll()!=null){?>
-                            
-                            <div class="reserve-btn">
+                        <div class="reserve-btn">
                             <div class="featured-btn-wrap">
-                                <a href="" id="dugmePosecen" class="btn btn-danger">POSEĆEN</a>
+                                <a href="posecen.html" class="btn btn-danger">POSETI</a>
                             </div>
-                            </div>
-                       <?php }
-                        else{?>
-                            <div class="reserve-btn">
-                            <div class="featured-btn-wrap">
-                                <a href="<?php echo site_url("BaseController/posetiRestoran/{$res->idR}"); ?>" id="dugmePosecen" class="btn btn-danger">POSETI</a>
-                            </div>
-                            </div>
-                       <?php }
-                        ?>
-                       
+                        </div>
                     </div>
                 </div>
             </div>
@@ -118,7 +105,47 @@
                         </div>
                         
                     </div>
-                    <div class="booking-checkbox_wrap mt-4">
+                    <div class="booking-checkbox_wrap mt-4" id="target1">
+                        <br>
+                       <form name='ostavljanjeRecenzije' action="<?= site_url("BaseController/ostavljanjeRecenzije/{$res->idR}") ?>" method="post">
+                       <div class="star-rating">
+                        <h12>Ocenite restoran:</h12>
+                        <div class="rating-wrapper" > 
+                         <input type="radio" name="rating[]" value="5" id="star1">
+                         <label for="star1"></label>
+                         <input type="radio" name="rating[]" value="4" id="star2">
+                         <label for="star2"></label>
+                         <input type="radio" name="rating[]" value="3" id="star3">
+                         <label for="star3"></label>
+                         <input type="radio" name="rating[]" value="2" id="star4">
+                         <label for="star4"></label>
+                         <input type="radio" name="rating[]" value="1" id="star5">
+                         <label for="star5"></label>
+                         
+                        </div>
+                        <br>
+                       
+                       
+
+                    </div>
+                           <textarea class="form-control rounded-0" id="tekstRecenzije"  name="tekstRecenzije" rows="6" placeholder="Ovde ostavite recenziju"></textarea>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="file" name="slike[]" id="slike" multiple>
+                            </div>
+                            <div class="offset-sm-4 col-sm-2" id="">
+                                <div class="reserve-btn">
+                                    <div class="featured-btn-wrap">
+                                        <input type="submit"  value="Pošalji" class="btn btn-danger py-3 px-5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        </form>
+                        <br>
+                        
+                        
                         <h5><?php echo $res->brojRecenzija;?> recenzija</h5>
                         <hr>
                         <div class="customer-review_wrap">
@@ -172,14 +199,6 @@
                                     <div class="customer-rating">'.$recenzija->Ocena.'</div>
                                 </div>
                                 <p class="customer-text">'.$recenzija->Tekst.'</p>
-                                <ul>';
-                                    $slikaModel=new App\Models\SlikaModel();
-                                    $slike=$slikaModel->where("idRec",$recenzija->idRec)->findAll();
-                                    foreach($slike as $slika){
-                                        echo '<li><img src="'.base_url('images/'.$slika->Opis).'" class="img-fluid" alt="#"></li>';
-                                    }
-                                    echo'
-                                </ul>    
                             </div>
                         </div>
                         <hr>';
@@ -218,7 +237,7 @@
                 </div>
                 <div class="col-md-4 responsive-wrap">
                     <div class="contact-info">
-                         <div id="map1"></div>
+                        <img src="<?= base_url('images/mapa.png'); ?>" class="img-fluid" alt="#">
                         <div class="address">
                             <span class="fab fa icon-location-pin"></span>
                             <p><?php echo $res->Adresa;?></p>
@@ -232,13 +251,15 @@
                             <p><?php echo $res->Sajt;?></p>
                         </div>
                         
+                        
                     </div>
                   
                 </div>
             </div>
         </div>
     </section>
-   
+   <?php } ?>
+
     <script>
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
@@ -272,34 +293,6 @@
                 }
             });
         }
-    </script>
-<<<<<<< HEAD
-  <script>
-        function initMap() {
-            var geocoder = new google.maps.Geocoder();
-            var address = "<?php echo $res->Adresa; ?>";
+    </script> 
 
-            geocoder.geocode( { 'address': address}, function(results, status) {
 
-            if (status == google.maps.GeocoderStatus.OK) {
-                var latitude = results[0].geometry.location.lat();
-                var longitude = results[0].geometry.location.lng();
-                } 
-            
-            
-            var uluru = {lat: latitude, lng: longitude};
-            var map = new google.maps.Map(
-                document.getElementById('map1'), {zoom: 15, center: uluru});
-            // The marker, positioned at Uluru
-            var marker = new google.maps.Marker({position: uluru, map: map});
-            }); 
-    }
-    </script>
-   <?php } ?>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRbsu4r0eRiOzh5P_aK7UobUwesU6jFoY&callback=initMap">
-    </script>
-=======
-    
->>>>>>> cf4f4a7dc06e701ee7476064b0024abc7d2630e6
-    
