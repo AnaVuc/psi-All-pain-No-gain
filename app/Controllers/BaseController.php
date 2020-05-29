@@ -32,7 +32,7 @@ class BaseController extends Controller
 		// Preload any models, libraries, etc, here.
 		//--------------------------------------------------------------------
 		// E.g.:
-                $autoload['libraries'] = array('session', 'database');
+                $autoload['libraries'] = array('session', 'database','googlemaps');
 		$this->session = \Config\Services::session();
 	}
         
@@ -42,7 +42,7 @@ class BaseController extends Controller
         
         public function index()
         {
-       
+            $this->googlemaps->initalize();
         }
         
         public function sortiranje_filtriranje(){
@@ -257,12 +257,13 @@ class BaseController extends Controller
             if ($r!=null){
                 $restorani=$r;
             }
+            $marker[' position '] = 'Crescent Park, Palo Alto';
             $data=[
                 'niz'=>$restoranModel->paginate(4),
                 'restorani'=>$restorani,
-                'pager'=>$restoranModel->pager
+                'pager'=>$restoranModel->pager,
+                
             ];
-           
             $prom=$this->session->get('korisnik');
             if (!empty ($prom)){
                 echo view('sablon/header_ulogovan',['korisnik'=>$prom]);

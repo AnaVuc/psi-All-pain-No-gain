@@ -1010,7 +1010,8 @@ Author: Surjith S M
     top: 0;
     right: 0;
     bottom: 0;
-    width: 41.7%; }
+    width: 41.7%;
+    }
     @media (max-width: 992px) {
       .map-fix {
         display: none;
@@ -1026,6 +1027,10 @@ Author: Surjith S M
   
   #map {
     height: 100%;
-    width: 100%; }
+    width: 100%;}
+  #map1 {
+    height: 60%;
+    width: auto;
+  }
   
   /*# sourceMappingURL=style.css.map */

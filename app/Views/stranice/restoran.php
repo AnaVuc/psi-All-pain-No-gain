@@ -1,6 +1,4 @@
-
-   <link rel="stylesheet" href="<?= base_url('css/swiper.min.css'); ?>"> 
-   
+ 
      <script src="<?= base_url('js/jquery-3.2.1.min.js'); ?>"></script>
     <script src="<?= base_url('js/popper.min.js'); ?>"></script>
     <script src="<?= base_url('js/bootstrap.min.js'); ?>"></script>
@@ -186,7 +184,7 @@
                 </div>
                 <div class="col-md-4 responsive-wrap">
                     <div class="contact-info">
-                        <img src="<?= base_url('images/mapa.png'); ?>" class="img-fluid" alt="#">
+                         <div id="map1"></div>
                         <div class="address">
                             <span class="fab fa icon-location-pin"></span>
                             <p><?php echo $res->Adresa;?></p>
@@ -200,15 +198,13 @@
                             <p><?php echo $res->Sajt;?></p>
                         </div>
                         
-                        
                     </div>
                   
                 </div>
             </div>
         </div>
     </section>
-   <?php } ?>
-
+   
     <script>
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
@@ -243,3 +239,29 @@
             });
         }
     </script>
+  <script>
+        function initMap() {
+            var geocoder = new google.maps.Geocoder();
+            var address = "<?php echo $res->Adresa; ?>";
+
+            geocoder.geocode( { 'address': address}, function(results, status) {
+
+            if (status == google.maps.GeocoderStatus.OK) {
+                var latitude = results[0].geometry.location.lat();
+                var longitude = results[0].geometry.location.lng();
+                } 
+            
+            
+            var uluru = {lat: latitude, lng: longitude};
+            var map = new google.maps.Map(
+                document.getElementById('map1'), {zoom: 15, center: uluru});
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({position: uluru, map: map});
+            }); 
+    }
+    </script>
+   <?php } ?>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRbsu4r0eRiOzh5P_aK7UobUwesU6jFoY&callback=initMap">
+    </script>
+    

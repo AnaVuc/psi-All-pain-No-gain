@@ -10,6 +10,7 @@
 
         &nbsp;
     </div>
+
 <section>
         <div class="container-fluid">
             <form name='sort_filt' action="<?= site_url("BaseController/sortiranje_filtriranje") ?>" method="post">
@@ -151,21 +152,64 @@
                                 </a>
                             </div>
                         </div>
-                         
-                    <?php  }
-                        endif; ?>
+                         <?php } 
+                endif; ?>
+                    
                 <div class="col-md-5 responsive-wrap map-wrap">
-                    <div class="map-fix">
-                        <!-- data-toggle="affix" -->
+                    <div class="map-fix" data-toggle="affix" >
                         <!-- Google map will appear here! Edit the Latitude, Longitude and Zoom Level below using data-attr-*  -->
-                        <div id="map" data-lat="40.674" data-lon="-73.945" data-zoom="14"></div>
+                        <div id="map" ></div>
                     </div>
                 </div>
               
                   
+                
             </div>
-            <?= $data['pager']->links('restorani_pager') ?>
         </div>
      </div>
   </div>
 </section>
+<script>
+           
+
+        function init() {
+                var infowindow = new google.maps.InfoWindow();
+                var marker, i;
+                
+                    var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 13, center: new google.maps.LatLng(44.810754,20.446044)});
+             <?php foreach ($data['restorani'] as $res){
+                        ?>
+                var geocoder = new google.maps.Geocoder();
+                var address = "<?php echo $res->Adresa; ?>";
+
+                geocoder.geocode( { 'address': address}, function(results, status) {
+
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var latitude = results[0].geometry.location.lat();
+                    var longitude = results[0].geometry.location.lng();
+                    } 
+                 var LatLng=new google.maps.LatLng(latitude,longitude); 
+                
+                var uluru = {lat: latitude, lng: longitude};
+                
+                
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: LatLng, map: map,title:'<?php echo $res->Ime; ?>'});
+                marker.setMap(map);
+            }); 
+                
+
+            <?php };
+                    ?>
+        }google.maps.event.addListener(marker, 'click', (function(marker) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker));
+</script>
+        
+   
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRbsu4r0eRiOzh5P_aK7UobUwesU6jFoY&callback=init">
+    </script>
