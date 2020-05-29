@@ -35,7 +35,7 @@ class RestoranModel extends Model
         return $test=$this->where('Cenovni_rang',$param)->findAll();
         
     } 
-    public function filter($vh=null,$ocena=null,$cena=null,$sort=null){
+    public function filter($vh=null,$ocena=null,$cena=null,$sort=null,$smer=null){
         $builder = $this;
         //filter: vrsta hrane
         if (!empty($vh)) {
@@ -64,15 +64,15 @@ class RestoranModel extends Model
         
         if(!empty($sort)){
             if ($sort=="Ocena"){
-                $builder=$builder->orderBy('Prosecna_ocena','DESC');
+                $builder=$builder->orderBy('Prosecna_ocena',$smer);
             }
             if ($sort=="Cena"){
-                 $builder=$builder->orderBy('Cenovni_rang','DESC');
+                 $builder=$builder->orderBy('Cenovni_rang','$smer');
             }
             if ($sort=="Popularnost"){
                 //'Prosecna_ocena * brojRecenzija as popularnost'
                 $builder=$builder->select('*,Prosecna_ocena * brojRecenzija as popularnost',FALSE)
-                        ->orderBy('popularnost','DESC');
+                        ->orderBy('popularnost','$smer');
             }
             
         }        

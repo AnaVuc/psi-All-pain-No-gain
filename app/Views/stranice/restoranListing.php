@@ -23,9 +23,11 @@
                                 echo $korModel->brojRestorana()?>  restorana </p>
                             </div>
                         </div>
+                        
                         <?php if ($korisnik){ ?>
                         <div class="col-md-8 featured-responsive">
                             <div class="detail-filter">
+                                
                                 <p>Sortiraj </p>
                                 <form class="filter-dropdown">
                                     <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" name="sortiranje">
@@ -34,16 +36,16 @@
                                         <option value="Popularnost" selected>Popularnost</option>
                                         <option value="Ocena">Ocena</option>
                                     </select>
-                                    
+                                    <p>Redosled </p>
+                                <form class="filter-dropdown">
+                                    <select  class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" name="smer">
+                                        <option value="ASC" >Rastuce</option>
+                                        <option value="DESC" selected>Opadajuce</option>
+                                    </select>
+                                </form>
 
                                 </form>
-                               <!--<p>Redosled </p>
-                                <form class="filter-dropdown">
-                                    <select  class="custom-select mb-2 mr-sm-2 mb-sm-0" id="smer" name="s">
-                                        <option value="Rastuce" >Rastuce</option>
-                                        <option value="Opadajuce" selected>Opadajuce</option>
-                                    </select>
-                                </form> -->
+                               
                                 <div class="map-responsive-wrap">
                                     <a class="map-icon" href="#"><span class="icon-location-pin"></span></a>
                                 </div>

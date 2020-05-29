@@ -61,7 +61,7 @@ class BaseController extends Controller
             $prom=$this->session->get('korisnik');
             $rate=null;
             $tekstRecenzije=null;
-            $ocena='0';
+            $ocena=null;
             if (isset($_POST['rating'])){
                  $rate= ($_POST['rating']);
             }
@@ -152,13 +152,12 @@ class BaseController extends Controller
              if (isset($_POST['sortiranje'])){
                  $sort= ($_POST['sortiranje']);
              }
-             /*$smer=null;
-             if (isset($_POST['s'])){
+             $smer=null;
+             if (isset($_POST['smer'])){
                  
-                 $smer=($_POST['s']);
+                 $smer=($_POST['smer']);
              }
-             echo '<br><br><br><br>';
-            var_dump($_POST);*/
+            var_dump($_POST);
              $vh=array();
              if (isset($_POST['vrsta'])){
                 foreach ($_POST['vrsta'] as $f){
@@ -179,7 +178,7 @@ class BaseController extends Controller
                  }
              }
              
-             $r=$res->filter($vh,$o,$c,$sort);
+             $r=$res->filter($vh,$o,$c,$sort,$smer);
              $this->ispisSvihRestorana($r);
         }
         

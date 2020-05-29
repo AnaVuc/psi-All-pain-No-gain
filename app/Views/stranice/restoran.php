@@ -273,7 +273,7 @@
             });
         }
     </script>
-<<<<<<< HEAD
+
   <script>
         function initMap() {
             var geocoder = new google.maps.Geocoder();
@@ -299,7 +299,5 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRbsu4r0eRiOzh5P_aK7UobUwesU6jFoY&callback=initMap">
     </script>
-=======
-    
->>>>>>> cf4f4a7dc06e701ee7476064b0024abc7d2630e6
+
     
