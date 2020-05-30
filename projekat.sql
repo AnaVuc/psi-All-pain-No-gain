@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: May 28, 2020 at 03:44 PM
+-- Generation Time: May 30, 2020 at 02:00 AM
 -- Server version: 8.0.18
 -- PHP Version: 7.4.0
 
@@ -109,27 +109,6 @@ CREATE TABLE IF NOT EXISTS `poseceni_restorani` (
 INSERT INTO `poseceni_restorani` (`idR`, `Korisnicko_ime`, `idPosR`) VALUES
 (5, 'ema123', 1),
 (9, 'ema123', 2);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `radno_vreme`
---
-
-DROP TABLE IF EXISTS `radno_vreme`;
-CREATE TABLE IF NOT EXISTS `radno_vreme` (
-  `idRV` char(18) NOT NULL,
-  `idR` int(11) NOT NULL,
-  `Ponedeljak` char(18) DEFAULT NULL,
-  `Utorak` char(18) DEFAULT NULL,
-  `Sreda` char(18) DEFAULT NULL,
-  `Cetvrtak` char(18) DEFAULT NULL,
-  `Petak` char(18) DEFAULT NULL,
-  `Subota` char(18) DEFAULT NULL,
-  `Nedelja` char(18) DEFAULT NULL,
-  PRIMARY KEY (`idRV`),
-  KEY `R_9` (`idR`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
