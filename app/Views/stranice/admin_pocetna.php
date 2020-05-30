@@ -20,8 +20,8 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"><a href="<?php echo site_url('Admin/ispisDodavanjeModeratora'); ?>">Dodaj novog moderatora</a></li>
                 <li class="list-group-item"><a href="<?php echo site_url('Admin/ispisUklanjanjeModeratora'); ?>">Ukloni moderatora</a></li>
-                <li class="list-group-item"><a href="#">Dodaj novi restoran</a></li>
-                <li class="list-group-item"><a href="#">Obriši restoran</a></li>
+                <li class="list-group-item"><a href="<?php echo site_url('Admin/ispisDodavanjeRestorana'); ?>">Dodaj novi restoran</a></li>
+                <li class="list-group-item"><a href="<?php echo site_url('Admin/ispisUklanjanjeRestorana'); ?>">Obriši restoran</a></li>
 
               </ul>
             </div>

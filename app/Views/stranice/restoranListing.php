@@ -133,7 +133,7 @@
                             <div class="featured-place-wrap">
                                 <a href="<?php echo site_url("BaseController/ispisJednogRestorana/{$res->idR}"); ?>" >
                                     <img src="<?= base_url('images/madera_image3.jpg'); ?>" class="img-fluid" alt="#">
-                                    <span class="featured-rating-green "><?php echo $res->Prosecna_ocena;?></span>
+                                    <span class="featured-rating-green "><?php echo number_format($res->Prosecna_ocena, 1);?></span>
                                     <div class="featured-title-box">
                                         <h6><?php echo $res->Ime;?></h6>
                                         <p><?php echo $res->brojRecenzija;?> recenzija</p></p> <span> </span>
