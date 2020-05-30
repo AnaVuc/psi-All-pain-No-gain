@@ -31,6 +31,7 @@ function showResult(str) {
   if (str.length==0) {
     document.getElementById("livesearch").innerHTML="";
     document.getElementById("livesearch").style.border="0px";
+    //document.getElementById("livesearch").style.background-color=white;
     return;
   }
   var xmlhttp=new XMLHttpRequest();
@@ -38,6 +39,7 @@ function showResult(str) {
     if (this.readyState==4 && this.status==200) {
       document.getElementById("livesearch").innerHTML=this.responseText;
       document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+      //document.getElementById("livesearch").style.background-color=white;
     }
   }
   xmlhttp.open("GET","<?php echo site_url("BaseController/ajax");?>?q="+str,true);
@@ -95,15 +97,14 @@ function showResult(str) {
                         <div class="row d-flex justify-content-center">
                             <div class="offset-6 col-md-8 " class="align-items-center">
                                 
-                                <div class="slider-link">
-                                <!-- <a href="#">Pronadji najpopularnije</a> -->
+                                <div class="slider-link ">
                                 </div>
                             </div>
                         </div>
-                        <div class="btn-row d-flex ">
-                            <form class="form-wrap mt-6">
-                                <input type="text" placeholder="Ime restorana" class="btn-group1" size="60" onkeyup="showResult(this.value)">
-                                <div id="livesearch"></div>
+                        <div class="btn-row d-flex justify-content-center">
+                            <form class="form-wrap mt-6 ">
+                                <input type="text" placeholder="Ime restorana" class="btn-group1" size="40" onkeyup="showResult(this.value)">
+                                <div id="livesearch" class="ajaxRezultati"></div>
                             </form>
                                         
                         </div>

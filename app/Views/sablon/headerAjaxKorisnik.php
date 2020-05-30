@@ -102,10 +102,10 @@ function showResult(str) {
                                 </div>
                             </div>
                         </div>
-                        <div class="btn-row d-flex ">
-                            <form class="form-wrap mt-6">
-                                <input type="text" placeholder="Ime restorana" class="btn-group1" size="60" onkeyup="showResult(this.value)">
-                                <div id="livesearch"></div>
+                        <div class="btn-row d-flex justify-content-center">
+                            <form class="form-wrap mt-6 ">
+                                <input type="text" placeholder="Ime restorana" class="btn-group1" size="40" onkeyup="showResult(this.value)">
+                                <div id="livesearch" class="ajaxRezultati"></div>
                             </form>
                                         
                         </div>

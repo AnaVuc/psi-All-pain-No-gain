@@ -9,7 +9,7 @@ Author: Surjith S M
    body {
     font-family: 'Roboto', sans-serif; 
    }
-  
+   
   
   h1 {
     font-size: 60px;
@@ -217,7 +217,9 @@ Author: Surjith S M
     width: 100%;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    border: none; }
+    border: none; 
+    
+  }
     @media (max-width: 576px) {
       .btn-group1 {
         width: 100%;
@@ -232,7 +234,8 @@ Author: Surjith S M
     border-top: none;
     border-right: none;
     border-bottom: none;
-    border-left: 1px solid #ccc; }
+    border-left: 1px solid #ccc;
+    }
     @media (max-width: 576px) {
       .btn-group2 {
         width: 100%;
@@ -257,6 +260,10 @@ Author: Surjith S M
       .btn-form {
         width: 100%;
         border-radius: 3px; } }
+    .ajaxRezultati{
+       background-color: white;
+       color: 	#428bca;
+    }    
   
   .search-icon {
     font-size: 15px;
