@@ -48,9 +48,9 @@ class Moderator extends BaseController
         $mod=$this->session->get('korisnik');
         $recenzijaModel->update($recenzija->idRec,["Korisnicko_ime"=>$mod->Korisnicko_ime]); 
         $noviBrojRecenzija=$restoran->brojRecenzija+1;
+        $restoranModel->update($restoran->idR,["brojRecenzija"=>$noviBrojRecenzija]);
         if($recenzija->Ocena!=null){
             $noviZbirOcena=$restoran->zbirOcena+$recenzija->Ocena;
-            $restoranModel->update($restoran->idR,["brojRecenzija"=>$noviBrojRecenzija]);
             $restoranModel->update($restoran->idR,["zbirOcena"=>$noviZbirOcena]);
             $restoranModel->update($restoran->idR,["Prosecna_ocena"=>[$noviZbirOcena*1.0/$noviBrojRecenzija]]);
         }
