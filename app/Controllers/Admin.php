@@ -9,31 +9,31 @@ use App\Models\ModeratorModel;
 class Admin extends BaseController {
 
     public function index() {
-        echo view('sablon/header_ulogovan');
+        echo view('sablon/headerAdmin');
         echo view('stranice/admin_pocetna');
         echo view('sablon/footer');
     }
 
     public function ispisDodavanjeModeratora() {
-        echo view('sablon/header_ulogovan');
+        echo view('sablon/headerAdmin');
         echo view('stranice/adminDodavanjeModeratora');
         echo view('sablon/footer');
     }
 
     public function ispisUklanjanjeModeratora() {
-        echo view('sablon/header_ulogovan');
+        echo view('sablon/headerAdmin');
         echo view('stranice/adminUklanjanjeModeratora');
         echo view('sablon/footer');
     }
 
     public function ispisUklanjanjeRestorana() {
-        echo view('sablon/header_ulogovan');
+        echo view('sablon/headerAdmin');
         echo view('stranice/adminUklanjanjeRestorana');
         echo view('sablon/footer');
     }
 
     public function ispisDodavanjeRestorana() {
-        echo view('sablon/header_ulogovan');
+        echo view('sablon/headerAdmin');
         echo view('stranice/adminDodavanjeRestorana');
         echo view('sablon/footer');
     }
