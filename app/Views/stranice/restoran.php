@@ -71,7 +71,7 @@
                 <div class="col-md-6">
                     <div class="reserve-seat-block">
                         <div class="reserve-rating">
-                            <span><?php echo number_format($res->Prosecna_ocena, 2)?></span>
+                            <span><?php echo number_format($res->Prosecna_ocena, 1)?></span>
                         </div>
                         <?php if ($korisnik){ ?>
                         <div class="review-btn">
@@ -108,7 +108,7 @@
     <!--============================= BOOKING DETAILS =============================-->
     <section class="light-bg booking-details_wrap">
         <div class="container">
-            <div class="row">
+            <div class="row" id="row1">
                 <div class="col-md-8 responsive-wrap">
                     <div class="booking-checkbox_wrap">
                         <div class="booking-checkbox">

@@ -73,7 +73,7 @@
                 <div class="col-md-6">
                     <div class="reserve-seat-block">
                         <div class="reserve-rating">
-                            <span><?php echo $res->Prosecna_ocena;?></span>
+                            <span><?php echo number_format($res->Prosecna_ocena, 1)?></span>
                         </div>
                         <?php if ($korisnik){ ?>
                         <div class="review-btn">

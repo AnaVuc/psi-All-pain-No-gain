@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: May 30, 2020 at 10:42 AM
+-- Generation Time: May 30, 2020 at 08:22 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.4.0
 
@@ -210,7 +210,7 @@ INSERT INTO `registrovan_korisnik` (`Korisnicko_ime`, `Password`, `Ime`, `Prezim
 
 DROP TABLE IF EXISTS `restoran`;
 CREATE TABLE IF NOT EXISTS `restoran` (
-  `idR` int(11) NOT NULL,
+  `idR` int(11) NOT NULL AUTO_INCREMENT,
   `Ime` char(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `Broj_telefona` char(18) DEFAULT NULL,
   `Adresa` char(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
@@ -224,7 +224,7 @@ CREATE TABLE IF NOT EXISTS `restoran` (
   `zbirOcena` int(11) NOT NULL,
   PRIMARY KEY (`idR`),
   KEY `R_20` (`idSl`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `restoran`
@@ -242,7 +242,8 @@ INSERT INTO `restoran` (`idR`, `Ime`, `Broj_telefona`, `Adresa`, `Sajt`, `Vrsta_
 (10, 'La Taqueria', '062220786', 'Gračanička 7', 'www.facebook.com/lataqueriabg/', 'meksička', '$$', '0', NULL, 'Autentična meksička hrana i pravi meksički takosi konačno su stigli u Beograd. U strogom centru grada nalazi se La Taqueria i u njoj se prave takosi, kesadilje ...\r\n', 0, 0),
 (11, 'Terminal GastroBar', '0114079502', 'Bore Stankovića 17', 'terminalgastrobar.rs', 'italijanska', '$$$', '0', NULL, 'Terminal Gastro Bar je casual dining restoran internacionalne kuhinje, smešten u jednom od najlepših delova Beograda, na Vračaru, pored Hrama Svetog Save. Terminal Gastro Bar postoji od 2015. godine. Rangira se kao jedan od vodećih beogradskih restorana.', 0, 0),
 (12, 'Marukoshi Restaurant', '0694794715', 'Kapetan-Mišina 37', 'marukoshi.rs', 'azijska', '$', '0', NULL, 'Naš concept je jednostavan, kao i naš meni.\r\nJapan ima veličanstvena jela koja se ne zovu suši.\r\nŽelimo da Vam predstavimo odličnu internacionalnu\r\nkuhinju koja je dostupna svim Beograđanima.\r\nDostupno znači pristupačno,a poznate začine koristimo\r\nna potpuno drugačiji način, u prijatnom ambijentu.', 0, 0),
-(1, 'Franš', '011 2641944', 'Bulevar oslobođenja 18a', 'frans.rs', 'srpska', '$$$$$', '0', NULL, 'Franš je smešten na idealnoj lokaciji u Beogradu, na Autokmandi u ulici Bulevar Oslobođenja 18a. Do njega možete veoma lako stići iz bilo kog dela grada da dolazite, a ono što posebno očarava jeste predeo u kom je smešten. Naime, okruženje Franša je prepuno zelenila i predstavlja pravu oazu mira od gradske vreve, buke i betona.\r\n\r\nKuhinja restorana Franš se zasniva na svežim namirnicama vrhunskog kvaliteta, koje se biraju sa posebnom pažnjom. Sva jela se u ovom restoranu pripremaju u trenutku porudžbine, a zabranjena je bilo kakva upotreba konzervansa, prerađivanih namirnica, hemikalija ili aditiva. Namirnice koje se termički ne obrađuju, svakog dana se analiziraju u sopstvenoj laboratoriji ovog prestižnog restorana.\r\n\r\nFranš je restoran koji je otvoren svakoga dana u periodu od 10:00h do 00:00h. U ovom eminentnom restoranu možete uživati svakoga dana, a ugođaj koji će vam pružiti omogućiće da se osećate kao u najelitnijim svetskim restoranima.', 0, 0);
+(1, 'Franš', '011 2641944', 'Bulevar oslobođenja 18a', 'frans.rs', 'srpska', '$$$$$', '0', NULL, 'Franš je smešten na idealnoj lokaciji u Beogradu, na Autokmandi u ulici Bulevar Oslobođenja 18a. Do njega možete veoma lako stići iz bilo kog dela grada da dolazite, a ono što posebno očarava jeste predeo u kom je smešten. Naime, okruženje Franša je prepuno zelenila i predstavlja pravu oazu mira od gradske vreve, buke i betona.\r\n\r\nKuhinja restorana Franš se zasniva na svežim namirnicama vrhunskog kvaliteta, koje se biraju sa posebnom pažnjom. Sva jela se u ovom restoranu pripremaju u trenutku porudžbine, a zabranjena je bilo kakva upotreba konzervansa, prerađivanih namirnica, hemikalija ili aditiva. Namirnice koje se termički ne obrađuju, svakog dana se analiziraju u sopstvenoj laboratoriji ovog prestižnog restorana.\r\n\r\nFranš je restoran koji je otvoren svakoga dana u periodu od 10:00h do 00:00h. U ovom eminentnom restoranu možete uživati svakoga dana, a ugođaj koji će vam pružiti omogućiće da se osećate kao u najelitnijim svetskim restoranima.', 0, 0),
+(13, 'restorancic', 'brtel', 'adresica', 'www.restoran.com', 'grcka', '$$', NULL, NULL, 'lepo mesto', 0, 0);
 
 -- --------------------------------------------------------
 
