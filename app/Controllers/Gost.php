@@ -5,8 +5,8 @@ use App\Models\RestoranModel;
 use App\Models\AdminModel;
 
 
+         
 class Gost extends BaseController
-
 
 {
     protected function prikaz($page,$data) {
@@ -19,19 +19,19 @@ class Gost extends BaseController
 
 	//--------------------------------------------------------------------
     public function index(){
-        //echo view('stranice/test');
         $restoranModel=new RestoranModel();
         $restorani=$restoranModel->findAll();
         $data['restorani']=$restorani;
         $data['controller']='Gost';
-        echo view('sablon/header'); 
-        echo view('sablon/pretraga');
+        echo view('sablon/headerAjaxGost'); 
         $this->najpopularniji($restorani);
         echo view('stranice/registrujSe');
         $this->sortPoOceni($restorani);
         echo view('sablon/footer');
     }
-   
+    
+    
+
     public function UlogujSe(){
         $this->prikaz('logovanje', []);
     }

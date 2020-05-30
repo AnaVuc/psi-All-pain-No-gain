@@ -17,7 +17,6 @@
                 Moderatorski sadržaj
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="index.html">Povratak na glavnu stranu</a></li>
                 <li class="list-group-item"><a href="<?php echo site_url('Moderator/ispisRecenzija'); ?>">Pogledaj recenzije za odobravanje</a></li>
                 <li class="list-group-item"><a href="<?php echo site_url('Moderator/ispisUklanjanjeKorisnika'); ?>">Ukloni korisnika</a></li>
                 <li class="list-group-item"><a href="<?php echo site_url('BaseController/promena_lozinke'); ?>">Promeni lozinku</a></li>

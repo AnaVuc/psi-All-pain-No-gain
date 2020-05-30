@@ -119,7 +119,7 @@
                         
                     </div>
                     <div class="booking-checkbox_wrap mt-4">
-                        <h5><?php echo $res->brojRecenzija;?> recenzija</h5>
+                        <h5><?php echo $res->brojRecenzija;?> recenzije</h5>
                         <hr>
                         <div class="customer-review_wrap">
                             <?php 

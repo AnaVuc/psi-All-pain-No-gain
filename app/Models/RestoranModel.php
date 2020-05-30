@@ -31,6 +31,7 @@ class RestoranModel extends Model
     }
     
     
+    
     public function dohvatiRestoraneCena($param){
         return $test=$this->where('Cenovni_rang',$param)->findAll();
         

@@ -2,8 +2,7 @@
     <!--Emilija Nikic, Emilija Radovanovic-->
 
 <head>
-   
-      
+  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,6 +26,24 @@
     <i class="fas fa-tachometer-alt"></i>
 
 </head>
+<script>
+function showResult(str) {
+  if (str.length==0) {
+    document.getElementById("livesearch").innerHTML="";
+    document.getElementById("livesearch").style.border="0px";
+    return;
+  }
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("livesearch").innerHTML=this.responseText;
+      document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+    }
+  }
+  xmlhttp.open("GET","<?php echo site_url("BaseController/ajax");?>?q="+str,true);
+  xmlhttp.send();
+}
+</script>
 
 <body>
 <div class="nav-menu">
@@ -52,6 +69,49 @@
         </div>
     </div>
 </div>
+    <section class="slider d-flex align-items-center">
+        <!-- <img src="images/slider.jpg" class="img-fluid" alt="#"> -->
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
+                    <div class="slider-title_box">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="slider-content_wrap">
+                                    <h1>Pronadjite restoran za Vas u Beogradu</h1>
+                                    <h5></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            &nbsp;
+                        </div>
+                        <div class="row">
+                            &nbsp;
+                        </div>
+                        <div class="row">
+                            &nbsp;
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="offset-6 col-md-8 " class="align-items-center">
+                                
+                                <div class="slider-link">
+                                <!-- <a href="#">Pronadji najpopularnije</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-row d-flex ">
+                            <form class="form-wrap mt-6">
+                                <input type="text" placeholder="Ime restorana" class="btn-group1" size="60" onkeyup="showResult(this.value)">
+                                <div id="livesearch"></div>
+                            </form>
+                                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     
      <script>

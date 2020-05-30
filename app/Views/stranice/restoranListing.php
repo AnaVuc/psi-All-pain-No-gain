@@ -172,7 +172,7 @@
   </div>
 </section>
 <script>
-           
+           var google;
 
         function init() {
                 var infowindow = new google.maps.InfoWindow();

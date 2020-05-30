@@ -17,7 +17,7 @@
                                 <form class="form-wrap mt-6">
                                     <div class="btn-group " role="group" aria-label="Basic example">
                                         <input type="text" placeholder="Ime restorana" class="btn-group1">
-                                        <a role="button" href="detail.html" class="btn btn-form btn-primary align-items-center"><span class="icon-magnifier search-icon"></span>PRETRAŽI<i class="pe-7s-angle-right"></i></a>
+                                        
                                     </div>
                                 </form>
                                 <div class="slider-link">

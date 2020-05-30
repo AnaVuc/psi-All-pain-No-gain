@@ -36,6 +36,37 @@ class BaseController extends Controller
 		$this->session = \Config\Services::session();
 	}
         
+        public function ajax(){
+        $restoranModel=new RestoranModel;
+        $restorani=$restoranModel->findAll();
+
+        $q = $_REQUEST["q"];
+
+        $hint = "";
+
+        // lookup all hints from array if $q is different from ""
+            if ($q !== "") {
+              $q = strtolower($q);
+              $len=strlen($q);
+              foreach($restorani as $res) {
+                if (stristr($q, substr($res->Ime, 0, $len))) {
+                  if ($hint === "") {
+                    $hint = "<div><a href=" .site_url("BaseController/ispisJednogRestorana/{$res->idR}"). ">". $res->Ime . "</a>
+                            <p>".$res->Adresa ."</p>
+                        </div>";
+                  } else {
+                    $hint=$hint . "<br /><div><a href=" .site_url("BaseController/ispisJednogRestorana/{$res->idR}"). ">". $res->Ime . "</a>
+                            <p>".$res->Adresa ."</p>
+                        </div>";
+                  }
+                }
+              }
+            }
+
+            // Output "no suggestion" if no hint was found or output correct values
+            echo $hint === "" ? "Ne postoji traženi restoran" : $hint;
+        }
+        
         
         public function ispisOstavljanjeRecenzije($id){
                 $restoranModel=new RestoranModel();
@@ -308,33 +339,6 @@ class BaseController extends Controller
 		
         }
         
-        public function pretraga($res){
-
-
-            // get the q parameter from URL
-            $q = $_REQUEST["q"];
-
-            $hint = "";
-
-            // lookup all hints from array if $q is different from ""
-            if ($q !== "") {
-            $q = strtolower($q);
-            $len=strlen($q);
-            foreach($res as $name) {
-                if (stristr($q, substr($name->Ime, 0, $len))) {
-                    if ($hint === "") {
-                        $hint = $name->Ime;
-                    } else {
-                        $hint .= ", $name->Ime";
-                }
-            }
-        }
-        }
-
-            // Output "no suggestion" if no hint was found or output correct values
-            echo $hint === "" ? "no suggestion" : $hint;
-
-        }
         
        public function ispisiNalog(){
         echo view('sablon/header_ulogovan');
