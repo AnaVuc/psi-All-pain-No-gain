@@ -173,7 +173,9 @@
 </section>
 <script>
            var google;
-
+           var map;
+           var marker;
+           
         function init() {
                 var infowindow = new google.maps.InfoWindow();
                 var marker, i;
@@ -212,6 +214,6 @@
 </script>
         
    
-    <script async defer
+    <script 
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRbsu4r0eRiOzh5P_aK7UobUwesU6jFoY&callback=init">
     </script>

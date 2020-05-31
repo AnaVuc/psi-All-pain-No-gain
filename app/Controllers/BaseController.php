@@ -359,7 +359,6 @@ class BaseController extends Controller
             if ($r!=null){
                 $restorani=$r;
             }
-            $marker[' position '] = 'Crescent Park, Palo Alto';
             $data=[
                 'niz'=>$restoranModel->paginate(4),
                 'restorani'=>$restorani,
