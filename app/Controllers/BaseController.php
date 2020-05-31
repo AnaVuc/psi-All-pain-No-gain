@@ -177,7 +177,6 @@ class BaseController extends Controller
         
         public function sortiranje_filtriranje(){
             $res=new RestoranModel;
-            var_dump($_POST);
             //sortiranje
             $sort=null;
              if (isset($_POST['sortiranje'])){

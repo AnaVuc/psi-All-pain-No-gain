@@ -76,7 +76,7 @@
                         <?php if ($korisnik){ ?>
                         <div class="review-btn">
                             <a href="<?php echo site_url("BaseController/ispisOstavljanjeRecenzije/{$res->idR}#target1"); ?>" class="btn btn-outline-danger">OSTAVI RECENZIJU</a>
-                            <span><?php echo $res->brojRecenzija;?> ostavljenih recenzija</span>
+                            <span>Broj ostavljenih recenzija: <?php echo $res->brojRecenzija;?> </span>
                         </div>
                         <?php 
                         $poseceniRestoraniModel=new App\Models\PoseceniRestoraniModel();
@@ -119,7 +119,7 @@
                         
                     </div>
                     <div class="booking-checkbox_wrap mt-4">
-                        <h5><?php echo $res->brojRecenzija;?> recenzije</h5>
+                        <h5>Broj recenzija: <?php echo $res->brojRecenzija;?> </h5>
                         <hr>
                         <div class="customer-review_wrap">
                             <?php 
