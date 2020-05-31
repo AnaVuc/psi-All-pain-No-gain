@@ -56,8 +56,9 @@ class RestoranModel extends Model
                  $min=(int)$ocena[$i][0];
                  $max=(int)$ocena[$i][1];
                
-                $where= "Prosecna_ocena BETWEEN {$min} AND {$max}";
+                $where= "Prosecna_ocena >= {$min} AND Prosecna_ocena <={$max}";
                 $builder=$builder->where($where);
+                if($builder==null) echo 'Ne postoji restoran sa traženim opsegom!';
                 //var_dump($builder);
               }
              
@@ -68,12 +69,12 @@ class RestoranModel extends Model
                 $builder=$builder->orderBy('Prosecna_ocena',$smer);
             }
             if ($sort=="Cena"){
-                 $builder=$builder->orderBy('Cenovni_rang','$smer');
+                 $builder=$builder->orderBy('Cenovni_rang',$smer);
             }
             if ($sort=="Popularnost"){
                 //'Prosecna_ocena * brojRecenzija as popularnost'
                 $builder=$builder->select('*,Prosecna_ocena * brojRecenzija as popularnost',FALSE)
-                        ->orderBy('popularnost','$smer');
+                        ->orderBy('popularnost',$smer);
             }
             
         }        
