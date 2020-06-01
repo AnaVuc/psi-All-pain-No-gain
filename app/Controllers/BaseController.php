@@ -187,7 +187,6 @@ class BaseController extends Controller
                  
                  $smer=($_POST['smer']);
              }
-            var_dump($_POST);
              $vh=array();
              if (isset($_POST['vrsta'])){
                 foreach ($_POST['vrsta'] as $f){
@@ -251,12 +250,6 @@ class BaseController extends Controller
                 $ime=$this->session->get('korisnik')->Korisnicko_ime;
                 if($prom->Password!=$this->request->getVar('password'))
                   return $this->promena_lozinke('Pogresna stara lozinka');
-                // var_dump($korModel->nadjiPoKI($ime));
-                //var_dump($modModel->nadjiPoKI($ime));
-                
-                //var_dump($korModel->nadjiPoKI($ime)===$prom);
-                //var_dump($modModel->nadjiPoKI($ime)===$prom);
-
               //promena u bazi
                 if ($korModel->nadjiPoKI($ime)==$prom){
                     $korModel->update($prom->Korisnicko_ime,['Password'=>$this->request->getVar('new')]);
