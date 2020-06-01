@@ -128,7 +128,7 @@
                        
                     foreach ($data['restorani'] as $res){
                         $slikaModel=new App\Models\SlikaModel();
-                        $slike=$slikaModel->find('idSl',$res->idSl);
+                        $slike=$slikaModel->find($res->idSl);
                         
                         
                         

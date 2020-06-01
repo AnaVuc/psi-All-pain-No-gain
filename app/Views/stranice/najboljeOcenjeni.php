@@ -14,12 +14,14 @@
 // ikonice se ne ucitavaju kako treba ali su ubacene u headeru
     $niz=$output = array_slice($restoran, 0, 3);
     foreach ($niz as $res){
+        $slikaModel = new App\Models\SlikaModel();
+        $slike = $slikaModel->find($res->idSl);
         ?>
                 <div class="col-md-4 featured-responsive">
                     <div class="featured-place-wrap">
                         <a href="<?php echo site_url("BaseController/ispisJednogRestorana/{$res->idR}"); ?>" >
-                            <img src="images/featured1.jpg" class="img-fluid" alt="#">
-                            <span class="featured-rating-green"><?php echo $res->Prosecna_ocena;?></span>
+                            <img src="<?= base_url('images/'.$slike->Opis); ?>" class="img-fluid" alt="#">
+                            <span class="featured-rating-green"><?php echo number_format($res->Prosecna_ocena, 1);?></span>
                             <div class="featured-title-box">
                                 <h6><?php echo $res->Ime;?></h6>
                                 <p><?php echo $res->brojRecenzija;?> recenzija</p> <span> • </span>

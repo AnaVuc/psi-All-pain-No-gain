@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: Jun 01, 2020 at 01:40 PM
+-- Generation Time: Jun 01, 2020 at 04:15 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.4.0
 
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `ostavljena_za` (
   `Korisnicko_ime` char(18) NOT NULL,
   `idOZ` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`idOZ`)
-) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `ostavljena_za`
@@ -116,7 +116,8 @@ INSERT INTO `ostavljena_za` (`idRec`, `idR`, `Korisnicko_ime`, `idOZ`) VALUES
 (47, 1, 'emarad', 48),
 (48, 10, 'emarad', 49),
 (49, 11, 'emarad', 50),
-(50, 1, 'milos123', 51);
+(50, 1, 'milos123', 51),
+(51, 12, 'AnaVuc', 52);
 
 -- --------------------------------------------------------
 
@@ -130,7 +131,7 @@ CREATE TABLE IF NOT EXISTS `poseceni_restorani` (
   `Korisnicko_ime` char(18) NOT NULL,
   `idPosR` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`idPosR`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `poseceni_restorani`
@@ -170,7 +171,8 @@ INSERT INTO `poseceni_restorani` (`idR`, `Korisnicko_ime`, `idPosR`) VALUES
 (1, 'emarad', 32),
 (10, 'emarad', 33),
 (11, 'emarad', 34),
-(1, 'milos123', 35);
+(1, 'milos123', 35),
+(12, 'AnaVuc', 36);
 
 -- --------------------------------------------------------
 
@@ -209,7 +211,7 @@ CREATE TABLE IF NOT EXISTS `recenzija` (
   PRIMARY KEY (`idRec`),
   KEY `R_7` (`idR`),
   KEY `R_19` (`Korisnicko_ime`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `recenzija`
@@ -248,7 +250,8 @@ INSERT INTO `recenzija` (`idRec`, `Korisnicko_ime`, `idR`, `Tekst`, `Ocena`) VAL
 (47, 'mod', 1, 'Frans je jedan od tri najbolja restorana u Beogradu, ambijent je veoma prijatan, hrana odlicna, veoma raznovrsna, sa velikim izborom pica, cene su veoma ptistupacne i poseban osvrt na uslugu koja je ubedljivo najbolja u gradu, treba ga posecivati sto vise puta.', 5),
 (48, 'mod', 10, 'Prijatan ambijent sa dobro raspolozenim i ljubaznim osobljem. Hrana ukusna, taco party plate je bio dobar, zanimljiv izbor pica. Sve u svemu, lepo iskustvo.', 4),
 (49, 'mod', 11, 'Lokal je prelep i vrlo prijatan.usluga je vrhunska!', 5),
-(50, 'mod', 1, 'Vrhunski restoran, verovatno najlepša terasa na kojoj sam bio. Konobari i osoblje su profesionalni, svaki njihov potez i reč su na mestu. Hrana bi mogla biti i nešto bolja, s obzirom na status koji restoran uživa. Zbog toga i dajem ocenu 4.\r\nNa odlasku su nas srdačno pozdravili, isto tako za svako naše pitanje su imali strpljenje i odgovor.', 4);
+(50, 'mod', 1, 'Vrhunski restoran, verovatno najlepša terasa na kojoj sam bio. Konobari i osoblje su profesionalni, svaki njihov potez i reč su na mestu. Hrana bi mogla biti i nešto bolja, s obzirom na status koji restoran uživa. Zbog toga i dajem ocenu 4.\r\nNa odlasku su nas srdačno pozdravili, isto tako za svako naše pitanje su imali strpljenje i odgovor.', 4),
+(51, 'mod', 12, '', 1);
 
 -- --------------------------------------------------------
 
@@ -308,18 +311,18 @@ CREATE TABLE IF NOT EXISTS `restoran` (
 --
 
 INSERT INTO `restoran` (`idR`, `Ime`, `Broj_telefona`, `Adresa`, `Sajt`, `Vrsta_hrane`, `Cenovni_rang`, `Prosecna_ocena`, `idSl`, `Opis`, `brojRecenzija`, `zbirOcena`) VALUES
-(2, 'Smokvica', '063608446', 'Molerova 33', 'smokvica.rs', 'italijanska', '$$', '2', NULL, 'Priča o Smokvici počela je sa željom četiri prijatelja da otvore restoran koji će biti najdraže mesto okupljanja njihovih prijatelja, porodica i svih onih koji biraju da što češće uživaju svim svojim čulima.Stvoreni su topli, ušuškani, kreativni ambijenti provanslaskog stila, u kojima kutak za sebe nalaze ljudi različitih godina, profesija i potreba. Naši gosti su oni koji žele dobru kafu, limunadu sa svežom nanom i opuštanje u bašti, oni koji vole bogat, šaren i uzbudljiv doručak, oni koji su došli da rade dok sporo ispijaju čaj, ali i oni raspoloženi za ukusan obrok na koji ne mogu da naiđu ni na jednom drugom mestu.\r\n\r\n', 2, 4),
-(3, 'Chez Nik', '0113131331', ' Bulevar Zorana Đinđića 48a', 'cheznik.com', 'srpska', '$$$', '4', NULL, 'Chez Nik, kratko ime koje znači puno toga na jednom mestu. Sjajnu kafu i doručak za uspešan početak dana, izbor jela i poslastica koji nikoga ne ostavljaju ravnodušnim. Uz kvalitetno birane namirnice, umeće i maštu naših kuvara, svaki tanjir se pretvara u malo remek delo. Poklonite sebi trenutke uživanja koji se dugo pamte!', 3, 8),
-(4, 'Lorenzo & Kakalamba', '0113295351', 'Cvijićeva 110', 'lk.rs', 'italijanska', '$$$', '5', NULL, '\"LORENZO I KAKALAMBA\" je porodični restoran koji je za kratko vreme uspeo da osvoji goste svojom originalnošću, šarmom i jedinstvenim spojem Firence i Pirota. Kroz autentičnu ponudu tradicionalnih firentinskih i piroćanskih specijaliteta i istog takvog ambijenta, imaćete osećaj da ste na jugu Srbije ili ste otputovali kroz vreme nazad u renesansnu Italiju. ', 4, 20),
-(5, 'Cantina de Frida', '0603654030', 'Karađorđeva 2', 'cantinadefrida.com', 'meksička', '$$', '4.6', NULL, 'Malo ljudi je posedovalo takvu žar za životom kao legendarna meksička umetnica Frida Kahlo. Ona je dočekivala svaki dan sa ljubavlju i strašću. Inspirisala je ljude oko sebe da posmatraju život iz različitih uglova. Ta njena strast za životom bila je inspiracija i za bar restoran Cantina de Frida.\r\nTo je mesto gde se sastaju prijatelji da zajedno pevaju, plešu i dele trpezu,\r\nu slavu životu.', 5, 23),
-(6, 'Mezestoran Dvorište', '0113246515', 'Svetogorska 46', 'restorandvoriste.rs', 'grčka', '$$', '4', NULL, 'Skriven od gradske vreve, izložen svežim povetarcima sa Krita, Jadrana, Andaluzije i Bliskog Istoka donosi u Beograd jednostavnu, kreativnu kuhinju koja poštuje pravila mediteranske ishrane, filozofije i načina života.', 3, 12),
-(7, 'Moonsushi', '0113344569', ' Makedonska 31', 'moon-sushi.com', 'azijska', '$', '4.5', NULL, 'Mesto sa najdužom tradicijom pripremanja japanskih specijaliteta, prvenstveno suši ukusa. Upravo na ovom mestu mnogi stanovnici Beograda i njihovi gosti su sarmu zamenili zdravim i veoma atraktivnim zalogajima. Neverovatan talenat kuvara i edukacija najvišeg nivoa svih zaposlenih će vas uvesti u svet sasvim posebne ishrane. Ne morate da pakujete kofere i planirate put u daleki Japan, on se doselio u strogi centar grada.', 2, 9),
-(8, 'Wok', '0113282828', 'Francuska 5', 'wok-republic.com', 'azijska', '$$', '3.3333333333333', NULL, 'Wok Republic je lanac restorna brze azijske hrane specijalizovan za wok, jela sa nudlama i pirinčem koja se spremaju u otvorenoj kuhinji.', 3, 10),
-(9, 'Zapata', ' 0113809207', 'Vojvode Bogdana 13', 'zapatabeograd.com', 'meksička', '$', '4.5', NULL, 'Restoran \"Zapata\" je osnovan u septembru 2005 godine i za jako kratko vreme stekao je brojne poštovaoce i verne goste. Lociran u blizini Bulevara Kralja Aleksandra i Vukovog spomenika, on je gastronomsko i hedonističko mesto u sirem centru metropole.', 2, 9),
-(10, 'La Taqueria', '062220786', 'Gračanička 7', 'www.facebook.com/lataqueriabg/', 'meksička', '$$', '4', NULL, 'Autentična meksička hrana i pravi meksički takosi konačno su stigli u Beograd. U strogom centru grada nalazi se La Taqueria i u njoj se prave takosi, kesadilje ...\r\n', 2, 8),
-(11, 'Terminal GastroBar', '0114079502', 'Bore Stankovića 17', 'terminalgastrobar.rs', 'italijanska', '$$$', '5', NULL, 'Terminal Gastro Bar je casual dining restoran internacionalne kuhinje, smešten u jednom od najlepših delova Beograda, na Vračaru, pored Hrama Svetog Save. Terminal Gastro Bar postoji od 2015. godine. Rangira se kao jedan od vodećih beogradskih restorana.', 3, 15),
-(12, 'Marukoshi Restaurant', '0694794715', 'Kapetan-Mišina 37', 'marukoshi.rs', 'azijska', '$', '2', NULL, 'Naš concept je jednostavan, kao i naš meni.\r\nJapan ima veličanstvena jela koja se ne zovu suši.\r\nŽelimo da Vam predstavimo odličnu internacionalnu\r\nkuhinju koja je dostupna svim Beograđanima.\r\nDostupno znači pristupačno,a poznate začine koristimo\r\nna potpuno drugačiji način, u prijatnom ambijentu.', 1, 2),
-(1, 'Franš', '011 2641944', 'Bulevar oslobođenja 18a', 'frans.rs', 'srpska', '$$$$$', '4.6666666666667', NULL, 'Franš je smešten na idealnoj lokaciji u Beogradu, na Autokmandi u ulici Bulevar Oslobođenja 18a. Do njega možete veoma lako stići iz bilo kog dela grada da dolazite, a ono što posebno očarava jeste predeo u kom je smešten. Naime, okruženje Franša je prepuno zelenila i predstavlja pravu oazu mira od gradske vreve, buke i betona.\r\n\r\nKuhinja restorana Franš se zasniva na svežim namirnicama vrhunskog kvaliteta, koje se biraju sa posebnom pažnjom. Sva jela se u ovom restoranu pripremaju u trenutku porudžbine, a zabranjena je bilo kakva upotreba konzervansa, prerađivanih namirnica, hemikalija ili aditiva. Namirnice koje se termički ne obrađuju, svakog dana se analiziraju u sopstvenoj laboratoriji ovog prestižnog restorana.\r\n\r\nFranš je restoran koji je otvoren svakoga dana u periodu od 10:00h do 00:00h. U ovom eminentnom restoranu možete uživati svakoga dana, a ugođaj koji će vam pružiti omogućiće da se osećate kao u najelitnijim svetskim restoranima.', 3, 14);
+(2, 'Smokvica', '063608446', 'Molerova 33', 'smokvica.rs', 'italijanska', '$$', '2', '24', 'Priča o Smokvici počela je sa željom četiri prijatelja da otvore restoran koji će biti najdraže mesto okupljanja njihovih prijatelja, porodica i svih onih koji biraju da što češće uživaju svim svojim čulima.Stvoreni su topli, ušuškani, kreativni ambijenti provanslaskog stila, u kojima kutak za sebe nalaze ljudi različitih godina, profesija i potreba. Naši gosti su oni koji žele dobru kafu, limunadu sa svežom nanom i opuštanje u bašti, oni koji vole bogat, šaren i uzbudljiv doručak, oni koji su došli da rade dok sporo ispijaju čaj, ali i oni raspoloženi za ukusan obrok na koji ne mogu da naiđu ni na jednom drugom mestu.\r\n\r\n', 2, 4),
+(3, 'Chez Nik', '0113131331', ' Bulevar Zorana Đinđića 48a', 'cheznik.com', 'srpska', '$$$', '4', '26', 'Chez Nik, kratko ime koje znači puno toga na jednom mestu. Sjajnu kafu i doručak za uspešan početak dana, izbor jela i poslastica koji nikoga ne ostavljaju ravnodušnim. Uz kvalitetno birane namirnice, umeće i maštu naših kuvara, svaki tanjir se pretvara u malo remek delo. Poklonite sebi trenutke uživanja koji se dugo pamte!', 3, 8),
+(4, 'Lorenzo & Kakalamba', '0113295351', 'Cvijićeva 110', 'lk.rs', 'italijanska', '$$$', '5', '29', '\"LORENZO I KAKALAMBA\" je porodični restoran koji je za kratko vreme uspeo da osvoji goste svojom originalnošću, šarmom i jedinstvenim spojem Firence i Pirota. Kroz autentičnu ponudu tradicionalnih firentinskih i piroćanskih specijaliteta i istog takvog ambijenta, imaćete osećaj da ste na jugu Srbije ili ste otputovali kroz vreme nazad u renesansnu Italiju. ', 4, 20),
+(5, 'Cantina de Frida', '0603654030', 'Karađorđeva 2', 'cantinadefrida.com', 'meksička', '$$', '4.6', '34', 'Malo ljudi je posedovalo takvu žar za životom kao legendarna meksička umetnica Frida Kahlo. Ona je dočekivala svaki dan sa ljubavlju i strašću. Inspirisala je ljude oko sebe da posmatraju život iz različitih uglova. Ta njena strast za životom bila je inspiracija i za bar restoran Cantina de Frida.\r\nTo je mesto gde se sastaju prijatelji da zajedno pevaju, plešu i dele trpezu,\r\nu slavu životu.', 5, 23),
+(6, 'Mezestoran Dvorište', '0113246515', 'Svetogorska 46', 'restorandvoriste.rs', 'grčka', '$$', '4', '32', 'Skriven od gradske vreve, izložen svežim povetarcima sa Krita, Jadrana, Andaluzije i Bliskog Istoka donosi u Beograd jednostavnu, kreativnu kuhinju koja poštuje pravila mediteranske ishrane, filozofije i načina života.', 3, 12),
+(7, 'Moonsushi', '0113344569', ' Makedonska 31', 'moon-sushi.com', 'azijska', '$', '4.5', '35', 'Mesto sa najdužom tradicijom pripremanja japanskih specijaliteta, prvenstveno suši ukusa. Upravo na ovom mestu mnogi stanovnici Beograda i njihovi gosti su sarmu zamenili zdravim i veoma atraktivnim zalogajima. Neverovatan talenat kuvara i edukacija najvišeg nivoa svih zaposlenih će vas uvesti u svet sasvim posebne ishrane. Ne morate da pakujete kofere i planirate put u daleki Japan, on se doselio u strogi centar grada.', 2, 9),
+(8, 'Wok', '0113282828', 'Francuska 5', 'wok-republic.com', 'azijska', '$$', '3.3333333333333', '37', 'Wok Republic je lanac restorna brze azijske hrane specijalizovan za wok, jela sa nudlama i pirinčem koja se spremaju u otvorenoj kuhinji.', 3, 10),
+(9, 'Zapata', ' 0113809207', 'Vojvode Bogdana 13', 'zapatabeograd.com', 'meksička', '$', '4.5', '39', 'Restoran \"Zapata\" je osnovan u septembru 2005 godine i za jako kratko vreme stekao je brojne poštovaoce i verne goste. Lociran u blizini Bulevara Kralja Aleksandra i Vukovog spomenika, on je gastronomsko i hedonističko mesto u sirem centru metropole.', 2, 9),
+(10, 'La Taqueria', '062220786', 'Gračanička 7', 'www.facebook.com/lataqueriabg/', 'meksička', '$$', '4', '41', 'Autentična meksička hrana i pravi meksički takosi konačno su stigli u Beograd. U strogom centru grada nalazi se La Taqueria i u njoj se prave takosi, kesadilje ...\r\n', 2, 8),
+(11, 'Terminal GastroBar', '0114079502', 'Bore Stankovića 17', 'terminalgastrobar.rs', 'italijanska', '$$$', '5', '44', 'Terminal Gastro Bar je casual dining restoran internacionalne kuhinje, smešten u jednom od najlepših delova Beograda, na Vračaru, pored Hrama Svetog Save. Terminal Gastro Bar postoji od 2015. godine. Rangira se kao jedan od vodećih beogradskih restorana.', 3, 15),
+(12, 'Marukoshi Restaurant', '0694794715', 'Kapetan-Mišina 37', 'marukoshi.rs', 'azijska', '$', '1.5', '46', 'Naš concept je jednostavan, kao i naš meni.\r\nJapan ima veličanstvena jela koja se ne zovu suši.\r\nŽelimo da Vam predstavimo odličnu internacionalnu\r\nkuhinju koja je dostupna svim Beograđanima.\r\nDostupno znači pristupačno,a poznate začine koristimo\r\nna potpuno drugačiji način, u prijatnom ambijentu.', 2, 3),
+(1, 'Franš', '011 2641944', 'Bulevar oslobođenja 18a', 'frans.rs', 'srpska', '$$$$$', '4.6666666666667', '49', 'Franš je smešten na idealnoj lokaciji u Beogradu, na Autokmandi u ulici Bulevar Oslobođenja 18a. Do njega možete veoma lako stići iz bilo kog dela grada da dolazite, a ono što posebno očarava jeste predeo u kom je smešten. Naime, okruženje Franša je prepuno zelenila i predstavlja pravu oazu mira od gradske vreve, buke i betona.\r\n\r\nKuhinja restorana Franš se zasniva na svežim namirnicama vrhunskog kvaliteta, koje se biraju sa posebnom pažnjom. Sva jela se u ovom restoranu pripremaju u trenutku porudžbine, a zabranjena je bilo kakva upotreba konzervansa, prerađivanih namirnica, hemikalija ili aditiva. Namirnice koje se termički ne obrađuju, svakog dana se analiziraju u sopstvenoj laboratoriji ovog prestižnog restorana.\r\n\r\nFranš je restoran koji je otvoren svakoga dana u periodu od 10:00h do 00:00h. U ovom eminentnom restoranu možete uživati svakoga dana, a ugođaj koji će vam pružiti omogućiće da se osećate kao u najelitnijim svetskim restoranima.', 3, 14);
 
 -- --------------------------------------------------------
 
@@ -336,15 +339,15 @@ CREATE TABLE IF NOT EXISTS `slika` (
   PRIMARY KEY (`idSl`),
   KEY `R_11` (`idRec`),
   KEY `idR` (`idR`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `slika`
 --
 
 INSERT INTO `slika` (`idSl`, `Opis`, `idRec`, `idR`) VALUES
-(1, 'rsz_frida_image1.jpg', NULL, 5),
-(2, 'frida_image4.jpg', NULL, 5),
+(1, 'frida2.jpg', NULL, 5),
+(2, 'frida1.jpg', NULL, 5),
 (3, 'featured1.jpg', 4, 5),
 (4, 'featured1.jpg', 12, 5),
 (5, 'featured3.jpg', 12, 5),
@@ -362,7 +365,36 @@ INSERT INTO `slika` (`idSl`, `Opis`, `idRec`, `idR`) VALUES
 (19, 'sushi-belgrade-sushi.jpg', 35, 7),
 (20, 'lorencorec1.jpg', 39, 4),
 (21, 'terminalrec1.jpg', 40, 11),
-(22, 'fransrec1.jpg', 47, 1);
+(22, 'fransrec1.jpg', 47, 1),
+(23, 'smokvica1.jpg', NULL, 2),
+(24, 'smokvica2.jpg', NULL, 2),
+(25, 'smokvica3.jpg', NULL, 2),
+(26, 'chezNik3.jpg', NULL, 3),
+(27, 'chezNik1.jpg', NULL, 3),
+(28, 'chezNik4.jpg', NULL, 3),
+(29, 'lorenzo1.jpg', NULL, 4),
+(30, 'lorenzo2.jpg', NULL, 4),
+(31, 'lorenzo3.jpg', NULL, 4),
+(32, 'meze2.jpg', NULL, 6),
+(33, 'meze1.jpg', NULL, 6),
+(34, 'frida3.jpg', NULL, 5),
+(35, 'moon1.jpg', NULL, 7),
+(36, 'moon2.png', NULL, 7),
+(37, 'wok1.jpg', NULL, 8),
+(38, 'wok2.jpg', NULL, 8),
+(39, 'zapata1.jpg', NULL, 9),
+(40, 'zapata2.jpg', NULL, 9),
+(41, 'taq1.jpg', NULL, 10),
+(42, 'taq2.jpg', NULL, 10),
+(43, 'terminal3.jpg', NULL, 11),
+(44, 'terminal1.jpg', NULL, 11),
+(45, 'terminal2.jpg', NULL, 11),
+(46, 'mar1.jpg', NULL, 12),
+(47, 'mar2.jpg', NULL, 12),
+(48, 'mar3.jpg', NULL, 12),
+(49, 'frans1.jpg', NULL, 1),
+(50, 'frans2.jpg', NULL, 1),
+(51, 'frans3.jpg', NULL, 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
