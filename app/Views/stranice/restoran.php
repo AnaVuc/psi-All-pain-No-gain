@@ -112,7 +112,7 @@
                         $ostavljenaZaModel=new \App\Models\OstavljenaZaModel();
                         $restoranModel=new App\Models\RestoranModel();
                         foreach($recenzije as $recenzija){
-                            $ostavljenaZa=$ostavljenaZaModel->find($recenzija->idRec);
+                            $ostavljenaZa=$ostavljenaZaModel->where('idRec', $recenzija->idRec)->first();
                             $restoran=$restoranModel->find($recenzija->idR);
                             echo '<div class="customer-review_wrap">
                             <div class="customer-img">
@@ -154,7 +154,7 @@
                                 echo '<span class="round-icon-blank"></span>';
                             }}
                                     echo'</div>';
-                                 if($recenzija->Ocena!=null) echo'   <div class="customer-rating">'.$recenzija->Ocena.'</div>';
+                                 if($recenzija->Ocena!=null) echo'   <div class="customer-rating">'.$recenzija->Ocena.'</div><br><br>';
                                echo' </div>
                                 <p class="customer-text">'.$recenzija->Tekst.'</p>
                                 ';
