@@ -176,26 +176,7 @@ INSERT INTO `poseceni_restorani` (`idR`, `Korisnicko_ime`, `idPosR`) VALUES
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `radno_vreme`
---
 
-DROP TABLE IF EXISTS `radno_vreme`;
-CREATE TABLE IF NOT EXISTS `radno_vreme` (
-  `idRV` char(18) NOT NULL,
-  `idR` int(11) NOT NULL,
-  `Ponedeljak` char(18) DEFAULT NULL,
-  `Utorak` char(18) DEFAULT NULL,
-  `Sreda` char(18) DEFAULT NULL,
-  `Cetvrtak` char(18) DEFAULT NULL,
-  `Petak` char(18) DEFAULT NULL,
-  `Subota` char(18) DEFAULT NULL,
-  `Nedelja` char(18) DEFAULT NULL,
-  PRIMARY KEY (`idRV`),
-  KEY `R_9` (`idR`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `recenzija`
