@@ -67,26 +67,8 @@
             <div class="row">
                 <div class="col-md-6 responsive-wrap">
                     <div class="booking-checkbox_wrap mt-4">
-                        <div class="card-header">
-                            Posećeni restorani
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <?php
-                            $poseceniRestoraniModel = new \App\Models\PoseceniRestoraniModel();
-                            $poseceniRestorani = $poseceniRestoraniModel->where("Korisnicko_ime", $korisnik->Korisnicko_ime)->findAll();
-                            $restorani = new App\Models\RestoranModel();
-                            foreach ($poseceniRestorani as $posecenRestoran) {
-                                $restoran = $restorani->find($posecenRestoran->idR);
-                                echo '<li class="list-group-item">' . $restoran->Ime . '</li>';
-                            }
-                            ?>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class="col-md-6 responsive-wrap">
-                    <div class="booking-checkbox_wrap mt-4">
                         <?php
+                        $restorani = new App\Models\RestoranModel();
                         $ostavljenaZaModel = new \App\Models\OstavljenaZaModel();
                         $ostavljenaZaRestorane = $ostavljenaZaModel->where("Korisnicko_ime", $korisnik->Korisnicko_ime)->findAll();
                         $recenzijeModel = new App\Models\RecenzijaModel();
@@ -134,6 +116,31 @@
                             echo '<h5>Nema recenzija</h5>';
                         }
                         ?>
+                    </div>
+
+                </div>
+                <div class="col-md-6 responsive-wrap">
+                    <div class="booking-checkbox_wrap mt-4">
+                       
+                     
+                            <?php
+                             echo '<h5>Posećeni restorani</h5><hr>';
+                            $poseceniRestoraniModel = new \App\Models\PoseceniRestoraniModel();
+                            $poseceniRestorani = $poseceniRestoraniModel->where("Korisnicko_ime", $korisnik->Korisnicko_ime)->findAll();
+                            $restorani = new App\Models\RestoranModel();
+                            foreach ($poseceniRestorani as $posecenRestoran) {
+                                $restoran = $restorani->find($posecenRestoran->idR);
+                                //echo $restoran->Ime;
+                                echo '<div class="customer-content-wrap">
+                                <div class="customer-content">
+                                    <div class="customer-review">
+                                        <h6>' . $restoran->Ime. '</h6>
+                                        
+                                    </div></div></div><hr>';
+                            }
+                            ?>
+                        </ul
+                        
 
 
 

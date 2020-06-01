@@ -8,6 +8,7 @@
     <script src="<?= base_url('js/jquery.magnific-popup.js'); ?>"></script>
     <!-- Swipper Slider JS -->
     <script src="<?= base_url('js/swiper.min.js'); ?>"></script>
+    
 
 <div>
         <div class="row">&nbsp;</div>
@@ -81,9 +82,25 @@
                             <span><?php echo $res->brojRecenzija;?> ostavljenih recenzija</span>
                         </div>
                         <div class="reserve-btn">
+                             <?php 
+                        $poseceniRestoraniModel=new App\Models\PoseceniRestoraniModel();
+                        
+                        if($poseceniRestoraniModel->where('Korisnicko_ime',$korisnik->Korisnicko_ime)->where('idR',$res->idR)->findAll()!=null){?>
+                            
+                            <div class="reserve-btn">
                             <div class="featured-btn-wrap">
-                                <a href="posecen.html" class="btn btn-danger">POSETI</a>
+                                <a href="" id="dugmePosecen" class="btn btn-danger">POSEĆEN</a>
                             </div>
+                            </div>
+                       <?php }
+                        else{?>
+                            <div class="reserve-btn">
+                            <div class="featured-btn-wrap">
+                                <a href="<?php echo site_url("BaseController/posetiRestoran/{$res->idR}"); ?>" id="dugmePosecen" class="btn btn-danger">POSETI</a>
+                            </div>
+                            </div>
+                       <?php }
+                        ?>
                         </div>
                     </div>
                 </div>
@@ -155,7 +172,7 @@
                         $ostavljenaZaModel=new \App\Models\OstavljenaZaModel();
                         $restoranModel=new App\Models\RestoranModel();
                         foreach($recenzije as $recenzija){
-                            $ostavljenaZa=$ostavljenaZaModel->find($recenzija->idRec);
+                            $ostavljenaZa=$ostavljenaZaModel->where('idRec', $recenzija->idRec)->first();
                             $restoran=$restoranModel->find($recenzija->idR);
                             echo '<div class="customer-review_wrap">
                             <div class="customer-img">
@@ -199,7 +216,7 @@
                                     echo'</div>';
                             
                             if($recenzija->Ocena!=null){
-                                echo '<div class="customer-rating">'.$recenzija->Ocena.'</div>';
+                                echo '<div class="customer-rating">'.$recenzija->Ocena.'</div><br><br>';
                             }
                                echo'
                                 </div>
@@ -248,7 +265,7 @@
                 </div>
                 <div class="col-md-4 responsive-wrap">
                     <div class="contact-info">
-                        <img src="<?= base_url('images/mapa.png'); ?>" class="img-fluid" alt="#">
+                        <div id="map1"></div>
                         <div class="address">
                             <span class="fab fa icon-location-pin"></span>
                             <p><?php echo $res->Adresa;?></p>
@@ -305,5 +322,32 @@
             });
         }
     </script> 
+    
+    <script>
+        function initMap() {
+            var geocoder = new google.maps.Geocoder();
+            var address = "<?php echo $res->Adresa; ?>";
+
+            geocoder.geocode( { 'address': address}, function(results, status) {
+
+            if (status == google.maps.GeocoderStatus.OK) {
+                var latitude = results[0].geometry.location.lat();
+                var longitude = results[0].geometry.location.lng();
+                } 
+            
+            
+            var uluru = {lat: latitude, lng: longitude};
+            var map = new google.maps.Map(
+                document.getElementById('map1'), {zoom: 15, center: uluru});
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({position: uluru, map: map});
+            }); 
+    }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRbsu4r0eRiOzh5P_aK7UobUwesU6jFoY&callback=initMap">
+    </script>
+
 
 

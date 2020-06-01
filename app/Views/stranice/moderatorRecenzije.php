@@ -16,7 +16,7 @@
                         $ostavljenaZaModel=new \App\Models\OstavljenaZaModel();
                         $restoranModel=new App\Models\RestoranModel();
                         foreach($recenzije as $recenzija){
-                            $ostavljenaZa=$ostavljenaZaModel->find($recenzija->idRec);
+                            $ostavljenaZa=$ostavljenaZaModel->where('idRec', $recenzija->idRec)->first();;
                             $restoran=$restoranModel->find($recenzija->idR);
                             echo '<div class="customer-review_wrap">
                             <div class="customer-img">
