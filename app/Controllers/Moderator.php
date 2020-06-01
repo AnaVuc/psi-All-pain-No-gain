@@ -21,7 +21,19 @@ class Moderator extends BaseController
 
     public function ukloniKorisnika(){
         $korisnikModel=new KorisnikModel();
-        $korisnikModel->delete($this->request->getVar('Korisnicko_ime'));
+        $korIme=$this->request->getVar('Korisnicko_ime');
+        
+        $ostavljenaZaModel=new \App\Models\OstavljenaZaModel();
+        $ostavljeneZa=$ostavljenaZaModel->where('Korisnicko_ime',$korIme)->findAll();
+        foreach ($ostavljeneZa as $ostavljenaZa){
+            $ostavljenaZaModel->update($ostavljenaZa->idOZ,["Korisnicko_ime"=>'unknown']);
+        }
+        $poseceniRestoraniModel= new \App\Models\PoseceniRestoraniModel();
+        $poseceniRestorani=$poseceniRestoraniModel->where('Korisnicko_ime',$korIme)->findAll();
+         foreach ($poseceniRestorani as $posecenRestoran){
+            $poseceniRestoraniModel->update($posecenRestoran->idPosR,["Korisnicko_ime"=>'unknown']);
+        }
+        $korisnikModel->delete($korIme);
         return redirect()->to(site_url('Moderator'));
     }
     
