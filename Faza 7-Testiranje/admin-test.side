@@ -1,0 +1,447 @@
+{
+  "id": "d6ba0054-2a9e-4ba5-a564-058b326a5135",
+  "version": "2.0",
+  "name": "admin",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "b2681b4b-dc84-4d2e-bfff-0afdc373991b",
+    "name": "admin-test",
+    "commands": [{
+      "id": "1c5ec126-fda3-4a70-b2a5-1c0de4d12b2c",
+      "comment": "",
+      "command": "open",
+      "target": "/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46f9f648-98fb-4a53-a827-cc55769580e5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4330f7a4-a4cf-4d78-a0bd-0875952f45f1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Izloguj se",
+      "targets": [
+        ["linkText=Izloguj se", "linkText"],
+        ["css=li:nth-child(4) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Izloguj se')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNavDropdown']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/BaseController/izlogujse']", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Izloguj se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00273cb4-4274-4f32-8c50-1cd8436299d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-menu:nth-child(7) .btn",
+      "targets": [
+        ["css=.nav-menu:nth-child(7) .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Uloguj se')])[2]", "xpath:link"],
+        ["xpath=(//div[@id='navbarNavDropdown']/ul/li[2]/a)[2]", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://localhost:8080/Gost/UlogujSe'])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div/nav/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "619b6b16-2998-4ffd-8277-97351839e19d",
+      "comment": "",
+      "command": "click",
+      "target": "name=Korisnicko_ime",
+      "targets": [
+        ["name=Korisnicko_ime", "name"],
+        ["css=.col-md-6:nth-child(1) .form-control", "css:finder"],
+        ["xpath=//input[@name='Korisnicko_ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b90e307-c0bb-4be3-a4a1-958ba8a55983",
+      "comment": "",
+      "command": "type",
+      "target": "name=Korisnicko_ime",
+      "targets": [
+        ["name=Korisnicko_ime", "name"],
+        ["css=.col-md-6:nth-child(1) .form-control", "css:finder"],
+        ["xpath=//input[@name='Korisnicko_ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "3f667324-a34d-4e29-8dc7-115fe2b56327",
+      "comment": "",
+      "command": "click",
+      "target": "name=Password",
+      "targets": [
+        ["name=Password", "name"],
+        ["css=.col-md-6:nth-child(2) .form-control", "css:finder"],
+        ["xpath=//input[@name='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "384e4a4a-0b76-4f30-87e7-2e8957a8e507",
+      "comment": "",
+      "command": "type",
+      "target": "name=Password",
+      "targets": [
+        ["name=Password", "name"],
+        ["css=.col-md-6:nth-child(2) .form-control", "css:finder"],
+        ["xpath=//input[@name='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "3de4d0a4-86b2-4525-a8e6-55e3c2bc78bf",
+      "comment": "",
+      "command": "click",
+      "target": "name=vrstaKorisnika",
+      "targets": [
+        ["name=vrstaKorisnika", "name"],
+        ["css=.custom-select", "css:finder"],
+        ["xpath=//select[@name='vrstaKorisnika']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09d781a1-dff6-4fc7-a1f7-757a485559e7",
+      "comment": "",
+      "command": "select",
+      "target": "name=vrstaKorisnika",
+      "targets": [],
+      "value": "label=Admin"
+    }, {
+      "id": "21f37337-9432-43f9-9d96-f45431c00763",
+      "comment": "",
+      "command": "click",
+      "target": "name=vrstaKorisnika",
+      "targets": [
+        ["name=vrstaKorisnika", "name"],
+        ["css=.custom-select", "css:finder"],
+        ["xpath=//select[@name='vrstaKorisnika']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cefe88ad-c2ef-42cf-8b28-07b8acc1d860",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@value='Uloguj se']", "xpath:attributes"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8a3455e-5512-4788-8204-dd3a63ba1916",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Dodaj novog moderatora",
+      "targets": [
+        ["linkText=Dodaj novog moderatora", "linkText"],
+        ["css=.list-group-item:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Dodaj novog moderatora')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/ispisDodavanjeModeratora']", "xpath:href"],
+        ["xpath=//div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Dodaj novog moderatora')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9260bf0f-7624-47b7-bc1a-7e1c91352004",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(5) .btn",
+      "targets": [
+        ["css=.row:nth-child(5) .btn", "css:finder"],
+        ["xpath=(//input[@value='Postavi za moderatora'])[2]", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5bbb2dd-a213-449c-a506-9fc1e60e15b8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Take Me Out!",
+      "targets": [
+        ["linkText=Take Me Out!", "linkText"],
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'Take Me Out!')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Admin']", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Take Me Out!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64344f75-ba2d-4d01-bf67-dd79672987aa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ukloni moderatora",
+      "targets": [
+        ["linkText=Ukloni moderatora", "linkText"],
+        ["css=.list-group-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ukloni moderatora')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/ispisUklanjanjeModeratora']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ukloni moderatora')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ec55225-8235-4383-bd28-73c9b657a5c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(5) .btn",
+      "targets": [
+        ["css=.row:nth-child(5) .btn", "css:finder"],
+        ["xpath=(//input[@value='Ukloni moderatora'])[2]", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86cb9167-1352-4864-8568-7b9a18f24d00",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Take Me Out!",
+      "targets": [
+        ["linkText=Take Me Out!", "linkText"],
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'Take Me Out!')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Admin']", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Take Me Out!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd9911fe-6c40-4ac4-a9a7-fbea2a52fa04",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Dodaj novi restoran",
+      "targets": [
+        ["linkText=Dodaj novi restoran", "linkText"],
+        ["css=.list-group-item:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Dodaj novi restoran')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/ispisDodavanjeRestorana']", "xpath:href"],
+        ["xpath=//div/div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Dodaj novi restoran')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "893b1fff-35b6-484a-8c2c-0fa4e5edc2a2",
+      "comment": "",
+      "command": "click",
+      "target": "name=ime",
+      "targets": [
+        ["name=ime", "name"],
+        ["css=.input-group-sm:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "606a755c-4c22-470d-9946-be65452d5dcb",
+      "comment": "",
+      "command": "type",
+      "target": "name=ime",
+      "targets": [
+        ["name=ime", "name"],
+        ["css=.input-group-sm:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "restoran"
+    }, {
+      "id": "6265068c-df81-4f0f-b382-6e909addcf17",
+      "comment": "",
+      "command": "click",
+      "target": "name=adresa",
+      "targets": [
+        ["name=adresa", "name"],
+        ["css=.input-group-sm:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adresa']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1127a91-e83c-4a4a-b505-37b944ca16a7",
+      "comment": "",
+      "command": "type",
+      "target": "name=adresa",
+      "targets": [
+        ["name=adresa", "name"],
+        ["css=.input-group-sm:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adresa']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Lomina 63"
+    }, {
+      "id": "e58cd186-113e-427f-8460-b2551593b6e7",
+      "comment": "",
+      "command": "click",
+      "target": "name=telefon",
+      "targets": [
+        ["name=telefon", "name"],
+        ["css=.input-group-sm:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='telefon']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7af95fd-6601-476d-a141-969c7a552620",
+      "comment": "",
+      "command": "type",
+      "target": "name=telefon",
+      "targets": [
+        ["name=telefon", "name"],
+        ["css=.input-group-sm:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='telefon']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "0644519589"
+    }, {
+      "id": "d05745eb-109d-4f75-8026-8b38f3153332",
+      "comment": "",
+      "command": "click",
+      "target": "name=sajt",
+      "targets": [
+        ["name=sajt", "name"],
+        ["css=.input-group-sm:nth-child(10)", "css:finder"],
+        ["xpath=//input[@name='sajt']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9325c1fa-4814-4dd6-a97a-121758726ae6",
+      "comment": "",
+      "command": "type",
+      "target": "name=sajt",
+      "targets": [
+        ["name=sajt", "name"],
+        ["css=.input-group-sm:nth-child(10)", "css:finder"],
+        ["xpath=//input[@name='sajt']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "restoran.rs"
+    }, {
+      "id": "c551861a-2984-4cdf-9e37-71869fa6fc2c",
+      "comment": "",
+      "command": "click",
+      "target": "name=cenovniRang",
+      "targets": [
+        ["name=cenovniRang", "name"],
+        ["xpath=(//select[@id='inlineFormCustomSelect'])[2]", "xpath:attributes"],
+        ["xpath=//select[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ece627d-111f-41b2-af26-d09bb5fe8ba4",
+      "comment": "",
+      "command": "select",
+      "target": "name=cenovniRang",
+      "targets": [],
+      "value": "label=$$$"
+    }, {
+      "id": "6ca3d480-fcb0-4287-bfbf-e3bc6ae26e50",
+      "comment": "",
+      "command": "click",
+      "target": "name=cenovniRang",
+      "targets": [
+        ["name=cenovniRang", "name"],
+        ["xpath=(//select[@id='inlineFormCustomSelect'])[2]", "xpath:attributes"],
+        ["xpath=//select[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40b64895-e472-4381-90b7-683ce2f51a6d",
+      "comment": "",
+      "command": "click",
+      "target": "id=opisRestorana",
+      "targets": [
+        ["id=opisRestorana", "id"],
+        ["name=opisRestorana", "name"],
+        ["css=#opisRestorana", "css:finder"],
+        ["xpath=//textarea[@id='opisRestorana']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f58896b5-2f42-4352-b85d-cdd1cfaa3ff0",
+      "comment": "",
+      "command": "type",
+      "target": "id=opisRestorana",
+      "targets": [
+        ["id=opisRestorana", "id"],
+        ["name=opisRestorana", "name"],
+        ["css=#opisRestorana", "css:finder"],
+        ["xpath=//textarea[@id='opisRestorana']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Veoma lep restoran"
+    }, {
+      "id": "3fb8a6a8-01bb-47aa-8e03-0da2e4cb99e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//input[@value='Dodaj restoran']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "46e2dff2-efcb-4460-b0c6-d0ef16e153f3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Obriši restoran",
+      "targets": [
+        ["linkText=Obriši restoran", "linkText"],
+        ["css=.list-group-item:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Obriši restoran')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/ispisUklanjanjeRestorana']", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Obriši restoran')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "768eb41b-9f5f-4918-8e7f-fc46325e2f2d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(30) .btn",
+      "targets": [
+        ["css=.row:nth-child(30) .btn", "css:finder"],
+        ["xpath=(//input[@value='Ukloni restoran'])[13]", "xpath:attributes"],
+        ["xpath=//div[13]/div[2]/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "975e95df-1115-462f-b25c-c1ac2dc0884a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Izloguj se",
+      "targets": [
+        ["linkText=Izloguj se", "linkText"],
+        ["css=.btn-outline-light", "css:finder"],
+        ["xpath=//a[contains(text(),'Izloguj se')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNavDropdown']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/BaseController/izlogujse']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Izloguj se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a9a59eb2-392c-4f1a-8a22-0564bee8c8a6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b2681b4b-dc84-4d2e-bfff-0afdc373991b"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
