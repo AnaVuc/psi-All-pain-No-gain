@@ -1,4 +1,6 @@
-
+<div class="row"> &nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
 <body>
     <div class="A" align="center">
         <form name="promenalozinke" action="<?= site_url("BaseController/promenaLoz") ?>" method="post">
