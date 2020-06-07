@@ -1,0 +1,232 @@
+{
+  "id": "a0c3033a-b8ab-4cd2-b5c6-16d0d61ed186",
+  "version": "2.0",
+  "name": "sortiranje",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "cd16d772-f0b8-451c-833b-6b0ab2597b91",
+    "name": "sortiranje",
+    "commands": [{
+      "id": "2d299e27-c908-4f2b-aa37-f5af0e8999aa",
+      "comment": "",
+      "command": "open",
+      "target": "/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b862111-3feb-44d1-aa54-1de93bfa1bf0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3517d50-1fad-4870-9210-9e408584422b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=VIDI SVE RESTORANE",
+      "targets": [
+        ["linkText=VIDI SVE RESTORANE", "linkText"],
+        ["css=.main-block:nth-child(6) .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'VIDI SVE RESTORANE')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/BaseController/ispisSvihRestorana']", "xpath:href"],
+        ["xpath=//div[3]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'VIDI SVE RESTORANE')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dcf67ec7-10eb-4788-8504-a628ae46fe1c",
+      "comment": "",
+      "command": "click",
+      "target": "name=smer",
+      "targets": [
+        ["name=smer", "name"],
+        ["xpath=(//select[@id='inlineFormCustomSelect'])[2]", "xpath:attributes"],
+        ["xpath=//select[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fd360ab-97ad-42a2-9c58-ecece671a72b",
+      "comment": "",
+      "command": "select",
+      "target": "name=smer",
+      "targets": [],
+      "value": "label=Rastuce"
+    }, {
+      "id": "435ea9ca-efa9-4137-9c28-d6dfd08576ac",
+      "comment": "",
+      "command": "click",
+      "target": "name=smer",
+      "targets": [
+        ["name=smer", "name"],
+        ["xpath=(//select[@id='inlineFormCustomSelect'])[2]", "xpath:attributes"],
+        ["xpath=//select[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c98227df-e5ed-4a0d-b1d3-0a82ae97ad4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@value='Potvrdi']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab058ec1-e400-420a-b14b-0a37ce1f0ee1",
+      "comment": "",
+      "command": "click",
+      "target": "id=inlineFormCustomSelect",
+      "targets": [
+        ["id=inlineFormCustomSelect", "id"],
+        ["name=sortiranje", "name"],
+        ["xpath=//select[@id='inlineFormCustomSelect']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "35b6baf3-9e72-4a62-8c70-b2fb43f1e017",
+      "comment": "",
+      "command": "select",
+      "target": "id=inlineFormCustomSelect",
+      "targets": [],
+      "value": "label=Cena"
+    }, {
+      "id": "0a31d6cc-7f35-48e9-9d07-87864151a770",
+      "comment": "",
+      "command": "click",
+      "target": "id=inlineFormCustomSelect",
+      "targets": [
+        ["id=inlineFormCustomSelect", "id"],
+        ["name=sortiranje", "name"],
+        ["xpath=//select[@id='inlineFormCustomSelect']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "987409b1-a1b7-472e-9712-66cb388ed654",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.detail-checkbox-wrap",
+      "targets": [
+        ["css=.detail-checkbox-wrap", "css:finder"],
+        ["xpath=//form/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "efb72267-d265-4ed5-8706-447d407679d5",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.detail-filter-wrap",
+      "targets": [
+        ["css=.detail-filter-wrap", "css:finder"],
+        ["xpath=//form/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed4860ee-890f-496c-a928-b9f60fbd6f86",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-7",
+      "targets": [
+        ["css=.col-md-7", "css:finder"],
+        ["xpath=//form/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23efd6e1-6cac-43dc-900b-b13d18c41fdb",
+      "comment": "",
+      "command": "click",
+      "target": "name=smer",
+      "targets": [
+        ["name=smer", "name"],
+        ["xpath=(//select[@id='inlineFormCustomSelect'])[2]", "xpath:attributes"],
+        ["xpath=//select[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96bc4ed9-9675-491e-9858-c13fdafcce91",
+      "comment": "",
+      "command": "select",
+      "target": "name=smer",
+      "targets": [],
+      "value": "label=Rastuce"
+    }, {
+      "id": "2df416e2-d1f0-4623-b8d9-720075857edf",
+      "comment": "",
+      "command": "click",
+      "target": "name=smer",
+      "targets": [
+        ["name=smer", "name"],
+        ["xpath=(//select[@id='inlineFormCustomSelect'])[2]", "xpath:attributes"],
+        ["xpath=//select[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ec58d2d-be1e-4fde-8b7e-7501097f87b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@value='Potvrdi']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f0c0233-c9f0-4a1a-9029-b8d24ab59be5",
+      "comment": "",
+      "command": "click",
+      "target": "id=inlineFormCustomSelect",
+      "targets": [
+        ["id=inlineFormCustomSelect", "id"],
+        ["name=sortiranje", "name"],
+        ["xpath=//select[@id='inlineFormCustomSelect']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f23b862e-f090-4980-affa-1798073ea760",
+      "comment": "",
+      "command": "select",
+      "target": "id=inlineFormCustomSelect",
+      "targets": [],
+      "value": "label=Ocena"
+    }, {
+      "id": "d6ed43d0-1cff-437e-b093-9898e2e93498",
+      "comment": "",
+      "command": "click",
+      "target": "id=inlineFormCustomSelect",
+      "targets": [
+        ["id=inlineFormCustomSelect", "id"],
+        ["name=sortiranje", "name"],
+        ["xpath=//select[@id='inlineFormCustomSelect']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8649fc02-226f-42b6-83a8-9a8d098f3f6a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@value='Potvrdi']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c2b36beb-6143-4963-9586-2319470c3cff",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["cd16d772-f0b8-451c-833b-6b0ab2597b91"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

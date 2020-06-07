@@ -1,0 +1,264 @@
+{
+  "id": "dfb0662b-8bb2-41d9-b75f-6be6babf8a32",
+  "version": "2.0",
+  "name": "mod",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "c6152037-0dee-4d91-a9c9-03565d77a2b5",
+    "name": "moderator",
+    "commands": [{
+      "id": "eb3df941-aadd-46df-999c-832864cbb0c0",
+      "comment": "",
+      "command": "open",
+      "target": "/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "431ae594-1d88-4059-b1df-185e1d622b2b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e203b7ac-1c63-4178-ab82-01721f0cc9cc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Izloguj se",
+      "targets": [
+        ["linkText=Izloguj se", "linkText"],
+        ["css=li:nth-child(4) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Izloguj se')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNavDropdown']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/BaseController/izlogujse']", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Izloguj se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e6afc57-73e4-429f-ad92-07272686b021",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-menu:nth-child(7) .btn",
+      "targets": [
+        ["css=.nav-menu:nth-child(7) .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Uloguj se')])[2]", "xpath:link"],
+        ["xpath=(//div[@id='navbarNavDropdown']/ul/li[2]/a)[2]", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://localhost:8080/Gost/UlogujSe'])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div/nav/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d100279d-0573-4dd6-b3f8-85e8a4cb0892",
+      "comment": "",
+      "command": "click",
+      "target": "name=Korisnicko_ime",
+      "targets": [
+        ["name=Korisnicko_ime", "name"],
+        ["css=.col-md-6:nth-child(1) .form-control", "css:finder"],
+        ["xpath=//input[@name='Korisnicko_ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af59876c-281b-4b8e-a3c1-80f2a4bd13d8",
+      "comment": "",
+      "command": "type",
+      "target": "name=Korisnicko_ime",
+      "targets": [
+        ["name=Korisnicko_ime", "name"],
+        ["css=.col-md-6:nth-child(1) .form-control", "css:finder"],
+        ["xpath=//input[@name='Korisnicko_ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mod"
+    }, {
+      "id": "9fc4811e-9477-45d1-8898-718849a2450a",
+      "comment": "",
+      "command": "click",
+      "target": "name=Password",
+      "targets": [
+        ["name=Password", "name"],
+        ["css=.col-md-6:nth-child(2) .form-control", "css:finder"],
+        ["xpath=//input[@name='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86c129bb-7094-482b-9afc-4a63e19cd6c6",
+      "comment": "",
+      "command": "type",
+      "target": "name=Password",
+      "targets": [
+        ["name=Password", "name"],
+        ["css=.col-md-6:nth-child(2) .form-control", "css:finder"],
+        ["xpath=//input[@name='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "3285049d-0001-4b9a-b3f7-19c3d708ca6d",
+      "comment": "",
+      "command": "click",
+      "target": "name=vrstaKorisnika",
+      "targets": [
+        ["name=vrstaKorisnika", "name"],
+        ["css=.custom-select", "css:finder"],
+        ["xpath=//select[@name='vrstaKorisnika']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94aa0b3f-81ff-4232-a8aa-8e707e197fb7",
+      "comment": "",
+      "command": "select",
+      "target": "name=vrstaKorisnika",
+      "targets": [],
+      "value": "label=Moderator"
+    }, {
+      "id": "2c608660-c6ed-4afd-afdc-5ebbf3f7d0ea",
+      "comment": "",
+      "command": "click",
+      "target": "name=vrstaKorisnika",
+      "targets": [
+        ["name=vrstaKorisnika", "name"],
+        ["css=.custom-select", "css:finder"],
+        ["xpath=//select[@name='vrstaKorisnika']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03664eca-cdc3-4d08-a002-49316e4a56f9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@value='Uloguj se']", "xpath:attributes"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e43d1c89-a6ce-4daf-94f9-c48346993dd3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pogledaj recenzije za odobravanje",
+      "targets": [
+        ["linkText=Pogledaj recenzije za odobravanje", "linkText"],
+        ["css=.list-group-item:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Pogledaj recenzije za odobravanje')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Moderator/ispisRecenzija']", "xpath:href"],
+        ["xpath=//div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pogledaj recenzije za odobravanje')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "560b9c15-9781-41a3-816d-d4fb0146a660",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(6) > .col-sm-3:nth-child(1) .btn",
+      "targets": [
+        ["css=.row:nth-child(6) > .col-sm-3:nth-child(1) .btn", "css:finder"],
+        ["xpath=//input[@value='Odobri']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf292629-090b-4078-a3fa-bf8849a9b141",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(6) > .col-sm-3:nth-child(1) .btn",
+      "targets": [
+        ["css=.row:nth-child(6) > .col-sm-3:nth-child(1) .btn", "css:finder"],
+        ["xpath=//input[@value='Odobri']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc759378-a578-4a80-a112-24cddee4c1c3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Take Me Out!",
+      "targets": [
+        ["linkText=Take Me Out!", "linkText"],
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'Take Me Out!')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Moderator']", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Take Me Out!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "893711d7-905f-4c9c-8076-f37dd861d1c1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ukloni korisnika",
+      "targets": [
+        ["linkText=Ukloni korisnika", "linkText"],
+        ["css=.list-group-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ukloni korisnika')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Moderator/ispisUklanjanjeKorisnika']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ukloni korisnika')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19b34844-72a5-490c-af3d-dba13ae9dcd5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@name='Korisnicko_ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4c31d60-e0b7-43a3-92b6-89f1b9889ef8",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@name='Korisnicko_ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "milos123"
+    }, {
+      "id": "acdb8074-fcb6-4af2-8e16-67ed2a71d74a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@value='Ukloni člana']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8405687b-452b-4c40-b5c9-5c2c9862ee53",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Promeni lozinku",
+      "targets": [
+        ["linkText=Promeni lozinku", "linkText"],
+        ["css=.list-group-item:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Promeni lozinku')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/BaseController/promena_lozinke']", "xpath:href"],
+        ["xpath=//div/div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Promeni lozinku')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0ce14a19-a39a-4420-9559-5237b1ceff43",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c6152037-0dee-4d91-a9c9-03565d77a2b5"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

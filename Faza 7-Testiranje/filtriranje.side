@@ -1,0 +1,171 @@
+{
+  "id": "7e66c2a1-efd1-4e14-b0ae-22e0b6f05310",
+  "version": "2.0",
+  "name": "filtriranje",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "7bf91ea6-ae57-4d4b-ae4d-3f128e57be1f",
+    "name": "filtriranje",
+    "commands": [{
+      "id": "1c86f884-c7ab-4fe3-aabf-36d4b32ab4e6",
+      "comment": "",
+      "command": "open",
+      "target": "/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "597bdb9b-778a-4aeb-81c4-d0eb31e91ddf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12845476-3c60-4b6d-be02-f27a5a1d61f5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=VIDI SVE RESTORANE",
+      "targets": [
+        ["linkText=VIDI SVE RESTORANE", "linkText"],
+        ["css=.main-block:nth-child(6) .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'VIDI SVE RESTORANE')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/BaseController/ispisSvihRestorana']", "xpath:href"],
+        ["xpath=//div[3]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'VIDI SVE RESTORANE')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a5c05a5-2a32-40ee-8442-33d8acf89d7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-12:nth-child(1) > .checkbox:nth-child(2) > p",
+      "targets": [
+        ["css=.col-sm-12:nth-child(1) > .checkbox:nth-child(2) > p", "css:finder"],
+        ["xpath=//div[2]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,' Italijanska')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e6e03e0-97ff-4407-9698-7793b84653a1",
+      "comment": "",
+      "command": "click",
+      "target": "name=vrsta[]",
+      "targets": [
+        ["name=vrsta[]", "name"],
+        ["css=.col-sm-12:nth-child(1) > .checkbox:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='vrsta[]']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97c4457a-ea23-4603-8066-03458d90062a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@value='Potvrdi']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8951c242-20a4-4575-b9b7-f84d4491e70b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-12:nth-child(2) > .checkbox:nth-child(4) > p",
+      "targets": [
+        ["css=.col-sm-12:nth-child(2) > .checkbox:nth-child(4) > p", "css:finder"],
+        ["xpath=//div[2]/div[3]/p", "xpath:position"],
+        ["xpath=//p[contains(.,' $$$')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa073b99-f169-4998-9075-0822053ea785",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-12:nth-child(2) > .checkbox:nth-child(4) input",
+      "targets": [
+        ["css=.col-sm-12:nth-child(2) > .checkbox:nth-child(4) input", "css:finder"],
+        ["xpath=(//input[@name='cena[]'])[3]", "xpath:attributes"],
+        ["xpath=//div[2]/div[3]/p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62722942-eab5-44b3-8651-f06422b93fd5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@value='Potvrdi']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04ddad55-d8cf-402e-a0be-b886776da59a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-12:nth-child(3) > .checkbox:nth-child(5) input",
+      "targets": [
+        ["css=.col-sm-12:nth-child(3) > .checkbox:nth-child(5) input", "css:finder"],
+        ["xpath=(//input[@name='ocena[]'])[4]", "xpath:attributes"],
+        ["xpath=//div[3]/div[4]/p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bffe6e0-5300-44f7-8488-0d41cb441589",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@value='Potvrdi']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa4c5aee-de97-4f02-8912-f7bcde3b4d82",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-12:nth-child(1) > .checkbox:nth-child(5) input",
+      "targets": [
+        ["css=.col-sm-12:nth-child(1) > .checkbox:nth-child(5) input", "css:finder"],
+        ["xpath=(//input[@name='vrsta[]'])[4]", "xpath:attributes"],
+        ["xpath=//div[4]/p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "176d150f-c88a-4c23-9b23-ec647159c3f2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-12:nth-child(2) > .checkbox:nth-child(5) input",
+      "targets": [
+        ["css=.col-sm-12:nth-child(2) > .checkbox:nth-child(5) input", "css:finder"],
+        ["xpath=(//input[@name='cena[]'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div[4]/p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f3bced7-bfe6-4f47-8986-70b0f2c038c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@value='Potvrdi']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c9885d20-4d8d-4ef6-8a26-c6f3f2f74b3e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7bf91ea6-ae57-4d4b-ae4d-3f128e57be1f"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

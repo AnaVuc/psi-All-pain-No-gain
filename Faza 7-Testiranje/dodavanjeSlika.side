@@ -1,0 +1,110 @@
+{
+  "id": "3f943076-a91e-4d4c-9e96-9377324cac05",
+  "version": "2.0",
+  "name": "dodavanjeSlika",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "c1b770c3-8be0-449f-9dcf-1bfafdd48b55",
+    "name": "dodavanjeSlika",
+    "commands": [{
+      "id": "a36c64c9-9744-4fab-ba9f-8476f7133c29",
+      "comment": "",
+      "command": "open",
+      "target": "/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9316d838-d8ae-4bbf-953a-4d86de75b965",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e5c4942-a6b1-478c-8fd6-018a62b82675",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-block:nth-child(6) .col-md-4:nth-child(3) .img-fluid",
+      "targets": [
+        ["css=.main-block:nth-child(6) .col-md-4:nth-child(3) .img-fluid", "css:finder"],
+        ["xpath=(//img[@alt='#'])[3]", "xpath:img"],
+        ["xpath=//div[3]/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "486d2b63-28fe-4fef-95a9-bda045841ba9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.review-btn",
+      "targets": [
+        ["css=.review-btn", "css:finder"],
+        ["xpath=//div/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9e8024d-4ba9-4766-ba4d-310189cb0e4d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=OSTAVI RECENZIJU",
+      "targets": [
+        ["linkText=OSTAVI RECENZIJU", "linkText"],
+        ["css=.btn-outline-danger", "css:finder"],
+        ["xpath=//a[contains(text(),'OSTAVI RECENZIJU')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/BaseController/ispisOstavljanjeRecenzije/11#target1']", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'OSTAVI RECENZIJU')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9693e8ae-38e7-457e-bc54-9c9634657127",
+      "comment": "",
+      "command": "click",
+      "target": "id=slike",
+      "targets": [
+        ["id=slike", "id"],
+        ["name=slike[]", "name"],
+        ["css=#slike", "css:finder"],
+        ["xpath=//input[@id='slike']", "xpath:attributes"],
+        ["xpath=//div[@id='target1']/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a83448b-e6f6-4a78-8714-72fc75678b7d",
+      "comment": "",
+      "command": "type",
+      "target": "id=slike",
+      "targets": [
+        ["id=slike", "id"],
+        ["name=slike[]", "name"],
+        ["css=#slike", "css:finder"],
+        ["xpath=//input[@id='slike']", "xpath:attributes"],
+        ["xpath=//div[@id='target1']/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\featured1.jpg"
+    }, {
+      "id": "2d6f28f5-1376-43c9-8894-01db6e1a727d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.py-3",
+      "targets": [
+        ["css=.py-3", "css:finder"],
+        ["xpath=//input[@value='Pošalji']", "xpath:attributes"],
+        ["xpath=//div[@id='target1']/form/div[2]/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ea1f5201-86c8-45e4-8dd9-ed04d62908cb",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c1b770c3-8be0-449f-9dcf-1bfafdd48b55"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

@@ -1,0 +1,79 @@
+{
+  "id": "97740fe1-1b9b-4d05-b9ef-077098919130",
+  "version": "2.0",
+  "name": "pretraga",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "45072732-19ea-4e71-ac30-d203199fd920",
+    "name": "pretraga",
+    "commands": [{
+      "id": "1dbb6610-80ba-4470-ba8b-63578bfdd8e5",
+      "comment": "",
+      "command": "open",
+      "target": "/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c553e4e2-b46f-4cc7-a80a-bde2dfd4e5de",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30b862fa-fb68-4617-84b7-2d600c8ee5f9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-group1",
+      "targets": [
+        ["css=.btn-group1", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bb54769-32e5-4ecf-a1db-3e14a25bb0e4",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,54.400001525878906)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74f9ba04-53d0-44c3-bfc9-e64a52378c03",
+      "comment": "",
+      "command": "type",
+      "target": "css=.btn-group1",
+      "targets": [
+        ["css=.btn-group1", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "meze"
+    }, {
+      "id": "0d079de2-53bb-4cba-9c52-2f760abc0ce8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Mezestoran Dvorište",
+      "targets": [
+        ["linkText=Mezestoran Dvorište", "linkText"],
+        ["css=#livesearch a", "css:finder"],
+        ["xpath=//a[contains(text(),'Mezestoran Dvorište')]", "xpath:link"],
+        ["xpath=//div[@id='livesearch']/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/BaseController/ispisJednogRestorana/6']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Mezestoran Dvorište')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "80ad076b-b460-42e9-9236-602939fe4045",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["45072732-19ea-4e71-ac30-d203199fd920"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
