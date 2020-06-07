@@ -1,0 +1,160 @@
+{
+  "id": "513ee77e-ec95-4cb0-abb4-7854e13721db",
+  "version": "2.0",
+  "name": "recenzije",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "280d9029-5d37-42f1-bac6-83cd982e9520",
+    "name": "recenzija",
+    "commands": [{
+      "id": "37ba8494-81e2-4c80-951f-0316a84438ce",
+      "comment": "",
+      "command": "open",
+      "target": "/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c0fc02f-14d5-44e8-ad52-cc2e372e84de",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "041e8878-ec0c-471e-b5b7-56ee67e52239",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-block:nth-child(6) .col-md-4:nth-child(3) .img-fluid",
+      "targets": [
+        ["css=.main-block:nth-child(6) .col-md-4:nth-child(3) .img-fluid", "css:finder"],
+        ["xpath=(//img[@alt='#'])[3]", "xpath:img"],
+        ["xpath=//div[3]/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eddbd8cd-62b4-4e77-8edf-63b5e2bc377b",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.swiper-slide-active > .img-fluid1",
+      "targets": [
+        ["css=.swiper-slide-active > .img-fluid1", "css:finder"],
+        ["xpath=(//img[@alt='#'])[2]", "xpath:img"],
+        ["xpath=//div[2]/img", "xpath:position"]
+      ],
+      "value": "1514,255"
+    }, {
+      "id": "69d3e9bc-7659-43f2-80bd-af67c0e0267a",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.swiper-slide-active > .img-fluid1",
+      "targets": [
+        ["css=.swiper-slide-active > .img-fluid1", "css:finder"],
+        ["xpath=(//img[@alt='#'])[2]", "xpath:img"],
+        ["xpath=//div[2]/img", "xpath:position"]
+      ],
+      "value": "1514,255"
+    }, {
+      "id": "8543c6de-633f-48e3-9df0-a8355e1cfae0",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.swiper-slide-active > .img-fluid1",
+      "targets": [
+        ["css=.swiper-slide-active > .img-fluid1", "css:finder"],
+        ["xpath=(//img[@alt='#'])[2]", "xpath:img"],
+        ["xpath=//div[2]/img", "xpath:position"]
+      ],
+      "value": "1514,255"
+    }, {
+      "id": "ae5a9153-2cde-4558-9918-66d9df6e9581",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swiper-slide-active > .img-fluid1",
+      "targets": [
+        ["css=.swiper-slide-active > .img-fluid1", "css:finder"],
+        ["xpath=(//img[@alt='#'])[2]", "xpath:img"],
+        ["xpath=//div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe5b7065-707f-4df5-a96c-d6e2865072b8",
+      "comment": "",
+      "command": "click",
+      "target": "id=dugmePosecen",
+      "targets": [
+        ["id=dugmePosecen", "id"],
+        ["linkText=POSETI", "linkText"],
+        ["css=#dugmePosecen", "css:finder"],
+        ["xpath=//a[contains(text(),'POSETI')]", "xpath:link"],
+        ["xpath=//a[@id='dugmePosecen']", "xpath:attributes"],
+        ["xpath=//a[@href='http://localhost:8080/BaseController/posetiRestoran/11']", "xpath:href"],
+        ["xpath=//div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'POSETI')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "57870375-a8d8-4267-bb71-e7d67b64e10f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=OSTAVI RECENZIJU",
+      "targets": [
+        ["linkText=OSTAVI RECENZIJU", "linkText"],
+        ["css=.btn-outline-danger", "css:finder"],
+        ["xpath=//a[contains(text(),'OSTAVI RECENZIJU')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/BaseController/ispisOstavljanjeRecenzije/11#target1']", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'OSTAVI RECENZIJU')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9d96c37-1122-4a67-ac6f-48c3e860735e",
+      "comment": "",
+      "command": "click",
+      "target": "id=tekstRecenzije",
+      "targets": [
+        ["id=tekstRecenzije", "id"],
+        ["name=tekstRecenzije", "name"],
+        ["css=#tekstRecenzije", "css:finder"],
+        ["xpath=//textarea[@id='tekstRecenzije']", "xpath:attributes"],
+        ["xpath=//div[@id='target1']/form/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fd79cb2-2181-4a46-b958-aff713ebe703",
+      "comment": "",
+      "command": "type",
+      "target": "id=tekstRecenzije",
+      "targets": [
+        ["id=tekstRecenzije", "id"],
+        ["name=tekstRecenzije", "name"],
+        ["css=#tekstRecenzije", "css:finder"],
+        ["xpath=//textarea[@id='tekstRecenzije']", "xpath:attributes"],
+        ["xpath=//div[@id='target1']/form/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "jako lep restoran"
+    }, {
+      "id": "1f708997-d4a0-4338-a678-a9a3ad0a45ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.py-3",
+      "targets": [
+        ["css=.py-3", "css:finder"],
+        ["xpath=//input[@value='Pošalji']", "xpath:attributes"],
+        ["xpath=//div[@id='target1']/form/div[2]/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a4a7b54c-f0d4-4549-b6ec-e36824556713",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["280d9029-5d37-42f1-bac6-83cd982e9520"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
